@@ -1,96 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Chef Brand Colors */
+    --background: 43 33% 93%; /* #F6F1E7 warm cream */
+    --foreground: 350 61% 15%; /* Dark burgundy text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 43 33% 93%;
+    --card-foreground: 350 61% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 43 33% 93%;
+    --popover-foreground: 350 61% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 350 61% 15%; /* #7A1E2D burgundy */
+    --primary-foreground: 43 33% 93%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 43 20% 88%;
+    --secondary-foreground: 350 61% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 43 20% 88%;
+    --muted-foreground: 350 30% 35%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 350 61% 15%;
+    --accent-foreground: 43 33% 93%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 43 33% 93%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 43 20% 80%;
+    --input: 43 20% 80%;
+    --ring: 350 61% 15%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Chef specific tokens */
+    --chef-cream: 43 33% 93%;
+    --chef-burgundy: 350 61% 15%;
+    --chef-burgundy-light: 350 61% 25%;
+    --chef-gold: 38 70% 55%;
+    --chef-dark: 350 30% 10%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 43 33% 93%;
+    --sidebar-foreground: 350 61% 15%;
+    --sidebar-primary: 350 61% 15%;
+    --sidebar-primary-foreground: 43 33% 93%;
+    --sidebar-accent: 43 20% 88%;
+    --sidebar-accent-foreground: 350 61% 15%;
+    --sidebar-border: 43 20% 80%;
+    --sidebar-ring: 350 61% 15%;
   }
 }
 
@@ -101,5 +62,138 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
+}
+
+@layer utilities {
+  /* Slide animations */
+  .slide-enter {
+    animation: slideEnter 0.6s ease-out forwards;
+  }
+
+  .slide-exit {
+    animation: slideExit 0.4s ease-in forwards;
+  }
+
+  .fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .fade-up-delay-1 {
+    animation: fadeUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .fade-up-delay-2 {
+    animation: fadeUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .fade-up-delay-3 {
+    animation: fadeUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+
+  .scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+}
+
+@keyframes slideEnter {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideExit {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Presentation specific styles */
+.slide-container {
+  @apply w-full h-screen overflow-hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.slide {
+  @apply w-full h-full p-12 flex flex-col;
+}
+
+.slide-title {
+  @apply text-5xl font-bold mb-8 text-primary;
+}
+
+.slide-subtitle {
+  @apply text-2xl font-medium text-muted-foreground mb-6;
+}
+
+.slide-content {
+  @apply flex-1 flex flex-col justify-center;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply fixed bottom-0 left-0 h-1 bg-primary transition-all duration-300;
+}
+
+/* Slide overview grid */
+.slide-overview {
+  @apply fixed inset-0 bg-background/95 backdrop-blur-sm z-50 p-8 overflow-auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.slide-thumbnail {
+  @apply border-2 border-border rounded-lg overflow-hidden cursor-pointer transition-all;
+  aspect-ratio: 16 / 9;
+}
+
+.slide-thumbnail:hover {
+  @apply border-primary shadow-lg scale-105;
+}
+
+.slide-thumbnail.active {
+  @apply border-primary ring-2 ring-primary ring-offset-2;
 }

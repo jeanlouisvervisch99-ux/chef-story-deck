@@ -1,6 +1,5 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight, Grid3X3 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 interface NavigationControlsProps {
   currentSlide: number;
@@ -18,44 +17,61 @@ export const NavigationControls: React.FC<NavigationControlsProps> = ({
   onOverview,
 }) => {
   return (
-    <div className="fixed bottom-6 right-6 flex items-center gap-2 z-40">
-      <Button
-        variant="outline"
-        size="icon"
-        onClick={onOverview}
-        className="bg-background/80 backdrop-blur-sm border-border hover:bg-secondary"
-        title="Overview (Esc)"
+    <div className="fixed bottom-8 right-8 flex items-center gap-3 z-50">
+      <button
+        onClick={onPrev}
+        disabled={currentSlide === 0}
+        className="p-3 rounded-2xl disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95"
+        style={{
+          background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255,255,255,0.6)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+        }}
+        aria-label="Previous slide"
       >
-        <Grid3X3 className="h-4 w-4" />
-      </Button>
+        <ChevronLeft className="h-5 w-5 text-foreground" />
+      </button>
       
-      <div className="flex items-center gap-1 bg-background/80 backdrop-blur-sm rounded-lg border border-border px-2 py-1">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={onPrev}
-          disabled={currentSlide === 0}
-          className="h-8 w-8"
-          title="Previous (←)"
-        >
-          <ChevronLeft className="h-4 w-4" />
-        </Button>
-        
-        <span className="text-sm font-medium px-2 min-w-[3rem] text-center">
-          {currentSlide + 1} / {totalSlides}
-        </span>
-        
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={onNext}
-          disabled={currentSlide === totalSlides - 1}
-          className="h-8 w-8"
-          title="Next (→)"
-        >
-          <ChevronRight className="h-4 w-4" />
-        </Button>
+      <button
+        onClick={onOverview}
+        className="p-3 rounded-2xl transition-all hover:scale-105 active:scale-95"
+        style={{
+          background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255,255,255,0.6)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+        }}
+        aria-label="Slide overview"
+      >
+        <Grid3X3 className="h-5 w-5 text-foreground" />
+      </button>
+      
+      <div 
+        className="px-4 py-2 rounded-xl font-semibold text-sm"
+        style={{
+          background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
+          color: 'white',
+          boxShadow: '0 4px 20px rgba(122, 30, 45, 0.3)',
+        }}
+      >
+        {currentSlide + 1} / {totalSlides}
       </div>
+      
+      <button
+        onClick={onNext}
+        disabled={currentSlide === totalSlides - 1}
+        className="p-3 rounded-2xl disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95"
+        style={{
+          background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255,255,255,0.6)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+        }}
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-5 w-5 text-foreground" />
+      </button>
     </div>
   );
 };

@@ -5,17 +5,20 @@ const problems = [
   {
     icon: TrendingDown,
     title: "Hospitality is a margin game",
-    description: "Average restaurant margins are just 3-5%. Every percentage point matters."
+    description: "Average restaurant margins are just 3-5%. Every percentage point matters.",
+    gradient: 'linear-gradient(135deg, hsl(350 70% 75%), hsl(350 60% 30%))',
   },
   {
     icon: Puzzle,
     title: "8+ disconnected tools",
-    description: "POS, inventory, reservations, payments, procurement, HR, accounting, loyalty..."
+    description: "POS, inventory, reservations, payments, procurement, HR, accounting, loyalty...",
+    gradient: 'linear-gradient(135deg, hsl(25 80% 80%), hsl(25 80% 55%))',
   },
   {
     icon: AlertTriangle,
     title: "No unified P&L prediction",
-    description: "No way to forecast costs based on reservations and historical data."
+    description: "No way to forecast costs based on reservations and historical data.",
+    gradient: 'linear-gradient(135deg, hsl(280 50% 80%), hsl(280 50% 60%))',
   }
 ];
 
@@ -23,28 +26,50 @@ export const ProblemSlide: React.FC = () => {
   return (
     <div className="slide">
       <h2 className="slide-title fade-up">The Problem</h2>
-      <p className="slide-subtitle fade-up-delay-1">
+      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-10">
         Restaurants are drowning in complexity
       </p>
       
       <div className="slide-content">
-        <div className="grid grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-3 gap-8">
           {problems.map((problem, index) => (
             <div
               key={problem.title}
-              className={`fade-up-delay-${index + 1} p-8 rounded-2xl bg-secondary/50 border border-border`}
+              className="fade-up feature-card group"
+              style={{ 
+                animationDelay: `${0.2 + index * 0.15}s`, 
+                opacity: 0,
+              }}
             >
-              <div className="p-3 bg-primary/10 rounded-xl w-fit mb-6">
-                <problem.icon className="h-8 w-8 text-primary" />
+              <div 
+                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+                style={{ background: problem.gradient }}
+              >
+                <problem.icon className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-3">
                 {problem.title}
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 {problem.description}
               </p>
             </div>
           ))}
+        </div>
+        
+        {/* Visual emphasis */}
+        <div className="fade-up-delay-3 mt-12 flex justify-center">
+          <div 
+            className="px-8 py-4 rounded-full"
+            style={{
+              background: 'linear-gradient(135deg, rgba(122, 30, 45, 0.1), rgba(217, 119, 87, 0.1))',
+              border: '1px solid rgba(122, 30, 45, 0.2)',
+            }}
+          >
+            <span className="text-lg font-medium text-primary">
+              Result: 60% of restaurants fail within 3 years
+            </span>
+          </div>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { SlideOverview } from './SlideOverview';
 import { ProgressBar } from './ProgressBar';
 import { NavigationControls } from './NavigationControls';
+import { AnimatedBackground } from './AnimatedBackground';
 import { TitleSlide } from './slides/TitleSlide';
 import { ProblemSlide } from './slides/ProblemSlide';
 import { SolutionSlide } from './slides/SolutionSlide';
@@ -90,6 +91,9 @@ export const Presentation: React.FC = () => {
 
   return (
     <div className="slide-container bg-background">
+      {/* Animated background */}
+      <AnimatedBackground />
+      
       {showOverview ? (
         <SlideOverview
           slides={slides}
@@ -99,7 +103,7 @@ export const Presentation: React.FC = () => {
         />
       ) : (
         <>
-          <div key={slideKey} className="slide-enter">
+          <div key={slideKey} className="slide-enter relative z-10">
             <CurrentSlideComponent />
           </div>
           <NavigationControls

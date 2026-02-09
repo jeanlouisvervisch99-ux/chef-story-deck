@@ -12,6 +12,7 @@ import { CompetitiveSlide } from './slides/CompetitiveSlide';
 import { BusinessModelSlide } from './slides/BusinessModelSlide';
 import { ICPSlide } from './slides/ICPSlide';
 import { MarketSlide } from './slides/MarketSlide';
+import { ValueSlide } from './slides/ValueSlide';
 import { RoadmapSlide } from './slides/RoadmapSlide';
 import { TeamSlide } from './slides/TeamSlide';
 import { AskSlide } from './slides/AskSlide';
@@ -27,10 +28,11 @@ const slides = [
   { id: 7, component: BusinessModelSlide, title: 'Business Model' },
   { id: 8, component: ICPSlide, title: 'ICP & GTM' },
   { id: 9, component: MarketSlide, title: 'Market Size' },
-  { id: 10, component: RoadmapSlide, title: 'Roadmap' },
-  { id: 11, component: TeamSlide, title: 'Team' },
-  { id: 12, component: AskSlide, title: 'The Ask' },
-  { id: 13, component: ClosingSlide, title: 'Closing' },
+  { id: 10, component: ValueSlide, title: 'Value Creation' },
+  { id: 11, component: RoadmapSlide, title: 'Roadmap' },
+  { id: 12, component: TeamSlide, title: 'Team' },
+  { id: 13, component: AskSlide, title: 'The Ask' },
+  { id: 14, component: ClosingSlide, title: 'Closing' },
 ];
 
 export const Presentation: React.FC = () => {

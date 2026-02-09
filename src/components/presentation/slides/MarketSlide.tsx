@@ -1,8 +1,8 @@
 import React from 'react';
-import { TrendingUp, MapPin } from 'lucide-react';
+import { TrendingUp, MapPin, Info, Building2 } from 'lucide-react';
 
 const marketData = [
-  { label: 'TAM', value: '20K', description: 'Belgium restaurants (NACE)', percent: 100 },
+  { label: 'TAM', value: '20K+', description: 'Belgium restaurants (NACE 56.10)', percent: 100 },
   { label: 'SAM', value: '12K', description: '60% addressable', percent: 60 },
   { label: 'SOM', value: '1K', description: '5% target', percent: 8 },
 ];
@@ -17,17 +17,17 @@ export const MarketSlide: React.FC = () => {
       <h2 className="slide-title fade-up">Market Opportunity</h2>
       
       <div className="slide-content">
-        <div className="flex gap-16 items-center">
+        <div className="flex gap-14 items-start">
           {/* Left: Market bars */}
           <div className="flex-1">
-            <div className="space-y-8">
+            <div className="space-y-6">
               {marketData.map((item, index) => (
                 <div
                   key={item.label}
                   className="fade-up"
                   style={{ animationDelay: `${0.3 + index * 0.2}s`, opacity: 0 }}
                 >
-                  <div className="flex justify-between mb-3">
+                  <div className="flex justify-between mb-2">
                     <div className="flex items-center gap-3">
                       <span 
                         className="text-sm font-bold px-3 py-1 rounded-lg"
@@ -40,10 +40,10 @@ export const MarketSlide: React.FC = () => {
                       >
                         {item.label}
                       </span>
-                      <span className="text-muted-foreground">{item.description}</span>
+                      <span className="text-muted-foreground text-sm">{item.description}</span>
                     </div>
                     <span 
-                      className="text-3xl font-black"
+                      className="text-2xl font-black"
                       style={{
                         background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
                         WebkitBackgroundClip: 'text',
@@ -54,7 +54,7 @@ export const MarketSlide: React.FC = () => {
                     </span>
                   </div>
                   <div 
-                    className="h-4 rounded-full overflow-hidden"
+                    className="h-3 rounded-full overflow-hidden"
                     style={{
                       background: 'linear-gradient(90deg, hsl(35 30% 90%), hsl(35 25% 88%))',
                     }}
@@ -74,12 +74,26 @@ export const MarketSlide: React.FC = () => {
                 </div>
               ))}
             </div>
+            
+            {/* NACE explanation */}
+            <div 
+              className="fade-up-delay-3 mt-6 p-4 rounded-xl flex items-start gap-3"
+              style={{
+                background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
+                border: '1px solid hsl(350 60% 30% / 0.15)',
+              }}
+            >
+              <Info className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+              <div className="text-sm text-muted-foreground">
+                <span className="font-semibold text-foreground">NACE 56.10</span> — "Restaurants and mobile food service activities" covers 20K+ registered establishments in Belgium.
+              </div>
+            </div>
           </div>
           
           {/* Right: Revenue target */}
-          <div className="flex-1 fade-up-delay-3">
+          <div className="flex-1 fade-up-delay-2">
             <div 
-              className="p-10 rounded-3xl relative overflow-hidden text-center"
+              className="p-8 rounded-3xl relative overflow-hidden text-center"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
                 boxShadow: '0 30px 80px rgba(122, 30, 45, 0.35)',
@@ -99,34 +113,34 @@ export const MarketSlide: React.FC = () => {
                   <span className="text-lg font-medium text-white/80">Target ARR</span>
                 </div>
                 <div 
-                  className="text-7xl font-black text-white mb-4"
+                  className="text-6xl font-black text-white mb-3"
                   style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}
                 >
-                  €4.8M
+                  €4-5M
                 </div>
                 <div 
-                  className="inline-block px-6 py-2 rounded-full"
+                  className="inline-block px-5 py-2 rounded-full"
                   style={{
                     background: 'rgba(255,255,255,0.15)',
                     backdropFilter: 'blur(10px)',
                   }}
                 >
-                  <span className="text-white/90">1,000 restaurants × €399/month</span>
+                  <span className="text-white/90 text-sm">1,000 restaurants × €399/month</span>
                 </div>
               </div>
             </div>
             
             <div 
-              className="mt-6 p-5 rounded-2xl text-center"
+              className="mt-5 p-4 rounded-2xl text-center"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.5)',
               }}
             >
-              <span className="text-muted-foreground">With procurement & payment fees:</span>
+              <span className="text-muted-foreground text-sm">With procurement & payment fees:</span>
               <p 
-                className="text-2xl font-bold mt-1"
+                className="text-xl font-bold mt-1"
                 style={{
                   background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
                   WebkitBackgroundClip: 'text',
@@ -135,6 +149,20 @@ export const MarketSlide: React.FC = () => {
               >
                 €6-8M potential
               </p>
+            </div>
+            
+            {/* Future expansion */}
+            <div 
+              className="mt-4 p-4 rounded-xl flex items-center gap-3"
+              style={{
+                background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.1), hsl(280 40% 50% / 0.1))',
+                border: '1px solid hsl(280 50% 60% / 0.2)',
+              }}
+            >
+              <Building2 className="w-5 h-5 text-purple-600 flex-shrink-0" />
+              <span className="text-sm font-medium text-foreground">
+                Future: Expand to hotel industry
+              </span>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Users, Rocket, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
+import { Target, Users, Rocket, TrendingUp, Sparkles, ArrowRight, Heart } from 'lucide-react';
 
 const milestones = [
   { icon: Rocket, text: "Launch MVP", color: 'hsl(350 60% 30%)' },
@@ -22,7 +22,7 @@ export const AskSlide: React.FC = () => {
           {/* Left: Funding card */}
           <div className="flex-1 fade-up-delay-1">
             <div 
-              className="p-12 rounded-3xl relative overflow-hidden text-center"
+              className="p-10 rounded-3xl relative overflow-hidden text-center"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 48% 35%))',
                 boxShadow: '0 30px 80px rgba(122, 30, 45, 0.35)',
@@ -57,14 +57,26 @@ export const AskSlide: React.FC = () => {
                 >
                   Pre-Seed Round
                 </span>
+                
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <Heart className="w-8 h-8 text-white/90" />
+                </div>
+                
                 <div 
-                  className="text-7xl font-black text-white mb-4"
+                  className="text-3xl font-bold text-white mb-2 leading-tight"
                   style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}
                 >
-                  €[Amount]
+                  Let us be part of the
                 </div>
-                <p className="text-white/90 text-xl">
-                  To build, launch, and scale Chef
+                <div 
+                  className="text-5xl font-black text-white mb-4"
+                  style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}
+                >
+                  Entourage Family
+                </div>
+                
+                <p className="text-white/80 text-lg">
+                  Together, we'll transform restaurant operations
                 </p>
               </div>
             </div>
@@ -106,7 +118,7 @@ export const AskSlide: React.FC = () => {
         </div>
         
         {/* Bottom CTA */}
-        <div className="fade-up-delay-3 mt-12 text-center">
+        <div className="fade-up-delay-3 mt-10 text-center">
           <div 
             className="inline-flex items-center gap-4 px-10 py-5 rounded-2xl"
             style={{

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Puzzle, TrendingDown } from 'lucide-react';
+import { AlertTriangle, Puzzle, TrendingDown, Building2 } from 'lucide-react';
 
 const problems = [
   {
@@ -15,10 +15,16 @@ const problems = [
     gradient: 'linear-gradient(135deg, hsl(25 80% 80%), hsl(25 80% 55%))',
   },
   {
+    icon: Building2,
+    title: "Decentralized chaos",
+    description: "Groups struggle with changing menus and no consolidated view across locations.",
+    gradient: 'linear-gradient(135deg, hsl(280 50% 80%), hsl(280 50% 60%))',
+  },
+  {
     icon: AlertTriangle,
     title: "No unified P&L prediction",
     description: "No way to forecast costs based on reservations and historical data.",
-    gradient: 'linear-gradient(135deg, hsl(280 50% 80%), hsl(280 50% 60%))',
+    gradient: 'linear-gradient(135deg, hsl(160 50% 70%), hsl(160 50% 45%))',
   }
 ];
 
@@ -31,26 +37,26 @@ export const ProblemSlide: React.FC = () => {
       </p>
       
       <div className="slide-content">
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-4 gap-6">
           {problems.map((problem, index) => (
             <div
               key={problem.title}
               className="fade-up feature-card group"
               style={{ 
-                animationDelay: `${0.2 + index * 0.15}s`, 
+                animationDelay: `${0.2 + index * 0.12}s`, 
                 opacity: 0,
               }}
             >
               <div 
-                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
                 style={{ background: problem.gradient }}
               >
-                <problem.icon className="h-8 w-8 text-white" />
+                <problem.icon className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-2">
                 {problem.title}
               </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 {problem.description}
               </p>
             </div>
@@ -58,7 +64,7 @@ export const ProblemSlide: React.FC = () => {
         </div>
         
         {/* Visual emphasis */}
-        <div className="fade-up-delay-3 mt-12 flex justify-center">
+        <div className="fade-up-delay-3 mt-10 flex justify-center">
           <div 
             className="px-8 py-4 rounded-full"
             style={{

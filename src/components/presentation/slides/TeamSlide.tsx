@@ -4,14 +4,14 @@ import { User, Code, Search, Sparkles } from 'lucide-react';
 const team = [
   {
     initials: "JL",
-    role: "CEO / COO",
+    role: "Co-Founder",
     icon: User,
     description: "Business strategy & operations",
     gradient: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 40%))',
   },
   {
     initials: "PJ",
-    role: "CTO",
+    role: "Co-Founder",
     icon: Code,
     description: "Technical architecture & product",
     gradient: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',

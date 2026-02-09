@@ -6,28 +6,28 @@ const roadmapItems = [
     icon: Calendar,
     title: "Flex Worker Timetables",
     description: "Integration for gig-driven hospitality model",
-    phase: "Q4 2024",
+    phase: "Q4 2026",
     color: 'hsl(350 60% 30%)',
   },
   {
     icon: Gamepad2,
     title: "Gamification",
     description: "Monthly competitions for free subscriptions",
-    phase: "Q1 2025",
+    phase: "Q1 2027",
     color: 'hsl(25 80% 55%)',
   },
   {
     icon: Truck,
     title: "Supplier Influence",
     description: "Demand predictions to guide growers & suppliers",
-    phase: "Q2 2025",
+    phase: "Q2 2027",
     color: 'hsl(280 50% 60%)',
   },
   {
     icon: MessageSquare,
     title: "Review Analysis",
     description: "Feedelity-style sentiment analysis integration",
-    phase: "Q3 2025",
+    phase: "Q3 2027",
     color: 'hsl(160 50% 45%)',
   }
 ];

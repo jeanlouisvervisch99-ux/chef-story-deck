@@ -12,6 +12,17 @@ export const TitleSlide: React.FC = () => {
         <Sparkles className="w-24 h-24 text-accent" />
       </div>
       
+      {/* Badge */}
+      <div 
+        className="fade-up px-5 py-2 rounded-full text-sm font-semibold mb-10"
+        style={{
+          background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.12), hsl(25 80% 55% / 0.12))',
+          color: 'hsl(350 60% 30%)',
+        }}
+      >
+        Pre-Seed Deck
+      </div>
+      
       {/* Logo with glow effect */}
       <div className="fade-up flex items-center gap-6 mb-8">
         <div 
@@ -41,7 +52,7 @@ export const TitleSlide: React.FC = () => {
       
       {/* Tagline with gradient */}
       <p 
-        className="fade-up-delay-1 text-4xl font-semibold mb-12"
+        className="fade-up-delay-1 text-4xl font-semibold mb-8"
         style={{
           background: 'linear-gradient(90deg, hsl(20 15% 35%), hsl(350 30% 40%))',
           WebkitBackgroundClip: 'text',
@@ -51,40 +62,17 @@ export const TitleSlide: React.FC = () => {
         The Manual for Your Restaurant
       </p>
       
-      {/* Founders with glass card */}
-      <div 
-        className="fade-up-delay-2 px-10 py-6 rounded-2xl"
-        style={{
-          background: 'linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3))',
-          backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255,255,255,0.5)',
-          boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
-        }}
+      {/* Manifesto line */}
+      <p 
+        className="fade-up-delay-2 text-2xl italic font-medium mb-12"
+        style={{ color: 'hsl(20 10% 45%)' }}
       >
-        <span className="text-xl font-medium text-foreground">
-          Pre-Seed Pitch
-        </span>
-        <div className="flex gap-8 mt-3 text-muted-foreground">
-          <span className="flex items-center gap-2">
-            <span 
-              className="w-2 h-2 rounded-full"
-              style={{ background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))' }}
-            />
-            JL — CEO/COO
-          </span>
-          <span className="flex items-center gap-2">
-            <span 
-              className="w-2 h-2 rounded-full"
-              style={{ background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))' }}
-            />
-            PJ — CTO
-          </span>
-        </div>
-      </div>
+        "Because all restaurants deserve to be great."
+      </p>
       
       {/* Decorative line */}
       <div 
-        className="fade-up-delay-3 mt-16 w-32 h-1 rounded-full"
+        className="fade-up-delay-3 mt-4 w-32 h-1 rounded-full"
         style={{
           background: 'linear-gradient(90deg, hsl(350 60% 30%), hsl(25 80% 55%))',
         }}

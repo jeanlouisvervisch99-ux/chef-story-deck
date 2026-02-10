@@ -1,10 +1,10 @@
 import React from 'react';
-import { TrendingUp, MapPin, Info, Building2 } from 'lucide-react';
+import { TrendingUp, MapPin, Info, Building2, Calculator } from 'lucide-react';
 
 const marketData = [
-  { label: 'TAM', value: '20K+', description: 'Belgium restaurants (NACE 56.10)', percent: 100 },
-  { label: 'SAM', value: '12K', description: '60% addressable', percent: 60 },
-  { label: 'SOM', value: '1K', description: '5% target', percent: 8 },
+  { label: 'TAM', value: '25K', description: 'Belgium restaurants (NACE 56.10)', percent: 100 },
+  { label: 'SAM', value: '15K', description: '60% addressable', percent: 60 },
+  { label: 'SOM', value: '1,250', description: '5% market share target', percent: 5 },
 ];
 
 export const MarketSlide: React.FC = () => {
@@ -85,21 +85,20 @@ export const MarketSlide: React.FC = () => {
             >
               <Info className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
               <div className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">NACE 56.10</span> — "Restaurants and mobile food service activities" covers 20K+ registered establishments in Belgium.
+                <span className="font-semibold text-foreground">NACE 56.10</span> — "Restaurants and mobile food service activities" — 25K registered establishments in Belgium (conservative estimate from 25K–28K range).
               </div>
             </div>
           </div>
           
-          {/* Right: Revenue target */}
+          {/* Right: The Math */}
           <div className="flex-1 fade-up-delay-2">
             <div 
-              className="p-8 rounded-3xl relative overflow-hidden text-center"
+              className="p-8 rounded-3xl relative overflow-hidden text-center mb-5"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
                 boxShadow: '0 30px 80px rgba(122, 30, 45, 0.35)',
               }}
             >
-              {/* Shimmer effect */}
               <div 
                 className="absolute inset-0 shimmer opacity-10"
                 style={{
@@ -109,14 +108,14 @@ export const MarketSlide: React.FC = () => {
               
               <div className="relative z-10">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <TrendingUp className="w-5 h-5 text-white/80" />
-                  <span className="text-lg font-medium text-white/80">Target ARR</span>
+                  <Calculator className="w-5 h-5 text-white/80" />
+                  <span className="text-lg font-medium text-white/80">The Math</span>
                 </div>
                 <div 
-                  className="text-6xl font-black text-white mb-3"
+                  className="text-5xl font-black text-white mb-3"
                   style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}
                 >
-                  €4-5M
+                  €2.5M ARR
                 </div>
                 <div 
                   className="inline-block px-5 py-2 rounded-full"
@@ -125,35 +124,44 @@ export const MarketSlide: React.FC = () => {
                     backdropFilter: 'blur(10px)',
                   }}
                 >
-                  <span className="text-white/90 text-sm">1,000 restaurants × €399/month</span>
+                  <span className="text-white/90 text-sm">1,250 restaurants × €169/mo</span>
                 </div>
               </div>
             </div>
             
+            {/* MRR breakdown */}
             <div 
-              className="mt-5 p-4 rounded-2xl text-center"
+              className="p-5 rounded-2xl mb-4"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.5)',
               }}
             >
-              <span className="text-muted-foreground text-sm">With procurement & payment fees:</span>
-              <p 
-                className="text-xl font-bold mt-1"
-                style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                €6-8M potential
-              </p>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-muted-foreground text-sm">Monthly Recurring Revenue</span>
+                <span 
+                  className="text-xl font-bold"
+                  style={{
+                    background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  €211K
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-foreground">
+                  With module expansion → clear path to €3M+ ARR
+                </span>
+              </div>
             </div>
             
             {/* Future expansion */}
             <div 
-              className="mt-4 p-4 rounded-xl flex items-center gap-3"
+              className="p-4 rounded-xl flex items-center gap-3"
               style={{
                 background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.1), hsl(280 40% 50% / 0.1))',
                 border: '1px solid hsl(280 50% 60% / 0.2)',

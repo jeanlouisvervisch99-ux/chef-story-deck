@@ -1,5 +1,12 @@
 import React from 'react';
-import { ChefHat, Mail, ArrowRight, Sparkles } from 'lucide-react';
+import { ChefHat, Mail, ArrowRight, Sparkles, Target, Users, Rocket, TrendingUp, Heart } from 'lucide-react';
+
+const milestones = [
+  { icon: Rocket, text: "Launch MVP", color: 'hsl(350 60% 30%)' },
+  { icon: Users, text: "First 50 restaurants", color: 'hsl(25 80% 55%)' },
+  { icon: TrendingUp, text: "Feature expansion", color: 'hsl(280 50% 60%)' },
+  { icon: Target, text: "Belgium market leadership", color: 'hsl(160 50% 45%)' },
+];
 
 export const ClosingSlide: React.FC = () => {
   return (
@@ -12,20 +19,20 @@ export const ClosingSlide: React.FC = () => {
         <Sparkles className="w-28 h-28 text-accent" />
       </div>
       
-      {/* Logo with enhanced styling */}
-      <div className="fade-up flex items-center gap-6 mb-8">
+      {/* Logo */}
+      <div className="fade-up flex items-center gap-5 mb-6">
         <div 
-          className="p-6 rounded-3xl relative"
+          className="p-5 rounded-3xl relative"
           style={{
             background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
             boxShadow: '0 25px 70px rgba(122, 30, 45, 0.4)',
           }}
         >
-          <ChefHat className="h-14 w-14 text-white" />
+          <ChefHat className="h-12 w-12 text-white" />
           <div className="absolute inset-0 rounded-3xl animate-pulse-glow opacity-40" />
         </div>
         <h1 
-          className="text-8xl font-black tracking-tight"
+          className="text-7xl font-black tracking-tight"
           style={{
             background: 'linear-gradient(135deg, hsl(350 60% 25%), hsl(350 55% 40%))',
             WebkitBackgroundClip: 'text',
@@ -36,70 +43,63 @@ export const ClosingSlide: React.FC = () => {
         </h1>
       </div>
       
-      <p 
-        className="fade-up-delay-1 text-4xl font-semibold mb-10"
-        style={{
-          background: 'linear-gradient(90deg, hsl(20 15% 35%), hsl(350 30% 40%))',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-        }}
-      >
-        The Manual for Your Restaurant
-      </p>
-      
-      {/* Contact card */}
+      {/* Entourage CTA */}
       <div 
-        className="fade-up-delay-2 flex items-center gap-4 px-10 py-5 rounded-2xl mb-10"
+        className="fade-up-delay-1 flex items-center gap-3 px-8 py-4 rounded-2xl mb-6"
         style={{
           background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
           boxShadow: '0 20px 60px rgba(122, 30, 45, 0.35)',
         }}
       >
-        <Mail className="h-6 w-6 text-white" />
-        <span className="text-xl font-semibold text-white">contact@chef.app</span>
+        <Heart className="w-6 h-6 text-white/90" />
+        <span className="text-2xl font-bold text-white">Let us be part of the Entourage Family</span>
       </div>
       
-      {/* CTA */}
+      {/* Milestones row */}
+      <div className="fade-up-delay-2 flex gap-4 mb-8">
+        {milestones.map((milestone, index) => (
+          <div 
+            key={milestone.text}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-full"
+            style={{
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255,255,255,0.5)',
+            }}
+          >
+            <div 
+              className="w-8 h-8 rounded-lg flex items-center justify-center"
+              style={{ background: milestone.color }}
+            >
+              <milestone.icon className="w-4 h-4 text-white" />
+            </div>
+            <span className="text-sm font-semibold text-foreground">{milestone.text}</span>
+            {index < milestones.length - 1 && (
+              <ArrowRight className="w-4 h-4 text-muted-foreground ml-1" />
+            )}
+          </div>
+        ))}
+      </div>
+      
+      {/* Contact */}
       <div 
-        className="fade-up-delay-3 flex items-center gap-3 px-8 py-4 rounded-full"
+        className="fade-up-delay-3 flex items-center gap-3 px-8 py-4 rounded-full mb-6"
         style={{
           background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
           backdropFilter: 'blur(20px)',
           border: '1px solid rgba(255,255,255,0.5)',
         }}
       >
-        <span 
-          className="text-2xl font-semibold"
-          style={{
-            background: 'linear-gradient(135deg, hsl(20 15% 20%), hsl(350 60% 30%))',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-        >
-          Let's cook together
-        </span>
-        <div 
-          className="w-10 h-10 rounded-full flex items-center justify-center"
-          style={{
-            background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
-          }}
-        >
-          <ArrowRight className="h-5 w-5 text-white" />
-        </div>
+        <Mail className="h-5 w-5 text-primary" />
+        <span className="text-lg font-semibold text-foreground">contact@chef.app</span>
       </div>
       
-      {/* Navigation hint */}
-      <div className="fade-up-delay-3 mt-16">
-        <p 
-          className="text-sm px-6 py-3 rounded-full"
-          style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3))',
-            color: 'hsl(20 10% 45%)',
-          }}
-        >
-          Use arrow keys to navigate • Press Esc for slide overview
-        </p>
-      </div>
+      <p 
+        className="fade-up-delay-3 text-xl italic font-medium"
+        style={{ color: 'hsl(20 10% 45%)' }}
+      >
+        "Because all restaurants deserve to be great."
+      </p>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { AnimatedBackground } from './AnimatedBackground';
 import { TitleSlide } from './slides/TitleSlide';
 import { ProblemSlide } from './slides/ProblemSlide';
 import { SolutionSlide } from './slides/SolutionSlide';
-import { VisionSlide } from './slides/VisionSlide';
+import { WhyNowSlide } from './slides/WhyNowSlide';
 import { FeaturesSlide } from './slides/FeaturesSlide';
 import { CompetitiveSlide } from './slides/CompetitiveSlide';
 import { BusinessModelSlide } from './slides/BusinessModelSlide';
@@ -15,24 +15,22 @@ import { MarketSlide } from './slides/MarketSlide';
 import { ValueSlide } from './slides/ValueSlide';
 import { RoadmapSlide } from './slides/RoadmapSlide';
 import { TeamSlide } from './slides/TeamSlide';
-import { AskSlide } from './slides/AskSlide';
 import { ClosingSlide } from './slides/ClosingSlide';
 
 const slides = [
   { id: 1, component: TitleSlide, title: 'Title' },
   { id: 2, component: ProblemSlide, title: 'Problem' },
   { id: 3, component: SolutionSlide, title: 'Solution' },
-  { id: 4, component: VisionSlide, title: 'Vision' },
+  { id: 4, component: WhyNowSlide, title: 'Why 2026?' },
   { id: 5, component: FeaturesSlide, title: 'Features' },
-  { id: 6, component: CompetitiveSlide, title: 'Competitive' },
+  { id: 6, component: CompetitiveSlide, title: 'Competitive Moat' },
   { id: 7, component: BusinessModelSlide, title: 'Business Model' },
   { id: 8, component: ICPSlide, title: 'ICP & GTM' },
   { id: 9, component: MarketSlide, title: 'Market Size' },
   { id: 10, component: ValueSlide, title: 'Value Creation' },
   { id: 11, component: RoadmapSlide, title: 'Roadmap' },
   { id: 12, component: TeamSlide, title: 'Team' },
-  { id: 13, component: AskSlide, title: 'The Ask' },
-  { id: 14, component: ClosingSlide, title: 'Closing' },
+  { id: 13, component: ClosingSlide, title: 'The Ask' },
 ];
 
 export const Presentation: React.FC = () => {
@@ -93,7 +91,6 @@ export const Presentation: React.FC = () => {
 
   return (
     <div className="slide-container bg-background">
-      {/* Animated background */}
       <AnimatedBackground />
       
       {showOverview ? (

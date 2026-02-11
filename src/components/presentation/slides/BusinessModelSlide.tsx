@@ -71,10 +71,7 @@ export const BusinessModelSlide: React.FC = () => {
                   <span className="text-white/70">/mo</span>
                 </div>
                 <p className="text-sm text-white/80 mb-3">Appetizer + 2 modules</p>
-                <div className="flex items-center gap-2 text-white/70 text-sm">
-                  <Plus className="w-4 h-4" />
-                  <span>€50/module add-on</span>
-                </div>
+                
               </div>
             </div>
             

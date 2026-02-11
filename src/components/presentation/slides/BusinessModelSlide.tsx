@@ -50,7 +50,7 @@ export const BusinessModelSlide: React.FC = () => {
               background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
               boxShadow: '0 20px 60px rgba(122, 30, 45, 0.3)'
             }}>
-                <div className="absolute top-3 right-4 px-4 py-1.5 rounded-full z-10 flex items-center gap-2" style={{
+                <div className="absolute bottom-4 left-4 px-4 py-1.5 rounded-full z-10 flex items-center gap-2" style={{
                 background: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',
                 boxShadow: '0 4px 15px rgba(217, 119, 87, 0.4)'
               }}>

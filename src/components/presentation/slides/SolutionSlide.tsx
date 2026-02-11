@@ -6,6 +6,7 @@ const features = [
   "AI-powered menu analysis",
   "Real-time P&L forecasting",
   "Integrated procurement",
+  "Workforce optimization",
 ];
 
 export const SolutionSlide: React.FC = () => {
@@ -156,6 +157,21 @@ export const SolutionSlide: React.FC = () => {
                   <div>
                     <div className="font-bold text-foreground text-sm">Interchange Revenue</div>
                     <div className="text-xs text-muted-foreground">Earn on every payment processed</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 p-2.5 rounded-xl" style={{
+                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
+                }}>
+                  <div 
+                    className="w-9 h-9 rounded-lg flex items-center justify-center"
+                    style={{ background: 'hsl(350 45% 40%)' }}
+                  >
+                    <Banknote className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground text-sm">Working Capital</div>
+                    <div className="text-xs text-muted-foreground">Finance procurement needs for restaurants</div>
                   </div>
                 </div>
               </div>

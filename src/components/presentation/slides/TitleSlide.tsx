@@ -67,7 +67,7 @@ export const TitleSlide: React.FC = () => {
         className="fade-up-delay-2 text-2xl italic font-medium mb-12"
         style={{ color: 'hsl(20 10% 45%)' }}
       >
-        "Because all restaurants deserve to be great."
+        "Because every restaurant deserves a chance to be Michelin."
       </p>
       
       {/* Decorative line */}

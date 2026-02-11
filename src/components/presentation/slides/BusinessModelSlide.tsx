@@ -7,6 +7,7 @@ const modules = [
   "Staff Planning",
   "Recipe Database",
   "Analytics & P&L",
+  "Working Capital",
 ];
 
 export const BusinessModelSlide: React.FC = () => {
@@ -66,7 +67,7 @@ export const BusinessModelSlide: React.FC = () => {
                 }}
               >
                 <div 
-                  className="absolute -top-4 right-4 px-4 py-1.5 rounded-full z-10 flex items-center gap-2"
+                  className="absolute top-3 right-4 px-4 py-1.5 rounded-full z-10 flex items-center gap-2"
                   style={{
                     background: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',
                     boxShadow: '0 4px 15px rgba(217, 119, 87, 0.4)',

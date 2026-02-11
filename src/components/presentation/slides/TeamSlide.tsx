@@ -9,6 +9,7 @@ const team = [
     role: "Co-Founder",
     title: "The Business Architect",
     photo: jeanLouisPhoto,
+    current: "Currently at Finch Capital",
     education: "MS Economics @ KU Leuven & Global Commerce @ UVA/Esade",
     link: "https://www.linkedin.com/in/jean-louis-vervisch-083218219/",
     linkLabel: "LinkedIn",
@@ -19,9 +20,10 @@ const team = [
     role: "Co-Founder",
     title: "The Systems Thinker",
     photo: pieterJanPhoto,
+    current: "Currently at Amplifino",
     education: "MS Civil Engineering & Philosophy @ KU Leuven",
     link: "https://jobs.elindus.be/meet-the-team-amplifino",
-    linkLabel: "Portfolio",
+    linkLabel: "Team Page",
     gradient: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',
   }
 ];
@@ -82,6 +84,9 @@ export const TeamSlide: React.FC = () => {
                   </div>
                 </div>
                 
+                <div className="flex items-start gap-2 mb-2 text-sm font-semibold" style={{ color: 'hsl(25 80% 55%)' }}>
+                  <span>{member.current}</span>
+                </div>
                 <div className="flex items-start gap-2 mb-4 text-sm text-muted-foreground">
                   <GraduationCap className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
                   <span>{member.education}</span>

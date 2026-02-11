@@ -4,7 +4,7 @@ import { Check, X, ChefHat, Sparkles } from 'lucide-react';
 const features = [
   { name: 'Michelin-grade recipe DB', toast: false, square: false, allo: false, chef: true },
   { name: 'Automated procurement', toast: false, square: false, allo: true, chef: true },
-  { name: 'AI invoice extraction', toast: false, square: false, allo: false, chef: true },
+  { name: 'Workforce optimization', toast: false, square: false, allo: false, chef: true },
   { name: 'Working capital financing', toast: false, square: false, allo: false, chef: true },
   { name: 'Predictive P&L', toast: false, square: false, allo: false, chef: true },
   { name: 'Menu cost engineering', toast: false, square: false, allo: false, chef: true },

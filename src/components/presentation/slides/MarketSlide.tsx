@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, MapPin, Info, Building2, Calculator } from 'lucide-react';
+import { TrendingUp, MapPin, Info, Globe, Calculator } from 'lucide-react';
 
 const marketData = [
   { label: 'TAM', value: '25K', description: 'Belgium restaurants (NACE 56.10)', percent: 100 },
@@ -138,7 +138,7 @@ export const MarketSlide: React.FC = () => {
                 border: '1px solid rgba(255,255,255,0.5)',
               }}
             >
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between mb-1">
                 <span className="text-muted-foreground text-sm">Monthly Recurring Revenue</span>
                 <span 
                   className="text-xl font-bold"
@@ -151,6 +151,10 @@ export const MarketSlide: React.FC = () => {
                   €211K
                 </span>
               </div>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-muted-foreground text-sm">ACV per restaurant</span>
+                <span className="text-sm font-bold text-foreground">€169 × 12 = €2,028/yr</span>
+              </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-foreground">
@@ -159,18 +163,36 @@ export const MarketSlide: React.FC = () => {
               </div>
             </div>
             
-            {/* Future expansion */}
+            {/* Future Country Expansion */}
             <div 
-              className="p-4 rounded-xl flex items-center gap-3"
+              className="p-4 rounded-xl"
               style={{
                 background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.1), hsl(280 40% 50% / 0.1))',
                 border: '1px solid hsl(280 50% 60% / 0.2)',
               }}
             >
-              <Building2 className="w-5 h-5 text-purple-600 flex-shrink-0" />
-              <span className="text-sm font-medium text-foreground">
-                Future: Expand to hotel industry
-              </span>
+              <div className="flex items-center gap-2 mb-3">
+                <Globe className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                <span className="text-sm font-bold text-foreground">Future Country Expansion</span>
+              </div>
+              <div className="flex gap-2">
+                {[
+                  { flag: '🇳🇱', code: 'NL' },
+                  { flag: '🇫🇷', code: 'FR' },
+                  { flag: '🇩🇪', code: 'DE' },
+                ].map((country) => (
+                  <div 
+                    key={country.code}
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium"
+                    style={{
+                      background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.15), hsl(280 40% 50% / 0.15))',
+                    }}
+                  >
+                    <span>{country.flag}</span>
+                    <span className="text-foreground">{country.code}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

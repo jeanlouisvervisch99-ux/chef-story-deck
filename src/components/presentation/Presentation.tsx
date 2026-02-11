@@ -6,7 +6,6 @@ import { AnimatedBackground } from './AnimatedBackground';
 import { TitleSlide } from './slides/TitleSlide';
 import { ProblemSlide } from './slides/ProblemSlide';
 import { SolutionSlide } from './slides/SolutionSlide';
-import { WhyNowSlide } from './slides/WhyNowSlide';
 import { FeaturesSlide } from './slides/FeaturesSlide';
 import { CompetitiveSlide } from './slides/CompetitiveSlide';
 import { BusinessModelSlide } from './slides/BusinessModelSlide';
@@ -20,17 +19,16 @@ import { ClosingSlide } from './slides/ClosingSlide';
 const slides = [
   { id: 1, component: TitleSlide, title: 'Title' },
   { id: 2, component: ProblemSlide, title: 'Problem' },
-  { id: 3, component: SolutionSlide, title: 'Solution' },
-  { id: 4, component: WhyNowSlide, title: 'Why 2026?' },
-  { id: 5, component: FeaturesSlide, title: 'Features' },
-  { id: 6, component: CompetitiveSlide, title: 'Competitive Moat' },
-  { id: 7, component: BusinessModelSlide, title: 'Business Model' },
-  { id: 8, component: ICPSlide, title: 'ICP & GTM' },
-  { id: 9, component: MarketSlide, title: 'Market Size' },
-  { id: 10, component: ValueSlide, title: 'Value Creation' },
-  { id: 11, component: RoadmapSlide, title: 'Roadmap' },
-  { id: 12, component: TeamSlide, title: 'Team' },
-  { id: 13, component: ClosingSlide, title: 'The Ask' },
+  { id: 3, component: SolutionSlide, title: 'Solution & Why Now' },
+  { id: 4, component: FeaturesSlide, title: 'Product Features' },
+  { id: 5, component: CompetitiveSlide, title: 'Competitive Moat' },
+  { id: 6, component: BusinessModelSlide, title: 'Business Model' },
+  { id: 7, component: ICPSlide, title: 'ICP & GTM' },
+  { id: 8, component: MarketSlide, title: 'Market Size' },
+  { id: 9, component: ValueSlide, title: 'Value Creation' },
+  { id: 10, component: RoadmapSlide, title: 'Roadmap' },
+  { id: 11, component: TeamSlide, title: 'Team' },
+  { id: 12, component: ClosingSlide, title: 'The Ask' },
 ];
 
 export const Presentation: React.FC = () => {

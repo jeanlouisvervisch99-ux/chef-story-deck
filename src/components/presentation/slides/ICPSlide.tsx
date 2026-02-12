@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Store, Utensils, Target } from 'lucide-react';
+import { Building2, Store, Utensils, Target, Gift, ArrowRight } from 'lucide-react';
 
 const tiers = [
   {
@@ -35,12 +35,12 @@ export const ICPSlide: React.FC = () => {
   return (
     <div className="slide">
       <h2 className="slide-title fade-up">ICP & Go-to-Market</h2>
-      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-10">
+      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-8">
         Tiered approach for maximum market penetration
       </p>
       
       <div className="slide-content">
-        <div className="flex gap-8">
+        <div className="flex gap-6">
           {tiers.map((tier, index) => (
             <div
               key={tier.tier}
@@ -48,7 +48,7 @@ export const ICPSlide: React.FC = () => {
               style={{ animationDelay: `${0.2 + index * 0.15}s`, opacity: 0 }}
             >
               <div 
-                className="h-full p-8 rounded-3xl relative overflow-hidden"
+                className="h-full p-6 rounded-3xl relative overflow-hidden"
                 style={{
                   background: 'linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                   backdropFilter: 'blur(20px)',
@@ -64,7 +64,7 @@ export const ICPSlide: React.FC = () => {
                 
                 {/* Priority badge */}
                 <div 
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-6"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4"
                   style={{
                     background: `${tier.color}15`,
                   }}
@@ -75,48 +75,66 @@ export const ICPSlide: React.FC = () => {
                   </span>
                 </div>
                 
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-3 mb-3">
                   <div 
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center"
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center"
                     style={{ background: tier.color }}
                   >
-                    <tier.icon className="w-7 h-7 text-white" />
+                    <tier.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-muted-foreground">{tier.tier}</div>
-                    <div className="text-xl font-bold text-foreground">{tier.title}</div>
+                    <div className="text-xs font-semibold text-muted-foreground">{tier.tier}</div>
+                    <div className="text-lg font-bold text-foreground">{tier.title}</div>
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground text-sm mb-3 leading-relaxed">
                   {tier.description}
                 </p>
                 
                 <div 
-                  className="px-4 py-3 rounded-xl"
+                  className="px-3 py-2 rounded-xl"
                   style={{
                     background: 'linear-gradient(135deg, hsl(35 40% 96%), hsl(35 50% 92%))',
                   }}
                 >
-                  <span className="text-sm text-muted-foreground">Examples: </span>
-                  <span className="text-sm font-medium text-foreground">{tier.examples}</span>
+                  <span className="text-xs text-muted-foreground">Examples: </span>
+                  <span className="text-xs font-medium text-foreground">{tier.examples}</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
         
-        {/* GTM strategy highlight */}
-        <div className="fade-up-delay-3 mt-10 flex justify-center">
+        {/* GTM strategy + Free trial */}
+        <div className="fade-up-delay-3 mt-8 flex justify-center gap-4">
           <div 
-            className="px-8 py-4 rounded-2xl flex items-center gap-4"
+            className="px-6 py-4 rounded-2xl flex items-center gap-4"
             style={{
               background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
               boxShadow: '0 15px 50px rgba(122, 30, 45, 0.25)',
             }}
           >
-            <div className="text-white font-bold text-lg">Strategy:</div>
-            <div className="text-white/90">Land with groups → Expand to independents → Scale across verticals</div>
+            <div className="text-white font-bold text-base">Strategy:</div>
+            <div className="text-white/90 text-sm">Land with groups → Expand to independents → Scale across verticals</div>
+          </div>
+          
+          <div 
+            className="px-6 py-4 rounded-2xl flex items-center gap-3"
+            style={{
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255,255,255,0.6)',
+              boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
+            }}
+          >
+            <Gift className="w-5 h-5 text-primary" />
+            <div>
+              <div className="font-bold text-foreground text-sm">1-month free trial</div>
+              <div className="text-xs text-muted-foreground flex items-center gap-1">
+                Auto-converts to paid <ArrowRight className="w-3 h-3" /> no friction
+              </div>
+            </div>
           </div>
         </div>
       </div>

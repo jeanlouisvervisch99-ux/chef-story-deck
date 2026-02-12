@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, MapPin, Info, Globe, Calculator } from 'lucide-react';
+import { TrendingUp, MapPin, Info, Globe, Calculator, Hotel } from 'lucide-react';
 
 const marketData = [
   { label: 'TAM', value: '25K', description: 'Belgium restaurants (NACE 56.10)', percent: 100 },
@@ -90,10 +90,10 @@ export const MarketSlide: React.FC = () => {
             </div>
           </div>
           
-          {/* Right: The Math */}
+          {/* Right: The Math + Expansion */}
           <div className="flex-1 fade-up-delay-2">
             <div 
-              className="p-8 rounded-3xl relative overflow-hidden text-center mb-5"
+              className="p-8 rounded-3xl relative overflow-hidden text-center mb-4"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
                 boxShadow: '0 30px 80px rgba(122, 30, 45, 0.35)',
@@ -131,7 +131,7 @@ export const MarketSlide: React.FC = () => {
             
             {/* MRR breakdown */}
             <div 
-              className="p-5 rounded-2xl mb-4"
+              className="p-4 rounded-2xl mb-4"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
                 backdropFilter: 'blur(20px)',
@@ -163,35 +163,55 @@ export const MarketSlide: React.FC = () => {
               </div>
             </div>
             
-            {/* Future Country Expansion */}
-            <div 
-              className="p-4 rounded-xl"
-              style={{
-                background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.1), hsl(280 40% 50% / 0.1))',
-                border: '1px solid hsl(280 50% 60% / 0.2)',
-              }}
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <Globe className="w-5 h-5 text-purple-600 flex-shrink-0" />
-                <span className="text-sm font-bold text-foreground">Future Country Expansion</span>
+            {/* Expansion sections side by side */}
+            <div className="grid grid-cols-2 gap-3">
+              {/* Future Country Expansion */}
+              <div 
+                className="p-3 rounded-xl"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.1), hsl(280 40% 50% / 0.1))',
+                  border: '1px solid hsl(280 50% 60% / 0.2)',
+                }}
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <Globe className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                  <span className="text-xs font-bold text-foreground">Country Expansion</span>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    { flag: '🇳🇱', code: 'NL' },
+                    { flag: '🇫🇷', code: 'FR' },
+                    { flag: '🇩🇪', code: 'DE' },
+                  ].map((country) => (
+                    <div 
+                      key={country.code}
+                      className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
+                      style={{
+                        background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.15), hsl(280 40% 50% / 0.15))',
+                      }}
+                    >
+                      <span>{country.flag}</span>
+                      <span className="text-foreground">{country.code}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="flex gap-2">
-                {[
-                  { flag: '🇳🇱', code: 'NL' },
-                  { flag: '🇫🇷', code: 'FR' },
-                  { flag: '🇩🇪', code: 'DE' },
-                ].map((country) => (
-                  <div 
-                    key={country.code}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium"
-                    style={{
-                      background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.15), hsl(280 40% 50% / 0.15))',
-                    }}
-                  >
-                    <span>{country.flag}</span>
-                    <span className="text-foreground">{country.code}</span>
-                  </div>
-                ))}
+
+              {/* Hotel Modules Expansion */}
+              <div 
+                className="p-3 rounded-xl"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(25 80% 55% / 0.1), hsl(38 85% 50% / 0.1))',
+                  border: '1px solid hsl(25 80% 55% / 0.2)',
+                }}
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <Hotel className="w-4 h-4 flex-shrink-0" style={{ color: 'hsl(25 80% 55%)' }} />
+                  <span className="text-xs font-bold text-foreground">Hotel Modules</span>
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Expand into hotel F&B operations — banquets, room service, multi-outlet management
+                </p>
               </div>
             </div>
           </div>

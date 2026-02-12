@@ -15,9 +15,9 @@ export const SolutionSlide: React.FC = () => {
       <h2 className="slide-title fade-up">The Solution — And Why Now</h2>
       
       <div className="slide-content">
-        <div className="flex gap-10 items-start">
+        <div className="grid grid-cols-2 gap-12 items-start">
           {/* Left: Solution */}
-          <div className="flex-1 fade-up-delay-1">
+          <div className="fade-up-delay-1 flex flex-col h-full">
             <div 
               className="text-3xl font-bold leading-tight mb-5"
               style={{
@@ -41,7 +41,7 @@ export const SolutionSlide: React.FC = () => {
                   style={{ animationDelay: `${0.4 + index * 0.08}s`, opacity: 0 }}
                 >
                   <div 
-                    className="w-6 h-6 rounded-full flex items-center justify-center"
+                    className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
                       background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
                     }}
@@ -55,7 +55,7 @@ export const SolutionSlide: React.FC = () => {
 
             {/* AI inflection callout */}
             <div 
-              className="fade-up-delay-2 p-5 rounded-2xl relative overflow-hidden"
+              className="fade-up-delay-2 p-5 rounded-2xl relative overflow-hidden mt-auto"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
                 boxShadow: '0 20px 60px rgba(122, 30, 45, 0.3)',
@@ -82,14 +82,14 @@ export const SolutionSlide: React.FC = () => {
           </div>
           
           {/* Right: Why Now + Embedded Finance */}
-          <div className="flex-1 fade-up-delay-2">
-            <div className="flex items-center gap-3 mb-2">
+          <div className="fade-up-delay-2 flex flex-col h-full">
+            <div className="flex items-center gap-3 mb-3">
               <Zap className="w-5 h-5 text-accent" />
-              <span className="text-muted-foreground font-semibold">Why 2026?</span>
+              <span className="text-muted-foreground font-semibold text-lg">Why 2026?</span>
             </div>
             
             <div 
-              className="p-5 rounded-2xl mb-5"
+              className="p-5 rounded-2xl mb-6"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
@@ -116,7 +116,7 @@ export const SolutionSlide: React.FC = () => {
             </div>
             
             <div 
-              className="p-5 rounded-2xl mb-4"
+              className="p-5 rounded-2xl flex-1"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
@@ -134,7 +134,7 @@ export const SolutionSlide: React.FC = () => {
                   background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
                 }}>
                   <div 
-                    className="w-9 h-9 rounded-lg flex items-center justify-center"
+                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
                     style={{ background: 'hsl(350 60% 30%)' }}
                   >
                     <Banknote className="w-4 h-4 text-white" />
@@ -149,7 +149,7 @@ export const SolutionSlide: React.FC = () => {
                   background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
                 }}>
                   <div 
-                    className="w-9 h-9 rounded-lg flex items-center justify-center"
+                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
                     style={{ background: 'hsl(25 80% 55%)' }}
                   >
                     <Shield className="w-4 h-4 text-white" />
@@ -164,7 +164,7 @@ export const SolutionSlide: React.FC = () => {
                   background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
                 }}>
                   <div 
-                    className="w-9 h-9 rounded-lg flex items-center justify-center"
+                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
                     style={{ background: 'hsl(350 45% 40%)' }}
                   >
                     <Banknote className="w-4 h-4 text-white" />

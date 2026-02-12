@@ -1,36 +1,48 @@
 import React from 'react';
-import { Check, X, ChefHat, Sparkles } from 'lucide-react';
+import { Check, X, ChefHat, Sparkles, Minus } from 'lucide-react';
 
 const features = [
-  { name: 'Michelin-grade recipe DB', toast: false, square: false, allo: false, chef: true },
-  { name: 'Automated procurement', toast: false, square: false, allo: true, chef: true },
-  { name: 'Workforce optimization', toast: false, square: false, allo: false, chef: true },
-  { name: 'Working capital financing', toast: false, square: false, allo: false, chef: true },
-  { name: 'Predictive P&L', toast: false, square: false, allo: false, chef: true },
-  { name: 'Menu cost engineering', toast: false, square: false, allo: false, chef: true },
-  { name: 'POS integration', toast: true, square: true, allo: true, chef: true },
-  { name: 'Multi-location mgmt', toast: true, square: true, allo: false, chef: true },
+  { name: 'Michelin-grade recipe DB',   lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, chef: true },
+  { name: 'Automated procurement',      lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, chef: true },
+  { name: 'Working capital financing',   lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, chef: true },
+  { name: 'Menu cost engineering',       lightspeed: false, toast: false, allo: false, yourbi: 'partial', sous: false, chef: true },
+  { name: 'Predictive P&L',             lightspeed: false, toast: false, allo: false, yourbi: true,  sous: false, chef: true },
+  { name: 'Workforce optimization',     lightspeed: false, toast: false, allo: false, yourbi: 'partial', sous: false, chef: true },
+  { name: 'AI-powered insights',        lightspeed: false, toast: true,  allo: false, yourbi: true,  sous: false, chef: true },
+  { name: 'POS integration',            lightspeed: true,  toast: true,  allo: true,  yourbi: false, sous: false, chef: true },
+  { name: 'Inventory management',       lightspeed: true,  toast: true,  allo: true,  yourbi: false, sous: false, chef: true },
+  { name: 'Multi-location mgmt',        lightspeed: true,  toast: true,  allo: false, yourbi: true,  sous: false, chef: true },
+  { name: 'Online ordering',            lightspeed: false, toast: true,  allo: true,  yourbi: false, sous: true,  chef: true },
+  { name: 'Loyalty & marketing',        lightspeed: false, toast: true,  allo: false, yourbi: false, sous: true,  chef: true },
+  { name: 'Embedded finance',           lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, chef: true },
 ];
 
-const Cell: React.FC<{ value: boolean; highlight?: boolean }> = ({ value, highlight }) => (
-  <td className="px-4 py-3 text-center">
-    {value ? (
+const Cell: React.FC<{ value: boolean | string; highlight?: boolean }> = ({ value, highlight }) => (
+  <td className="px-2 py-2 text-center">
+    {value === 'partial' ? (
       <div 
-        className="w-7 h-7 rounded-full flex items-center justify-center mx-auto"
+        className="w-6 h-6 rounded-full flex items-center justify-center mx-auto"
+        style={{ background: 'hsl(38 85% 50% / 0.15)' }}
+      >
+        <Minus className="w-3.5 h-3.5 text-foreground/60" />
+      </div>
+    ) : value ? (
+      <div 
+        className="w-6 h-6 rounded-full flex items-center justify-center mx-auto"
         style={{ 
           background: highlight 
             ? 'linear-gradient(135deg, hsl(160 50% 45%), hsl(160 50% 55%))' 
             : 'hsl(160 50% 45% / 0.15)' 
         }}
       >
-        <Check className={`w-4 h-4 ${highlight ? 'text-white' : 'text-foreground'}`} />
+        <Check className={`w-3.5 h-3.5 ${highlight ? 'text-white' : 'text-foreground'}`} />
       </div>
     ) : (
       <div 
-        className="w-7 h-7 rounded-full flex items-center justify-center mx-auto"
+        className="w-6 h-6 rounded-full flex items-center justify-center mx-auto"
         style={{ background: 'hsl(350 40% 50% / 0.1)' }}
       >
-        <X className="w-4 h-4 text-muted-foreground/50" />
+        <X className="w-3.5 h-3.5 text-muted-foreground/50" />
       </div>
     )}
   </td>
@@ -40,7 +52,7 @@ export const CompetitiveSlide: React.FC = () => {
   return (
     <div className="slide">
       <h2 className="slide-title fade-up">Competitive Landscape</h2>
-      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-8">
+      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-6">
         Generalists vs. <span className="font-bold text-primary">purpose-built</span>
       </p>
       
@@ -51,18 +63,45 @@ export const CompetitiveSlide: React.FC = () => {
           border: '1px solid rgba(255,255,255,0.6)',
           boxShadow: '0 15px 50px rgba(0,0,0,0.06)',
         }}>
-          <table className="w-full text-sm">
+          <table className="w-full text-xs">
             <thead>
               <tr style={{ borderBottom: '2px solid hsl(350 60% 30% / 0.15)' }}>
-                <th className="text-left px-6 py-4 font-bold text-foreground text-base">Feature</th>
-                <th className="px-4 py-4 font-semibold text-muted-foreground">Toast</th>
-                <th className="px-4 py-4 font-semibold text-muted-foreground">Square</th>
-                <th className="px-4 py-4 font-semibold text-muted-foreground">AllO</th>
-                <th className="px-4 py-4">
-                  <div className="flex items-center justify-center gap-2">
-                    <ChefHat className="w-5 h-5 text-primary" />
+                <th className="text-left px-4 py-3 font-bold text-foreground text-sm">Feature</th>
+                <th className="px-2 py-3 font-semibold text-muted-foreground">
+                  <div className="text-center">
+                    <div>Lightspeed</div>
+                    <div className="text-[10px] font-normal text-muted-foreground/60">BE/Global</div>
+                  </div>
+                </th>
+                <th className="px-2 py-3 font-semibold text-muted-foreground">
+                  <div className="text-center">
+                    <div>Toast</div>
+                    <div className="text-[10px] font-normal text-muted-foreground/60">UK & US</div>
+                  </div>
+                </th>
+                <th className="px-2 py-3 font-semibold text-muted-foreground">
+                  <div className="text-center">
+                    <div>AllO</div>
+                    <div className="text-[10px] font-normal text-muted-foreground/60">Germany</div>
+                  </div>
+                </th>
+                <th className="px-2 py-3 font-semibold text-muted-foreground">
+                  <div className="text-center">
+                    <div>YourBI</div>
+                    <div className="text-[10px] font-normal text-muted-foreground/60">Netherlands</div>
+                  </div>
+                </th>
+                <th className="px-2 py-3 font-semibold text-muted-foreground">
+                  <div className="text-center">
+                    <div>Sous</div>
+                    <div className="text-[10px] font-normal text-muted-foreground/60">Netherlands</div>
+                  </div>
+                </th>
+                <th className="px-2 py-3">
+                  <div className="flex items-center justify-center gap-1.5">
+                    <ChefHat className="w-4 h-4 text-primary" />
                     <span 
-                      className="font-bold text-base"
+                      className="font-bold text-sm"
                       style={{
                         background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
                         WebkitBackgroundClip: 'text',
@@ -81,15 +120,17 @@ export const CompetitiveSlide: React.FC = () => {
                   key={feature.name}
                   className="fade-up"
                   style={{ 
-                    animationDelay: `${0.3 + index * 0.06}s`, 
+                    animationDelay: `${0.3 + index * 0.04}s`, 
                     opacity: 0,
                     borderBottom: index < features.length - 1 ? '1px solid hsl(35 30% 90%)' : 'none',
                   }}
                 >
-                  <td className="px-6 py-3 font-medium text-foreground">{feature.name}</td>
+                  <td className="px-4 py-2 font-medium text-foreground text-xs">{feature.name}</td>
+                  <Cell value={feature.lightspeed} />
                   <Cell value={feature.toast} />
-                  <Cell value={feature.square} />
                   <Cell value={feature.allo} />
+                  <Cell value={feature.yourbi} />
+                  <Cell value={feature.sous} />
                   <Cell value={feature.chef} highlight />
                 </tr>
               ))}
@@ -98,7 +139,7 @@ export const CompetitiveSlide: React.FC = () => {
         </div>
         
         {/* Bottom callout */}
-        <div className="fade-up-delay-3 mt-8 flex justify-center gap-4">
+        <div className="fade-up-delay-3 mt-6 flex justify-center gap-4">
           <div 
             className="inline-flex items-center gap-3 px-6 py-3 rounded-full"
             style={{
@@ -106,7 +147,7 @@ export const CompetitiveSlide: React.FC = () => {
             }}
           >
             <Sparkles className="w-5 h-5 text-primary" />
-            <span className="text-lg font-medium text-foreground">
+            <span className="text-base font-medium text-foreground">
               Chef is purpose-built for the kitchen, not adapted from retail POS
             </span>
           </div>

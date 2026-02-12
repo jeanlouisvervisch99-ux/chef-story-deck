@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, FileText, BookOpen, Truck, CreditCard } from 'lucide-react';
+import { Brain, FileText, BookOpen, Truck, CreditCard, Users, Sparkles } from 'lucide-react';
 
 const features = [
   {
@@ -32,6 +32,12 @@ const features = [
     description: "Full POS integration",
     color: 'hsl(38 85% 50%)',
   },
+  {
+    icon: Users,
+    title: "Workforce Optimization",
+    description: "Smart scheduling & staff planning",
+    color: 'hsl(210 60% 50%)',
+  },
 ];
 
 export const FeaturesSlide: React.FC = () => {
@@ -43,12 +49,12 @@ export const FeaturesSlide: React.FC = () => {
       </p>
       
       <div className="slide-content">
-        <div className="grid grid-cols-5 gap-6">
+        <div className="grid grid-cols-3 gap-5">
           {features.map((feature, index) => (
             <div
               key={feature.title}
               className="fade-up group"
-              style={{ animationDelay: `${0.2 + index * 0.1}s`, opacity: 0 }}
+              style={{ animationDelay: `${0.2 + index * 0.08}s`, opacity: 0 }}
             >
               <div 
                 className="feature-card h-full flex flex-col items-center text-center transition-all"
@@ -57,12 +63,12 @@ export const FeaturesSlide: React.FC = () => {
                 }}
               >
                 <div 
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110 group-hover:rotate-3"
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 group-hover:rotate-3"
                   style={{ backgroundColor: feature.color }}
                 >
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">
+                <h3 className="text-base font-bold text-foreground mb-1.5">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -73,19 +79,35 @@ export const FeaturesSlide: React.FC = () => {
           ))}
         </div>
         
-        {/* Feature highlight */}
-        <div className="fade-up-delay-3 mt-12 flex justify-center">
+        {/* More to come + AI callout */}
+        <div className="fade-up-delay-3 mt-8 flex justify-center gap-5">
           <div 
-            className="flex items-center gap-6 px-10 py-6 rounded-2xl"
+            className="flex items-center gap-4 px-8 py-5 rounded-2xl"
             style={{
               background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
               boxShadow: '0 20px 60px rgba(122, 30, 45, 0.3)',
             }}
           >
-            <Brain className="w-10 h-10 text-white" />
+            <Brain className="w-8 h-8 text-white" />
             <div className="text-left">
-              <div className="text-white font-bold text-xl">AI learns from your data</div>
-              <div className="text-white/80">Predictions improve over time</div>
+              <div className="text-white font-bold text-lg">AI learns from your data</div>
+              <div className="text-white/80 text-sm">Predictions improve over time</div>
+            </div>
+          </div>
+          
+          <div 
+            className="flex items-center gap-3 px-6 py-5 rounded-2xl"
+            style={{
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255,255,255,0.6)',
+              boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
+            }}
+          >
+            <Sparkles className="w-6 h-6 text-primary" />
+            <div className="text-left">
+              <div className="font-bold text-foreground text-lg">More to come</div>
+              <div className="text-sm text-muted-foreground">Evolving roadmap of modules</div>
             </div>
           </div>
         </div>

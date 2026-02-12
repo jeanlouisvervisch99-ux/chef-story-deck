@@ -1,21 +1,80 @@
 import React from 'react';
-import { Eye, Banknote, Shield, Zap, Brain, Sparkles } from 'lucide-react';
+import { Zap, MapPin, Shield, Globe, Flag, TrendingUp } from 'lucide-react';
+
+const marketInsights = [
+  {
+    icon: Globe,
+    title: "Toast absent from mainland Europe",
+    description: "The US market leader (156K locations) has no presence in continental Europe — leaving a wide-open gap.",
+    color: 'hsl(350 60% 30%)',
+  },
+  {
+    icon: TrendingUp,
+    title: "Local players capturing domestic markets",
+    description: "Allo (Germany) and YourBI (Netherlands) are rapidly growing in their home markets — proving demand for local, purpose-built platforms.",
+    color: 'hsl(25 80% 55%)',
+  },
+];
 
 export const WhyNowSlide: React.FC = () => {
   return (
     <div className="slide">
       <div className="flex items-center gap-3 mb-2 fade-up">
         <Zap className="w-5 h-5 text-accent" />
-        <span className="text-muted-foreground font-medium">The AI Inflection Point</span>
+        <span className="text-muted-foreground font-medium">The European Opportunity</span>
       </div>
-      <h2 className="slide-title fade-up">Why 2026?</h2>
+      <h2 className="slide-title fade-up">Why Belgium, Why Now?</h2>
       
       <div className="slide-content">
-        <div className="flex gap-12 items-start">
-          {/* Left: The AI shift */}
-          <div className="flex-1 fade-up-delay-1">
+        <div className="grid grid-cols-2 gap-12 items-start">
+          {/* Left: Market dynamics */}
+          <div className="fade-up-delay-1">
+            <h3 
+              className="text-2xl font-bold mb-6"
+              style={{
+                background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              The competitive landscape is shifting
+            </h3>
+            
+            <div className="space-y-4">
+              {marketInsights.map((insight, index) => (
+                <div
+                  key={insight.title}
+                  className="fade-up p-5 rounded-2xl"
+                  style={{ 
+                    animationDelay: `${0.3 + index * 0.15}s`, 
+                    opacity: 0,
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(255,255,255,0.6)',
+                    boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
+                  }}
+                >
+                  <div className="flex items-start gap-4">
+                    <div 
+                      className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                      style={{ background: insight.color }}
+                    >
+                      <insight.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-foreground mb-1">{insight.title}</div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{insight.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Right: Belgium opportunity */}
+          <div className="fade-up-delay-2">
             <div 
-              className="p-8 rounded-3xl relative overflow-hidden mb-6"
+              className="p-7 rounded-3xl relative overflow-hidden mb-5"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
                 boxShadow: '0 30px 80px rgba(122, 30, 45, 0.35)',
@@ -29,103 +88,64 @@ export const WhyNowSlide: React.FC = () => {
               />
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <Brain className="w-8 h-8 text-white/90" />
-                  <span className="text-white/80 text-lg font-medium">LLM-Driven Vision</span>
-                </div>
-                <div className="text-4xl font-black text-white mb-3">
-                  99% Accuracy
-                </div>
-                <p className="text-white/80 text-lg mb-4">
-                  Extract data from messy invoices and handwritten specials automatically.
-                </p>
-                <div 
-                  className="px-5 py-2.5 rounded-full inline-flex items-center gap-2"
-                  style={{
-                    background: 'rgba(255,255,255,0.15)',
-                    backdropFilter: 'blur(10px)',
-                  }}
-                >
-                  <Eye className="w-5 h-5 text-white" />
-                  <span className="text-white font-medium">Ending manual data entry for good</span>
-                </div>
-              </div>
-            </div>
-            
-            <div 
-              className="p-5 rounded-2xl flex items-start gap-4"
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)',
-              }}
-            >
-              <div className="text-muted-foreground text-sm leading-relaxed">
-                <span className="font-bold text-foreground">5 years ago:</span> Digitizing a kitchen was a manual mess—hours of data entry, disconnected systems, constant errors.
-              </div>
-            </div>
-          </div>
-          
-          {/* Right: Embedded Finance */}
-          <div className="flex-1 fade-up-delay-2">
-            <div className="flex items-center gap-3 mb-6">
-              <Sparkles className="w-5 h-5 text-accent" />
-              <h3 
-                className="text-2xl font-bold"
-                style={{
-                  background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                The Flipped Playbook
-              </h3>
-            </div>
-            
-            <div 
-              className="p-6 rounded-2xl mb-5"
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)',
-                boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
-              }}
-            >
-              <h4 className="font-bold text-foreground text-lg mb-3">Not just SaaS — Embedded Finance</h4>
-              <p className="text-muted-foreground leading-relaxed mb-5">
-                By handling procurement payments, Chef becomes a financial clearinghouse. We aren't just charging for software.
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-4 p-3 rounded-xl" style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
-                }}>
-                  <div 
-                    className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: 'hsl(350 60% 30%)' }}
-                  >
-                    <Banknote className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground">Capture the Float</div>
-                    <div className="text-sm text-muted-foreground">Hold procurement funds in transit</div>
-                  </div>
+                  <Flag className="w-7 h-7 text-white/90" />
+                  <span className="text-white/80 text-lg font-medium">🇧🇪 Belgium's Unique Position</span>
                 </div>
                 
-                <div className="flex items-center gap-4 p-3 rounded-xl" style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
-                }}>
-                  <div 
-                    className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: 'hsl(25 80% 55%)' }}
-                  >
-                    <Shield className="w-5 h-5 text-white" />
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div 
+                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                      style={{ background: 'rgba(255,255,255,0.15)' }}
+                    >
+                      <span className="text-lg">🍽️</span>
+                    </div>
+                    <div>
+                      <div className="text-white font-bold">Strong culinary identity</div>
+                      <div className="text-white/70 text-sm">World-renowned gastronomy culture with Michelin density among Europe's highest</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-bold text-foreground">Interchange Revenue</div>
-                    <div className="text-sm text-muted-foreground">Earn on every payment processed</div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div 
+                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                      style={{ background: 'rgba(255,255,255,0.15)' }}
+                    >
+                      <span className="text-lg">⏳</span>
+                    </div>
+                    <div>
+                      <div className="text-white font-bold">Slower digitalization</div>
+                      <div className="text-white/70 text-sm">Belgian hospitality lags behind NL, DE & UK in tech adoption — massive greenfield opportunity</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div 
+                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                      style={{ background: 'rgba(255,255,255,0.15)' }}
+                    >
+                      <span className="text-lg">🏠</span>
+                    </div>
+                    <div>
+                      <div className="text-white font-bold">No domestic champion</div>
+                      <div className="text-white/70 text-sm">No Belgian-born purpose-built restaurant platform exists today</div>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            
+            <div 
+              className="fade-up-delay-3 p-4 rounded-xl flex items-center gap-3"
+              style={{
+                background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
+                border: '1px solid hsl(350 60% 30% / 0.12)',
+              }}
+            >
+              <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+              <span className="text-sm font-medium text-foreground">
+                Win Belgium first → expand into NL, FR, DE with proven playbook
+              </span>
             </div>
           </div>
         </div>

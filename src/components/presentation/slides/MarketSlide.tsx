@@ -1,10 +1,33 @@
 import React from 'react';
-import { TrendingUp, MapPin, Info, Globe, Calculator, Hotel } from 'lucide-react';
+import { TrendingUp, MapPin, Info, Calculator, Zap, Target, Building2, UtensilsCrossed, BarChart3 } from 'lucide-react';
 
 const marketData = [
   { label: 'TAM', value: '25K', description: 'Belgium restaurants (NACE 56.10)', percent: 100 },
   { label: 'SAM', value: '15K', description: '60% addressable', percent: 60 },
   { label: 'SOM', value: '1,250', description: '5% market share target', percent: 5 },
+];
+
+const whyNowReasons = [
+  {
+    icon: Target,
+    title: "Displace Lightspeed in Belgium",
+    description: "Lightspeed is a POS — not an operations platform. Restaurants need more than payments.",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Frequently changing menus",
+    description: "Seasonal and daily-changing menus create cost chaos. Chef automates ingredient tracking and forecasting.",
+  },
+  {
+    icon: BarChart3,
+    title: "Margin optimization is urgent",
+    description: "Food costs up 15-20% since 2022. Restaurants can't afford guesswork on procurement and pricing.",
+  },
+  {
+    icon: Building2,
+    title: "High-volume environments",
+    description: "Cafeterias, campus dining, and chain groups need centralized control — no tool serves them today.",
+  },
 ];
 
 export const MarketSlide: React.FC = () => {
@@ -14,13 +37,13 @@ export const MarketSlide: React.FC = () => {
         <MapPin className="w-5 h-5 text-primary" />
         <span className="text-muted-foreground font-medium">Belgium Focus → European Expansion</span>
       </div>
-      <h2 className="slide-title fade-up">Market Opportunity</h2>
+      <h2 className="slide-title fade-up">Market Opportunity & Why Now</h2>
       
       <div className="slide-content">
-        <div className="flex gap-14 items-start">
-          {/* Left: Market bars */}
-          <div className="flex-1">
-            <div className="space-y-6">
+        <div className="grid grid-cols-2 gap-12 items-start">
+          {/* Left: TAM/SAM/SOM + The Math */}
+          <div>
+            <div className="space-y-5 mb-6">
               {marketData.map((item, index) => (
                 <div
                   key={item.label}
@@ -75,144 +98,73 @@ export const MarketSlide: React.FC = () => {
               ))}
             </div>
             
-            {/* NACE explanation */}
+            {/* The Math */}
             <div 
-              className="fade-up-delay-3 mt-6 p-4 rounded-xl flex items-start gap-3"
-              style={{
-                background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
-                border: '1px solid hsl(350 60% 30% / 0.15)',
-              }}
-            >
-              <Info className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-              <div className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">NACE 56.10</span> — "Restaurants and mobile food service activities" — 25K registered establishments in Belgium (conservative estimate from 25K–28K range).
-              </div>
-            </div>
-          </div>
-          
-          {/* Right: The Math + Expansion */}
-          <div className="flex-1 fade-up-delay-2">
-            <div 
-              className="p-8 rounded-3xl relative overflow-hidden text-center mb-4"
+              className="fade-up-delay-2 p-6 rounded-2xl relative overflow-hidden text-center"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
-                boxShadow: '0 30px 80px rgba(122, 30, 45, 0.35)',
+                boxShadow: '0 25px 60px rgba(122, 30, 45, 0.3)',
               }}
             >
-              <div 
-                className="absolute inset-0 shimmer opacity-10"
-                style={{
-                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
-                }}
-              />
-              
               <div className="relative z-10">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Calculator className="w-5 h-5 text-white/80" />
-                  <span className="text-lg font-medium text-white/80">The Math</span>
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <Calculator className="w-4 h-4 text-white/80" />
+                  <span className="text-sm font-medium text-white/80">The Math</span>
                 </div>
-                <div 
-                  className="text-5xl font-black text-white mb-3"
-                  style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}
-                >
+                <div className="text-4xl font-black text-white mb-1" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}>
                   €2.5M ARR
                 </div>
-                <div 
-                  className="inline-block px-5 py-2 rounded-full"
-                  style={{
-                    background: 'rgba(255,255,255,0.15)',
-                    backdropFilter: 'blur(10px)',
-                  }}
-                >
+                <div className="inline-block px-4 py-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.15)' }}>
                   <span className="text-white/90 text-sm">1,250 restaurants × €169/mo</span>
                 </div>
               </div>
             </div>
-            
-            {/* MRR breakdown */}
-            <div 
-              className="p-4 rounded-2xl mb-4"
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.5)',
-              }}
-            >
-              <div className="flex items-center justify-between mb-1">
-                <span className="text-muted-foreground text-sm">Monthly Recurring Revenue</span>
-                <span 
-                  className="text-xl font-bold"
-                  style={{
-                    background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
-                  €211K
-                </span>
-              </div>
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-muted-foreground text-sm">ACV per restaurant</span>
-                <span className="text-sm font-bold text-foreground">€169 × 12 = €2,028/yr</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-foreground">
-                  With module expansion → clear path to €3M+ ARR
-                </span>
-              </div>
+          </div>
+          
+          {/* Right: Why Now */}
+          <div className="fade-up-delay-1">
+            <div className="flex items-center gap-3 mb-4">
+              <Zap className="w-5 h-5 text-accent" />
+              <h3 
+                className="text-2xl font-bold"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                Why Now?
+              </h3>
             </div>
             
-            {/* Expansion sections side by side */}
-            <div className="grid grid-cols-2 gap-3">
-              {/* Future Country Expansion */}
-              <div 
-                className="p-3 rounded-xl"
-                style={{
-                  background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.1), hsl(280 40% 50% / 0.1))',
-                  border: '1px solid hsl(280 50% 60% / 0.2)',
-                }}
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <Globe className="w-4 h-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-xs font-bold text-foreground">Country Expansion</span>
-                </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    { flag: '🇳🇱', code: 'NL' },
-                    { flag: '🇫🇷', code: 'FR' },
-                    { flag: '🇩🇪', code: 'DE' },
-                  ].map((country) => (
+            <div className="space-y-3">
+              {whyNowReasons.map((reason, index) => (
+                <div
+                  key={reason.title}
+                  className="fade-up p-4 rounded-2xl"
+                  style={{ 
+                    animationDelay: `${0.3 + index * 0.12}s`, 
+                    opacity: 0,
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(255,255,255,0.6)',
+                    boxShadow: '0 8px 30px rgba(0,0,0,0.05)',
+                  }}
+                >
+                  <div className="flex items-start gap-3">
                     <div 
-                      key={country.code}
-                      className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
-                      style={{
-                        background: 'linear-gradient(135deg, hsl(280 50% 60% / 0.15), hsl(280 40% 50% / 0.15))',
-                      }}
+                      className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+                      style={{ background: 'hsl(350 60% 30%)' }}
                     >
-                      <span>{country.flag}</span>
-                      <span className="text-foreground">{country.code}</span>
+                      <reason.icon className="w-4 h-4 text-white" />
                     </div>
-                  ))}
+                    <div>
+                      <div className="font-bold text-foreground text-sm mb-0.5">{reason.title}</div>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{reason.description}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              {/* Hotel Modules Expansion */}
-              <div 
-                className="p-3 rounded-xl"
-                style={{
-                  background: 'linear-gradient(135deg, hsl(25 80% 55% / 0.1), hsl(38 85% 50% / 0.1))',
-                  border: '1px solid hsl(25 80% 55% / 0.2)',
-                }}
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <Hotel className="w-4 h-4 flex-shrink-0" style={{ color: 'hsl(25 80% 55%)' }} />
-                  <span className="text-xs font-bold text-foreground">Hotel Modules</span>
-                </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Expand into hotel F&B operations — banquets, room service, multi-outlet management
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>

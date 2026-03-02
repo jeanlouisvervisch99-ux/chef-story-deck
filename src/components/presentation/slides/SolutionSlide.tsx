@@ -2,30 +2,30 @@ import React from 'react';
 import { CheckCircle2, Sparkles, Zap, Brain, Eye, Banknote, Shield } from 'lucide-react';
 
 const features = [
-  "All-in-one operations platform",
-  "AI-powered menu analysis",
-  "Real-time P&L forecasting",
-  "Integrated procurement",
-  "Workforce optimization",
-];
+"All-in-one operations platform",
+"AI-powered menu analysis",
+"Real-time P&L forecasting",
+"Integrated procurement",
+"Workforce optimization"];
+
 
 export const SolutionSlide: React.FC = () => {
   return (
     <div className="slide">
-      <h2 className="slide-title fade-up">The Solution — And Why Now</h2>
+      <h2 className="slide-title fade-up">The Solution</h2>
       
       <div className="slide-content">
         <div className="grid grid-cols-2 gap-12 items-start">
           {/* Left: Solution */}
           <div className="fade-up-delay-1 flex flex-col h-full">
-            <div 
+            <div
               className="text-3xl font-bold leading-tight mb-5"
               style={{
                 background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
                 WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
+                WebkitTextFillColor: 'transparent'
+              }}>
+              
               One platform to run your entire restaurant group
             </div>
             
@@ -34,33 +34,33 @@ export const SolutionSlide: React.FC = () => {
             </p>
             
             <div className="space-y-2.5 mb-6">
-              {features.map((feature, index) => (
-                <div
-                  key={feature}
-                  className="fade-up flex items-center gap-3"
-                  style={{ animationDelay: `${0.4 + index * 0.08}s`, opacity: 0 }}
-                >
-                  <div 
-                    className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
-                    style={{
-                      background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
-                    }}
-                  >
+              {features.map((feature, index) =>
+              <div
+                key={feature}
+                className="fade-up flex items-center gap-3"
+                style={{ animationDelay: `${0.4 + index * 0.08}s`, opacity: 0 }}>
+                
+                  <div
+                  className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{
+                    background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))'
+                  }}>
+                  
                     <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                   </div>
                   <span className="text-base font-medium text-foreground">{feature}</span>
                 </div>
-              ))}
+              )}
             </div>
 
             {/* AI inflection callout */}
-            <div 
+            <div
               className="fade-up-delay-2 p-5 rounded-2xl relative overflow-hidden mt-auto"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
-                boxShadow: '0 20px 60px rgba(122, 30, 45, 0.3)',
-              }}
-            >
+                boxShadow: '0 20px 60px rgba(122, 30, 45, 0.3)'
+              }}>
+              
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                   <Brain className="w-6 h-6 text-white/90" />
@@ -70,10 +70,10 @@ export const SolutionSlide: React.FC = () => {
                 <p className="text-white/80 text-sm mb-3">
                   Extract data from messy invoices and handwritten specials automatically.
                 </p>
-                <div 
+                <div
                   className="px-4 py-2 rounded-full inline-flex items-center gap-2"
-                  style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)' }}
-                >
+                  style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)' }}>
+                  
                   <Eye className="w-4 h-4 text-white" />
                   <span className="text-white text-sm font-medium">Ending manual data entry for good</span>
                 </div>
@@ -88,14 +88,14 @@ export const SolutionSlide: React.FC = () => {
               <span className="text-muted-foreground font-semibold text-lg">Why 2026?</span>
             </div>
             
-            <div 
+            <div
               className="p-5 rounded-2xl mb-6"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)',
-              }}
-            >
+                border: '1px solid rgba(255,255,255,0.6)'
+              }}>
+              
               <div className="text-muted-foreground text-sm leading-relaxed">
                 <span className="font-bold text-foreground">5 years ago:</span> Digitizing a kitchen was a manual mess—hours of data entry, disconnected systems, constant errors. Today, AI makes it possible to automate everything.
               </div>
@@ -103,27 +103,27 @@ export const SolutionSlide: React.FC = () => {
 
             <div className="flex items-center gap-3 mb-4">
               <Sparkles className="w-5 h-5 text-accent" />
-              <h3 
+              <h3
                 className="text-xl font-bold"
                 style={{
                   background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
                   WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
+                  WebkitTextFillColor: 'transparent'
+                }}>
+                
                 The Flipped Playbook
               </h3>
             </div>
             
-            <div 
+            <div
               className="p-5 rounded-2xl flex-1"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.6)',
-                boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
-              }}
-            >
+                boxShadow: '0 10px 40px rgba(0,0,0,0.06)'
+              }}>
+              
               <h4 className="font-bold text-foreground mb-2">Not just SaaS — Embedded Finance</h4>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 By handling procurement payments, Chef becomes a financial clearinghouse.
@@ -131,12 +131,12 @@ export const SolutionSlide: React.FC = () => {
               
               <div className="space-y-2.5">
                 <div className="flex items-center gap-3 p-2.5 rounded-xl" style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
+                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))'
                 }}>
-                  <div 
+                  <div
                     className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'hsl(350 60% 30%)' }}
-                  >
+                    style={{ background: 'hsl(350 60% 30%)' }}>
+                    
                     <Banknote className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -146,12 +146,12 @@ export const SolutionSlide: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center gap-3 p-2.5 rounded-xl" style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
+                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))'
                 }}>
-                  <div 
+                  <div
                     className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'hsl(25 80% 55%)' }}
-                  >
+                    style={{ background: 'hsl(25 80% 55%)' }}>
+                    
                     <Shield className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -161,12 +161,12 @@ export const SolutionSlide: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-3 p-2.5 rounded-xl" style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))',
+                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))'
                 }}>
-                  <div 
+                  <div
                     className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'hsl(350 45% 40%)' }}
-                  >
+                    style={{ background: 'hsl(350 45% 40%)' }}>
+                    
                     <Banknote className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -179,6 +179,6 @@ export const SolutionSlide: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 };

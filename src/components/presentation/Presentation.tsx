@@ -19,7 +19,7 @@ import { ClosingSlide } from './slides/ClosingSlide';
 const slides = [
   { id: 1, component: TitleSlide, title: 'Title' },
   { id: 2, component: ProblemSlide, title: 'Problem' },
-  { id: 3, component: SolutionSlide, title: 'Solution & Why Now' },
+  { id: 3, component: SolutionSlide, title: 'Solution' },
   { id: 4, component: FeaturesSlide, title: 'Product Features' },
   { id: 5, component: CompetitiveSlide, title: 'Competitive Moat' },
   { id: 6, component: BusinessModelSlide, title: 'Business Model' },

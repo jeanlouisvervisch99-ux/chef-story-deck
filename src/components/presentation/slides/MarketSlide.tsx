@@ -100,22 +100,31 @@ export const MarketSlide: React.FC = () => {
             
             {/* The Math */}
             <div
-              className="fade-up-delay-2 p-6 rounded-2xl relative overflow-hidden text-center"
+              className="fade-up-delay-2 p-6 rounded-2xl relative overflow-hidden"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
                 boxShadow: '0 25px 60px rgba(122, 30, 45, 0.3)'
               }}>
               
               <div className="relative z-10">
-                <div className="flex items-center justify-center gap-2 mb-1">
+                <div className="flex items-center justify-center gap-2 mb-2">
                   <Calculator className="w-4 h-4 text-white/80" />
                   <span className="text-sm font-medium text-white/80">The Math</span>
                 </div>
-                <div className="text-4xl font-black text-white mb-1" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}>
-                  €2.5M ARR
+                <div className="text-center mb-3">
+                  <div className="text-3xl font-black text-white mb-1" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}>
+                    €200K+ MRR
+                  </div>
+                  <div className="inline-block px-4 py-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.15)' }}>
+                    <span className="text-white/90 text-sm">1,250 restaurants × €169/mo</span>
+                  </div>
                 </div>
-                <div className="inline-block px-4 py-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.15)' }}>
-                  <span className="text-white/90 text-sm">1,250 restaurants × €169/mo</span>
+                <div className="border-t border-white/20 pt-3 text-center">
+                  <div className="text-white/70 text-xs mb-1">With module upsell potential</div>
+                  <div className="text-2xl font-black text-white" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}>
+                    → €3M+ ARR
+                  </div>
+                  <div className="text-white/60 text-xs mt-1">in Belgium alone</div>
                 </div>
               </div>
             </div>

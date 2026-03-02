@@ -1,11 +1,10 @@
 import React from 'react';
-import { ChefHat, Mail, ArrowRight, Sparkles, Target, Users, Rocket, TrendingUp, Heart } from 'lucide-react';
+import { ChefHat, Mail, Sparkles, Heart, Building2, GraduationCap, Store } from 'lucide-react';
 
-const milestones = [
-  { icon: Rocket, text: "Launch MVP", color: 'hsl(350 60% 30%)' },
-  { icon: Users, text: "First 50 restaurants", color: 'hsl(25 80% 55%)' },
-  { icon: TrendingUp, text: "Feature expansion", color: 'hsl(280 50% 60%)' },
-  { icon: Target, text: "Belgium market leadership", color: 'hsl(160 50% 45%)' },
+const earlyCustomers = [
+  { icon: GraduationCap, name: "UGent Cafeteria", type: "University dining" },
+  { icon: Building2, name: "Wintercircus Cafeteria", type: "Cultural venue" },
+  { icon: Store, name: "Lunch Garden", type: "Chain restaurants" },
 ];
 
 export const ClosingSlide: React.FC = () => {
@@ -20,7 +19,7 @@ export const ClosingSlide: React.FC = () => {
       </div>
       
       {/* Logo */}
-      <div className="fade-up flex items-center gap-5 mb-6">
+      <div className="fade-up flex items-center gap-5 mb-5">
         <div 
           className="p-5 rounded-3xl relative"
           style={{
@@ -43,6 +42,19 @@ export const ClosingSlide: React.FC = () => {
         </h1>
       </div>
       
+      {/* Positioning line */}
+      <p 
+        className="fade-up-delay-1 text-2xl font-bold mb-6 max-w-2xl leading-relaxed"
+        style={{
+          background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+        }}
+      >
+        Chef runs your restaurant for you.<br />
+        Now everyone has the capacity to become great.
+      </p>
+      
       {/* Entourage CTA */}
       <div 
         className="fade-up-delay-1 flex items-center gap-3 px-8 py-4 rounded-2xl mb-6"
@@ -55,12 +67,13 @@ export const ClosingSlide: React.FC = () => {
         <span className="text-2xl font-bold text-white">Let us be part of the Entourage Family</span>
       </div>
       
-      {/* Milestones row */}
-      <div className="fade-up-delay-2 flex gap-4 mb-8">
-        {milestones.map((milestone, index) => (
+      {/* Early customers */}
+      <div className="fade-up-delay-2 flex gap-4 mb-6">
+        <span className="text-sm font-semibold text-muted-foreground self-center mr-2">Building alongside:</span>
+        {earlyCustomers.map((customer) => (
           <div 
-            key={milestone.text}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-full"
+            key={customer.name}
+            className="flex items-center gap-2.5 px-4 py-2.5 rounded-full"
             style={{
               background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
               backdropFilter: 'blur(20px)',
@@ -68,22 +81,21 @@ export const ClosingSlide: React.FC = () => {
             }}
           >
             <div 
-              className="w-8 h-8 rounded-lg flex items-center justify-center"
-              style={{ background: milestone.color }}
+              className="w-7 h-7 rounded-lg flex items-center justify-center"
+              style={{ background: 'hsl(350 60% 30%)' }}
             >
-              <milestone.icon className="w-4 h-4 text-white" />
+              <customer.icon className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="text-sm font-semibold text-foreground">{milestone.text}</span>
-            {index < milestones.length - 1 && (
-              <ArrowRight className="w-4 h-4 text-muted-foreground ml-1" />
-            )}
+            <div className="text-left">
+              <span className="text-sm font-semibold text-foreground">{customer.name}</span>
+            </div>
           </div>
         ))}
       </div>
       
       {/* Contact */}
       <div 
-        className="fade-up-delay-3 flex items-center gap-3 px-8 py-4 rounded-full mb-6"
+        className="fade-up-delay-3 flex items-center gap-3 px-8 py-4 rounded-full mb-4"
         style={{
           background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
           backdropFilter: 'blur(20px)',
@@ -95,7 +107,7 @@ export const ClosingSlide: React.FC = () => {
       </div>
       
       <p 
-        className="fade-up-delay-3 text-xl italic font-medium"
+        className="fade-up-delay-3 text-lg italic font-medium"
         style={{ color: 'hsl(20 10% 45%)' }}
       >
         "Because every restaurant deserves a chance to be Michelin."

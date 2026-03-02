@@ -15,7 +15,6 @@ import { ValueSlide } from './slides/ValueSlide';
 import { RoadmapSlide } from './slides/RoadmapSlide';
 import { TeamSlide } from './slides/TeamSlide';
 import { ClosingSlide } from './slides/ClosingSlide';
-import { WhyNowSlide } from './slides/WhyNowSlide';
 
 const slides = [
   { id: 1, component: TitleSlide, title: 'Title' },
@@ -25,12 +24,11 @@ const slides = [
   { id: 5, component: CompetitiveSlide, title: 'Competitive Moat' },
   { id: 6, component: BusinessModelSlide, title: 'Business Model' },
   { id: 7, component: ICPSlide, title: 'ICP & GTM' },
-  { id: 8, component: MarketSlide, title: 'Market Size' },
-  { id: 9, component: WhyNowSlide, title: 'Why Now' },
-  { id: 10, component: ValueSlide, title: 'Value Creation' },
-  { id: 11, component: RoadmapSlide, title: 'Roadmap' },
-  { id: 12, component: TeamSlide, title: 'Team' },
-  { id: 13, component: ClosingSlide, title: 'The Ask' },
+  { id: 8, component: MarketSlide, title: 'Market & Why Now' },
+  { id: 9, component: ValueSlide, title: 'Value Creation' },
+  { id: 10, component: RoadmapSlide, title: 'Roadmap' },
+  { id: 11, component: TeamSlide, title: 'Team' },
+  { id: 12, component: ClosingSlide, title: 'The Ask' },
 ];
 
 export const Presentation: React.FC = () => {

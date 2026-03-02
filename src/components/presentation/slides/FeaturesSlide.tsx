@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, FileText, BookOpen, Truck, CreditCard, Users, Sparkles } from 'lucide-react';
+import { Brain, FileText, BookOpen, Truck, CreditCard, Users, Sparkles, Smartphone } from 'lucide-react';
 
 const features = [
   {
@@ -44,7 +44,7 @@ export const FeaturesSlide: React.FC = () => {
   return (
     <div className="slide">
       <h2 className="slide-title fade-up">Product Features</h2>
-      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-10">
+      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-8">
         Everything you need, intelligently connected
       </p>
       
@@ -79,24 +79,40 @@ export const FeaturesSlide: React.FC = () => {
           ))}
         </div>
         
-        {/* More to come + AI callout */}
-        <div className="fade-up-delay-3 mt-8 flex justify-center gap-5">
+        {/* Bottom row: Hardware + AI + More to come */}
+        <div className="fade-up-delay-3 mt-7 flex justify-center gap-4">
           <div 
-            className="flex items-center gap-4 px-8 py-5 rounded-2xl"
+            className="flex items-center gap-3 px-6 py-4 rounded-2xl"
+            style={{
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255,255,255,0.6)',
+              boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
+            }}
+          >
+            <Smartphone className="w-6 h-6 text-primary" />
+            <div className="text-left">
+              <div className="font-bold text-foreground text-sm">Works on any hardware</div>
+              <div className="text-xs text-muted-foreground">Android, Apple, laptops, smartphones — zero lock-in</div>
+            </div>
+          </div>
+
+          <div 
+            className="flex items-center gap-4 px-6 py-4 rounded-2xl"
             style={{
               background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
               boxShadow: '0 20px 60px rgba(122, 30, 45, 0.3)',
             }}
           >
-            <Brain className="w-8 h-8 text-white" />
+            <Brain className="w-7 h-7 text-white" />
             <div className="text-left">
-              <div className="text-white font-bold text-lg">AI learns from your data</div>
-              <div className="text-white/80 text-sm">Predictions improve over time</div>
+              <div className="text-white font-bold text-sm">AI learns from your data</div>
+              <div className="text-white/80 text-xs">Predictions improve over time</div>
             </div>
           </div>
           
           <div 
-            className="flex items-center gap-3 px-6 py-5 rounded-2xl"
+            className="flex items-center gap-3 px-6 py-4 rounded-2xl"
             style={{
               background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
               backdropFilter: 'blur(20px)',
@@ -106,8 +122,8 @@ export const FeaturesSlide: React.FC = () => {
           >
             <Sparkles className="w-6 h-6 text-primary" />
             <div className="text-left">
-              <div className="font-bold text-foreground text-lg">More to come</div>
-              <div className="text-sm text-muted-foreground">Evolving roadmap of modules</div>
+              <div className="font-bold text-foreground text-sm">More to come</div>
+              <div className="text-xs text-muted-foreground">Evolving roadmap of modules</div>
             </div>
           </div>
         </div>

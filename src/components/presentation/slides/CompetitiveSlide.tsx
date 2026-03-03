@@ -70,7 +70,7 @@ export const CompetitiveSlide: React.FC = () => {
                 <th className="px-2 py-3 font-semibold text-muted-foreground">
                   <div className="text-center">
                     <div>Lightspeed</div>
-                    <div className="text-[10px] font-normal text-muted-foreground/60">Canada</div>
+                    <div className="text-[10px] font-normal text-muted-foreground/60">CAnad</div>
                   </div>
                 </th>
                 <th className="px-2 py-3 font-semibold text-muted-foreground">

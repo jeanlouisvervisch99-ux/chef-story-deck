@@ -2,19 +2,19 @@ import React from 'react';
 import { Check, X, ChefHat, Sparkles, Minus } from 'lucide-react';
 
 const features = [
-  { name: 'Michelin-grade recipe DB',   lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, chef: true },
-  { name: 'Automated procurement',      lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, chef: true },
-  { name: 'Working capital financing',   lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, chef: true },
-  { name: 'Menu cost engineering',       lightspeed: false, toast: false, allo: false, yourbi: 'partial', sous: false, chef: true },
-  { name: 'Predictive P&L',             lightspeed: false, toast: false, allo: false, yourbi: true,  sous: false, chef: true },
-  { name: 'Workforce optimization',     lightspeed: false, toast: false, allo: false, yourbi: 'partial', sous: false, chef: true },
-  { name: 'AI-powered insights',        lightspeed: false, toast: true,  allo: false, yourbi: true,  sous: false, chef: true },
-  { name: 'POS integration',            lightspeed: true,  toast: true,  allo: true,  yourbi: false, sous: false, chef: true },
-  { name: 'Inventory management',       lightspeed: true,  toast: true,  allo: true,  yourbi: false, sous: false, chef: true },
-  { name: 'Multi-location mgmt',        lightspeed: true,  toast: true,  allo: false, yourbi: true,  sous: false, chef: true },
-  { name: 'Online ordering',            lightspeed: false, toast: true,  allo: true,  yourbi: false, sous: true,  chef: true },
-  { name: 'Loyalty & marketing',        lightspeed: false, toast: true,  allo: false, yourbi: false, sous: true,  chef: true },
-  { name: 'Embedded finance',           lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, chef: true },
+  { name: 'Michelin-grade recipe DB',   lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, apicbase: true,      chef: true },
+  { name: 'Automated procurement',      lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, apicbase: true,      chef: true },
+  { name: 'Working capital financing',   lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, apicbase: false,     chef: true },
+  { name: 'Menu cost engineering',       lightspeed: false, toast: false, allo: false, yourbi: 'partial', sous: false, apicbase: true,  chef: true },
+  { name: 'Predictive P&L',             lightspeed: false, toast: false, allo: false, yourbi: true,  sous: false, apicbase: 'partial',  chef: true },
+  { name: 'Workforce optimization',     lightspeed: false, toast: false, allo: false, yourbi: 'partial', sous: false, apicbase: false,  chef: true },
+  { name: 'AI-powered insights',        lightspeed: false, toast: true,  allo: false, yourbi: true,  sous: false, apicbase: 'partial',  chef: true },
+  { name: 'POS integration',            lightspeed: true,  toast: true,  allo: true,  yourbi: false, sous: false, apicbase: true,       chef: true },
+  { name: 'Inventory management',       lightspeed: true,  toast: true,  allo: true,  yourbi: false, sous: false, apicbase: true,       chef: true },
+  { name: 'Multi-location mgmt',        lightspeed: true,  toast: true,  allo: false, yourbi: true,  sous: false, apicbase: true,       chef: true },
+  { name: 'Online ordering',            lightspeed: false, toast: true,  allo: true,  yourbi: false, sous: true,  apicbase: false,      chef: true },
+  { name: 'Loyalty & marketing',        lightspeed: false, toast: true,  allo: false, yourbi: false, sous: true,  apicbase: false,      chef: true },
+  { name: 'Embedded finance',           lightspeed: false, toast: false, allo: false, yourbi: false, sous: false, apicbase: false,      chef: true },
 ];
 
 const Cell: React.FC<{ value: boolean | string; highlight?: boolean }> = ({ value, highlight }) => (
@@ -97,6 +97,12 @@ export const CompetitiveSlide: React.FC = () => {
                     <div className="text-[10px] font-normal text-muted-foreground/60">Netherlands</div>
                   </div>
                 </th>
+                <th className="px-2 py-3 font-semibold text-muted-foreground">
+                  <div className="text-center">
+                    <div>Apicbase</div>
+                    <div className="text-[10px] font-normal text-muted-foreground/60">Belgium</div>
+                  </div>
+                </th>
                 <th className="px-2 py-3">
                   <div className="flex items-center justify-center gap-1.5">
                     <ChefHat className="w-4 h-4 text-primary" />
@@ -131,6 +137,7 @@ export const CompetitiveSlide: React.FC = () => {
                   <Cell value={feature.allo} />
                   <Cell value={feature.yourbi} />
                   <Cell value={feature.sous} />
+                  <Cell value={feature.apicbase} />
                   <Cell value={feature.chef} highlight />
                 </tr>
               ))}

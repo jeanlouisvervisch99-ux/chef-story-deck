@@ -1,60 +1,53 @@
 import React from 'react';
-import { Brain, FileText, BookOpen, Truck, CreditCard, Users, Sparkles, Smartphone } from 'lucide-react';
+import { Receipt, UtensilsCrossed, BarChart3, Sparkles, Lock, ArrowRight } from 'lucide-react';
 
-const features = [
+const coreFeatures = [
   {
-    icon: Brain,
-    title: "Predictive P&L",
-    description: "Forecast costs based on reservations + historical data",
+    icon: Receipt,
+    title: "AI Invoice Ingestion",
+    description: "Snap or forward any invoice — AI extracts line items, prices, and quantities automatically",
     color: 'hsl(350 60% 30%)',
+    tag: "V1 Core",
   },
   {
-    icon: FileText,
-    title: "AI Menu Scanning",
-    description: "Automatic ingredient & cost estimation",
+    icon: UtensilsCrossed,
+    title: "Recipe & Menu Costing",
+    description: "Map ingredients to recipes. Know the true cost of every dish in real time",
     color: 'hsl(25 80% 55%)',
+    tag: "V1 Core",
   },
   {
-    icon: BookOpen,
-    title: "Recipe Database",
-    description: "Access recipes from Michelin chefs",
-    color: 'hsl(280 50% 60%)',
-  },
-  {
-    icon: Truck,
-    title: "Procurement",
-    description: "Direct wholesaler integrations",
+    icon: BarChart3,
+    title: "Real-Time Margin Dashboard",
+    description: "See dish-level profitability at a glance. Spot loss-makers instantly",
     color: 'hsl(160 50% 45%)',
+    tag: "V1 Core",
   },
-  {
-    icon: CreditCard,
-    title: "Loyalty & Payments",
-    description: "Full POS integration",
-    color: 'hsl(38 85% 50%)',
-  },
-  {
-    icon: Users,
-    title: "Workforce Optimization",
-    description: "Smart scheduling & staff planning",
-    color: 'hsl(210 60% 50%)',
-  },
+];
+
+const futureModules = [
+  "Procurement recommendations",
+  "Forecasting & demand planning",
+  "Workforce optimization",
+  "Working capital financing",
+  "Loyalty & payments",
 ];
 
 export const FeaturesSlide: React.FC = () => {
   return (
     <div className="slide">
-      <h2 className="slide-title fade-up">Product Features</h2>
+      <h2 className="slide-title fade-up">Product — V1 Wedge</h2>
       <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-8">
-        Everything you need, intelligently connected
+        Focused on what matters most: <span className="font-bold text-primary">margin intelligence</span>
       </p>
       
       <div className="slide-content">
-        <div className="grid grid-cols-3 gap-5">
-          {features.map((feature, index) => (
+        <div className="grid grid-cols-3 gap-6 mb-8">
+          {coreFeatures.map((feature, index) => (
             <div
               key={feature.title}
               className="fade-up group"
-              style={{ animationDelay: `${0.2 + index * 0.08}s`, opacity: 0 }}
+              style={{ animationDelay: `${0.2 + index * 0.1}s`, opacity: 0 }}
             >
               <div 
                 className="feature-card h-full flex flex-col items-center text-center transition-all"
@@ -63,12 +56,18 @@ export const FeaturesSlide: React.FC = () => {
                 }}
               >
                 <div 
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 group-hover:rotate-3"
+                  className="px-3 py-1 rounded-full text-xs font-bold mb-4 text-white"
+                  style={{ background: feature.color }}
+                >
+                  {feature.tag}
+                </div>
+                <div 
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110"
                   style={{ backgroundColor: feature.color }}
                 >
-                  <feature.icon className="w-7 h-7 text-white" />
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-base font-bold text-foreground mb-1.5">
+                <h3 className="text-lg font-bold text-foreground mb-2">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -79,51 +78,33 @@ export const FeaturesSlide: React.FC = () => {
           ))}
         </div>
         
-        {/* Bottom row: Hardware + AI + More to come */}
-        <div className="fade-up-delay-3 mt-7 flex justify-center gap-4">
+        {/* Future modules - greyed out */}
+        <div className="fade-up-delay-3 flex justify-center gap-4">
           <div 
-            className="flex items-center gap-3 px-6 py-4 rounded-2xl"
+            className="flex items-center gap-4 px-6 py-4 rounded-2xl flex-1 max-w-3xl"
             style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3))',
               backdropFilter: 'blur(20px)',
-              border: '1px solid rgba(255,255,255,0.6)',
-              boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
+              border: '1px solid rgba(255,255,255,0.4)',
             }}
           >
-            <Smartphone className="w-6 h-6 text-primary" />
-            <div className="text-left">
-              <div className="font-bold text-foreground text-sm">Works on any hardware</div>
-              <div className="text-xs text-muted-foreground">Android, Apple, laptops, smartphones — zero lock-in</div>
-            </div>
-          </div>
-
-          <div 
-            className="flex items-center gap-4 px-6 py-4 rounded-2xl"
-            style={{
-              background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
-              boxShadow: '0 20px 60px rgba(122, 30, 45, 0.3)',
-            }}
-          >
-            <Brain className="w-7 h-7 text-white" />
-            <div className="text-left">
-              <div className="text-white font-bold text-sm">AI learns from your data</div>
-              <div className="text-white/80 text-xs">Predictions improve over time</div>
-            </div>
-          </div>
-          
-          <div 
-            className="flex items-center gap-3 px-6 py-4 rounded-2xl"
-            style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-              backdropFilter: 'blur(20px)',
-              border: '1px solid rgba(255,255,255,0.6)',
-              boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
-            }}
-          >
-            <Sparkles className="w-6 h-6 text-primary" />
-            <div className="text-left">
-              <div className="font-bold text-foreground text-sm">More to come</div>
-              <div className="text-xs text-muted-foreground">Evolving roadmap of modules</div>
+            <Lock className="w-5 h-5 text-muted-foreground/50 flex-shrink-0" />
+            <div className="flex-1">
+              <div className="font-bold text-muted-foreground/70 text-sm mb-2">Future Modules — Stepwise Expansion</div>
+              <div className="flex flex-wrap gap-2">
+                {futureModules.map(mod => (
+                  <span 
+                    key={mod} 
+                    className="px-3 py-1 rounded-full text-xs font-medium"
+                    style={{
+                      background: 'hsl(35 30% 90%)',
+                      color: 'hsl(20 10% 50%)',
+                    }}
+                  >
+                    {mod}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

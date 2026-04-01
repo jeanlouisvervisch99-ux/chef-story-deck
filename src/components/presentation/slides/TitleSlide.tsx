@@ -4,7 +4,6 @@ import { ChefHat, Sparkles } from 'lucide-react';
 export const TitleSlide: React.FC = () => {
   return (
     <div className="slide flex flex-col items-center justify-center text-center relative overflow-hidden">
-      {/* Decorative elements */}
       <div className="absolute top-20 right-20 opacity-20">
         <Sparkles className="w-32 h-32 text-primary" />
       </div>
@@ -12,7 +11,6 @@ export const TitleSlide: React.FC = () => {
         <Sparkles className="w-24 h-24 text-accent" />
       </div>
       
-      {/* Badge */}
       <div 
         className="fade-up px-5 py-2 rounded-full text-sm font-semibold mb-10"
         style={{
@@ -23,7 +21,6 @@ export const TitleSlide: React.FC = () => {
         Pre-Seed Deck
       </div>
       
-      {/* Logo with glow effect */}
       <div className="fade-up flex items-center gap-6 mb-8">
         <div 
           className="p-6 rounded-3xl relative"
@@ -33,10 +30,7 @@ export const TitleSlide: React.FC = () => {
           }}
         >
           <ChefHat className="h-16 w-16 text-primary-foreground" />
-          <div 
-            className="absolute inset-0 rounded-3xl animate-pulse-glow"
-            style={{ opacity: 0.5 }}
-          />
+          <div className="absolute inset-0 rounded-3xl animate-pulse-glow" style={{ opacity: 0.5 }} />
         </div>
         <h1 
           className="text-8xl font-black tracking-tight"
@@ -50,27 +44,30 @@ export const TitleSlide: React.FC = () => {
         </h1>
       </div>
       
-      {/* Tagline with gradient */}
       <p 
-        className="fade-up-delay-1 text-4xl font-semibold mb-8"
+        className="fade-up-delay-1 text-4xl font-semibold mb-6"
         style={{
           background: 'linear-gradient(90deg, hsl(20 15% 35%), hsl(350 30% 40%))',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
         }}
       >
-        The Manual for Your Restaurant
+        The AI Copilot for Restaurant Profitability
       </p>
       
-      {/* Manifesto line */}
       <p 
-        className="fade-up-delay-2 text-2xl italic font-medium mb-12"
+        className="fade-up-delay-2 text-xl font-medium mb-4 max-w-2xl text-muted-foreground"
+      >
+        We turn invoices into margin intelligence — so every restaurant knows exactly where money is made and lost.
+      </p>
+
+      <p 
+        className="fade-up-delay-2 text-lg italic font-medium mb-12"
         style={{ color: 'hsl(20 10% 45%)' }}
       >
         "Because every restaurant deserves a chance to be Michelin."
       </p>
       
-      {/* Decorative line */}
       <div 
         className="fade-up-delay-3 mt-4 w-32 h-1 rounded-full"
         style={{

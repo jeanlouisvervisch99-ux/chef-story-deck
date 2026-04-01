@@ -1,35 +1,49 @@
 import React from 'react';
-import { Calendar, Gamepad2, Truck, MessageSquare, Sparkles } from 'lucide-react';
+import { Receipt, BarChart3, Truck, Sparkles, CheckCircle2 } from 'lucide-react';
 
-const roadmapItems = [
+const phases = [
   {
-    icon: Calendar,
-    title: "Flex Worker Timetables",
-    description: "Integration for gig-driven hospitality model",
-    phase: "Q4 2026",
+    version: "V1",
+    title: "Margin Intelligence",
+    timeline: "Now → Q2 2027",
+    icon: Receipt,
     color: 'hsl(350 60% 30%)',
+    status: "Building",
+    items: [
+      "AI invoice ingestion",
+      "Recipe & menu costing",
+      "Real-time margin dashboard",
+      "Dish-level P&L visibility",
+    ],
   },
   {
-    icon: Gamepad2,
-    title: "Gamification",
-    description: "Monthly competitions for free subscriptions",
-    phase: "Q1 2027",
+    version: "V2",
+    title: "Forecasting & Recommendations",
+    timeline: "Q3 2027 → Q1 2028",
+    icon: BarChart3,
     color: 'hsl(25 80% 55%)',
+    status: "Planned",
+    items: [
+      "Cost forecasting based on trends",
+      "Procurement recommendations",
+      "Supplier price benchmarking",
+      "Menu performance scoring",
+    ],
   },
   {
+    version: "V3",
+    title: "Deeper Integrations & Automation",
+    timeline: "2028+",
     icon: Truck,
-    title: "Supplier Influence",
-    description: "Demand predictions to guide growers & suppliers",
-    phase: "Q2 2027",
-    color: 'hsl(280 50% 60%)',
-  },
-  {
-    icon: MessageSquare,
-    title: "Review Analysis",
-    description: "Feedelity-style sentiment analysis integration",
-    phase: "Q3 2027",
     color: 'hsl(160 50% 45%)',
-  }
+    status: "Vision",
+    items: [
+      "POS integrations for sales data",
+      "Automated reordering",
+      "Multi-location analytics",
+      "Industry benchmarking",
+    ],
+  },
 ];
 
 export const RoadmapSlide: React.FC = () => {
@@ -37,70 +51,86 @@ export const RoadmapSlide: React.FC = () => {
     <div className="slide">
       <div className="flex items-center gap-3 mb-2 fade-up">
         <Sparkles className="w-5 h-5 text-accent" />
-        <span className="text-muted-foreground font-medium">What's Coming</span>
+        <span className="text-muted-foreground font-medium">Disciplined Expansion</span>
       </div>
-      <h2 className="slide-title fade-up">Roadmap & Future</h2>
+      <h2 className="slide-title fade-up">Product Roadmap</h2>
       
       <div className="slide-content">
-        <div className="relative">
-          {/* Timeline line */}
-          <div 
-            className="absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 rounded-full"
-            style={{
-              background: 'linear-gradient(180deg, hsl(350 60% 30%), hsl(25 80% 55%), hsl(280 50% 60%), hsl(160 50% 45%))',
-            }}
-          />
-          
-          <div className="space-y-8">
-            {roadmapItems.map((item, index) => (
-              <div
-                key={item.title}
-                className={`fade-up flex items-center gap-10 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                style={{ animationDelay: `${0.2 + index * 0.15}s`, opacity: 0 }}
+        <div className="flex gap-6">
+          {phases.map((phase, index) => (
+            <div
+              key={phase.version}
+              className="flex-1 fade-up"
+              style={{ animationDelay: `${0.2 + index * 0.15}s`, opacity: 0 }}
+            >
+              <div 
+                className="h-full p-6 rounded-3xl relative overflow-hidden"
+                style={{
+                  background: index === 0
+                    ? `linear-gradient(135deg, ${phase.color}, hsl(350 50% 38%))`
+                    : 'linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+                  backdropFilter: index === 0 ? undefined : 'blur(20px)',
+                  border: index === 0 ? undefined : '1px solid rgba(255,255,255,0.6)',
+                  boxShadow: index === 0
+                    ? '0 20px 60px rgba(122, 30, 45, 0.3)'
+                    : '0 10px 40px rgba(0,0,0,0.06)',
+                }}
               >
-                <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                  <div 
-                    className={`inline-block p-6 rounded-2xl ${index % 2 === 0 ? 'mr-6' : 'ml-6'}`}
+                {index !== 0 && <div className="absolute top-0 left-0 right-0 h-1.5" style={{ background: phase.color }} />}
+                
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <div 
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{ background: index === 0 ? 'rgba(255,255,255,0.2)' : phase.color }}
+                    >
+                      <phase.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <div className={`text-2xl font-black ${index === 0 ? 'text-white' : 'text-foreground'}`}>
+                        {phase.version}
+                      </div>
+                    </div>
+                  </div>
+                  <span 
+                    className="px-3 py-1 rounded-full text-xs font-bold"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                      backdropFilter: 'blur(20px)',
-                      border: '1px solid rgba(255,255,255,0.6)',
-                      boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
+                      background: index === 0 ? 'rgba(255,255,255,0.2)' : `${phase.color}15`,
+                      color: index === 0 ? 'white' : phase.color,
                     }}
                   >
-                    <div className={`flex items-center gap-3 mb-2 ${index % 2 === 0 ? 'justify-end' : ''}`}>
-                      <div 
-                        className="w-10 h-10 rounded-xl flex items-center justify-center"
-                        style={{ background: item.color }}
-                      >
-                        <item.icon className="w-5 h-5 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
-                    </div>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-                
-                {/* Timeline node */}
-                <div 
-                  className="relative z-10 w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{
-                    background: 'linear-gradient(135deg, hsl(35 40% 98%), hsl(35 50% 95%))',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                    border: `3px solid ${item.color}`,
-                  }}
-                >
-                  <span 
-                    className="text-sm font-bold"
-                    style={{ color: item.color }}
-                  >
-                    {item.phase}
+                    {phase.status}
                   </span>
                 </div>
                 
-                <div className="flex-1" />
+                <div className={`text-lg font-bold mb-1 ${index === 0 ? 'text-white' : 'text-foreground'}`}>
+                  {phase.title}
+                </div>
+                <div className={`text-sm mb-4 ${index === 0 ? 'text-white/70' : 'text-muted-foreground'}`}>
+                  {phase.timeline}
+                </div>
+                
+                <div className="space-y-2">
+                  {phase.items.map(item => (
+                    <div key={item} className="flex items-center gap-2">
+                      <CheckCircle2 className={`w-4 h-4 flex-shrink-0 ${index === 0 ? 'text-white/80' : 'text-primary'}`} />
+                      <span className={`text-sm ${index === 0 ? 'text-white/90' : 'text-foreground'}`}>{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
+            </div>
+          ))}
+        </div>
+        
+        <div className="fade-up-delay-3 mt-6 flex justify-center">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full" style={{
+            background: 'linear-gradient(135deg, rgba(122, 30, 45, 0.1), rgba(217, 119, 87, 0.1))'
+          }}>
+            <Sparkles className="w-5 h-5 text-primary" />
+            <span className="text-base font-medium text-foreground">
+              Focused wedge → Stepwise expansion → Platform over time
+            </span>
           </div>
         </div>
       </div>

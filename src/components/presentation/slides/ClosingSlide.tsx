@@ -52,7 +52,7 @@ export const ClosingSlide: React.FC = () => {
         border: '1px solid rgba(255,255,255,0.5)',
       }}>
         <span className="text-sm text-muted-foreground">Potential early rollout prospects:</span>
-        {["UGent Cafeteria", "Wintercircus Cafeteria", "Lunch Garden"].map(name => (
+        {["UGent Cafeteria", "Wintercircus Cafeteria", "Lunch Garden", "Les brasseries de Breyne"].map(name => (
           <span key={name} className="px-3 py-1 rounded-full text-xs font-medium" style={{
             background: 'hsl(35 30% 90%)',
             color: 'hsl(20 10% 45%)',

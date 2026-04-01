@@ -42,7 +42,7 @@ export const ClosingSlide: React.FC = () => {
         boxShadow: '0 20px 60px rgba(122, 30, 45, 0.35)',
       }}>
         <Heart className="w-6 h-6 text-white/90" />
-        <span className="text-2xl font-bold text-white">Let us be part of the Entourage Family</span>
+        <span className="text-2xl font-bold text-white">Let's build more profitable restaurants</span>
       </div>
       
       <div className="fade-up-delay-2 flex items-center gap-2 px-5 py-2.5 rounded-full mb-5" style={{

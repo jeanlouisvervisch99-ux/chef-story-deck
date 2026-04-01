@@ -8,10 +8,10 @@ import { ProblemSlide } from './slides/ProblemSlide';
 import { SolutionSlide } from './slides/SolutionSlide';
 import { FeaturesSlide } from './slides/FeaturesSlide';
 import { CompetitiveSlide } from './slides/CompetitiveSlide';
+import { ValueSlide } from './slides/ValueSlide';
 import { BusinessModelSlide } from './slides/BusinessModelSlide';
 import { ICPSlide } from './slides/ICPSlide';
 import { MarketSlide } from './slides/MarketSlide';
-import { ValueSlide } from './slides/ValueSlide';
 import { RoadmapSlide } from './slides/RoadmapSlide';
 import { TeamSlide } from './slides/TeamSlide';
 import { ClosingSlide } from './slides/ClosingSlide';
@@ -20,12 +20,12 @@ const slides = [
   { id: 1, component: TitleSlide, title: 'Title' },
   { id: 2, component: ProblemSlide, title: 'Problem' },
   { id: 3, component: SolutionSlide, title: 'Solution' },
-  { id: 4, component: FeaturesSlide, title: 'Product Features' },
-  { id: 5, component: CompetitiveSlide, title: 'Competitive Moat' },
-  { id: 6, component: BusinessModelSlide, title: 'Business Model' },
-  { id: 7, component: ICPSlide, title: 'ICP & GTM' },
+  { id: 4, component: FeaturesSlide, title: 'V1 Product' },
+  { id: 5, component: CompetitiveSlide, title: 'Competitive Landscape' },
+  { id: 6, component: ValueSlide, title: 'Value Creation' },
+  { id: 7, component: BusinessModelSlide, title: 'Business Model' },
   { id: 8, component: MarketSlide, title: 'Market & Why Now' },
-  { id: 9, component: ValueSlide, title: 'Value Creation' },
+  { id: 9, component: ICPSlide, title: 'ICP & GTM' },
   { id: 10, component: RoadmapSlide, title: 'Roadmap' },
   { id: 11, component: TeamSlide, title: 'Team' },
   { id: 12, component: ClosingSlide, title: 'The Ask' },

@@ -1,29 +1,29 @@
 import React from 'react';
-import { AlertTriangle, Puzzle, TrendingDown, Building2 } from 'lucide-react';
+import { AlertTriangle, Eye, TrendingDown, Receipt } from 'lucide-react';
 
 const problems = [
   {
     icon: TrendingDown,
-    title: "Hospitality is a margin game",
-    description: "Average restaurant margins are just 3-5%. Every percentage point matters.",
+    title: "3–5% net margins",
+    description: "Restaurants operate on razor-thin margins. A single underperforming dish can wipe out monthly profit.",
     gradient: 'linear-gradient(135deg, hsl(350 70% 75%), hsl(350 60% 30%))',
   },
   {
-    icon: Puzzle,
-    title: "8+ disconnected tools",
-    description: "POS, inventory, reservations, payments, procurement, HR, accounting, loyalty...",
+    icon: Eye,
+    title: "Zero dish-level visibility",
+    description: "Most owners don't know which dishes make money and which lose it. Pricing is based on gut feeling, not data.",
     gradient: 'linear-gradient(135deg, hsl(25 80% 80%), hsl(25 80% 55%))',
   },
   {
-    icon: Building2,
-    title: "Decentralized chaos",
-    description: "Groups struggle with changing menus and no consolidated view across locations.",
+    icon: Receipt,
+    title: "Invoices pile up unread",
+    description: "Ingredient costs change weekly. Paper and PDF invoices sit in drawers — never linked to actual menu costs.",
     gradient: 'linear-gradient(135deg, hsl(280 50% 80%), hsl(280 50% 60%))',
   },
   {
     icon: AlertTriangle,
-    title: "No unified P&L prediction",
-    description: "No way to forecast costs based on reservations and historical data.",
+    title: "No real-time cost tracking",
+    description: "Owners discover margin erosion months later in quarterly accounting — far too late to act.",
     gradient: 'linear-gradient(135deg, hsl(160 50% 70%), hsl(160 50% 45%))',
   }
 ];
@@ -33,7 +33,7 @@ export const ProblemSlide: React.FC = () => {
     <div className="slide">
       <h2 className="slide-title fade-up">The Problem</h2>
       <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-10">
-        Restaurants are drowning in complexity
+        Restaurants are flying blind on profitability
       </p>
       
       <div className="slide-content">
@@ -42,10 +42,7 @@ export const ProblemSlide: React.FC = () => {
             <div
               key={problem.title}
               className="fade-up feature-card group"
-              style={{ 
-                animationDelay: `${0.2 + index * 0.12}s`, 
-                opacity: 0,
-              }}
+              style={{ animationDelay: `${0.2 + index * 0.12}s`, opacity: 0 }}
             >
               <div 
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
@@ -63,7 +60,6 @@ export const ProblemSlide: React.FC = () => {
           ))}
         </div>
         
-        {/* Visual emphasis */}
         <div className="fade-up-delay-3 mt-10 flex justify-center">
           <div 
             className="px-8 py-4 rounded-full"
@@ -73,7 +69,7 @@ export const ProblemSlide: React.FC = () => {
             }}
           >
             <span className="text-lg font-medium text-primary">
-              Result: 60% of restaurants fail within 3 years
+              Result: most restaurants don't know their true cost per plate
             </span>
           </div>
         </div>

@@ -52,35 +52,19 @@ export const TeamSlide: React.FC = () => {
               >
                 <div className="flex items-center gap-5 mb-5">
                   <div 
-                    className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 relative"
-                    style={{
-                      boxShadow: '0 10px 30px rgba(122, 30, 45, 0.2)',
-                    }}
+                    className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0"
+                    style={{ boxShadow: '0 10px 30px rgba(122, 30, 45, 0.2)' }}
                   >
-                    <img 
-                      src={member.photo} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <h3 
-                      className="text-2xl font-bold mb-1"
-                      style={{
-                        background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                      }}
-                    >
-                      {member.name}
-                    </h3>
+                    <h3 className="text-2xl font-bold mb-1" style={{
+                      background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}>{member.name}</h3>
                     <div className="text-sm font-semibold text-muted-foreground">{member.role}</div>
-                    <div 
-                      className="text-sm font-bold mt-1"
-                      style={{ color: 'hsl(350 60% 30%)' }}
-                    >
-                      {member.title}
-                    </div>
+                    <div className="text-sm font-bold mt-1" style={{ color: 'hsl(350 60% 30%)' }}>{member.title}</div>
                   </div>
                 </div>
                 
@@ -97,10 +81,7 @@ export const TeamSlide: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-transform hover:scale-105"
-                  style={{
-                    background: member.gradient,
-                    color: 'white',
-                  }}
+                  style={{ background: member.gradient, color: 'white' }}
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
                   {member.linkLabel}
@@ -110,45 +91,33 @@ export const TeamSlide: React.FC = () => {
           ))}
         </div>
         
-        {/* CPO Strategic Search */}
+        {/* CPO Search */}
         <div className="fade-up-delay-3 max-w-2xl mx-auto">
-          <div 
-            className="p-6 rounded-3xl relative overflow-hidden"
-            style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
-              backdropFilter: 'blur(20px)',
-              border: '2px solid hsl(350 60% 30% / 0.2)',
-            }}
-          >
+          <div className="p-6 rounded-3xl relative overflow-hidden" style={{
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
+            backdropFilter: 'blur(20px)',
+            border: '2px solid hsl(350 60% 30% / 0.2)',
+          }}>
             <div className="absolute top-4 right-4 opacity-30">
               <Sparkles className="w-8 h-8 text-accent" />
             </div>
-            
             <div className="flex items-center gap-4 mb-3">
-              <div 
-                className="w-12 h-12 rounded-xl flex items-center justify-center"
-                style={{
-                  background: 'linear-gradient(135deg, hsl(280 50% 60%), hsl(280 40% 50%))',
-                }}
-              >
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{
+                background: 'linear-gradient(135deg, hsl(280 50% 60%), hsl(280 40% 50%))',
+              }}>
                 <Search className="h-6 w-6 text-white" />
               </div>
               <div>
-                <span 
-                  className="text-xl font-bold block"
-                  style={{
-                    background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(280 50% 60%))',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
-                  Strategic Search: CPO
-                </span>
+                <span className="text-xl font-bold block" style={{
+                  background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(280 50% 60%))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}>Strategic Search: CPO</span>
                 <span className="text-sm text-muted-foreground">Hospitality + Tech background</span>
               </div>
             </div>
             <p className="text-muted-foreground text-sm">
-              Seeking a Chief Product Officer with deep hospitality experience to guide product vision and industry-specific feature development.
+              Seeking a Chief Product Officer with deep hospitality experience to guide product vision and customer discovery.
             </p>
           </div>
         </div>

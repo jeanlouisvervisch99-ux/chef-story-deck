@@ -1,13 +1,13 @@
 import React from 'react';
-import { CheckCircle2, Sparkles, Zap, Brain, Eye, Banknote, Shield } from 'lucide-react';
+import { CheckCircle2, Brain, Eye, Layers, ArrowRight } from 'lucide-react';
 
-const features = [
-"All-in-one operations platform",
-"AI-powered menu analysis",
-"Real-time P&L forecasting",
-"Integrated procurement",
-"Workforce optimization"];
-
+const v1Features = [
+  "AI invoice ingestion — snap, scan, done",
+  "Automatic recipe & menu costing",
+  "Real-time margin dashboard per dish",
+  "Works on top of any existing POS",
+  "No deep integrations required for V1",
+];
 
 export const SolutionSlide: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const SolutionSlide: React.FC = () => {
       
       <div className="slide-content">
         <div className="grid grid-cols-2 gap-12 items-start">
-          {/* Left: Solution */}
+          {/* Left: Core V1 */}
           <div className="fade-up-delay-1 flex flex-col h-full">
             <div
               className="text-3xl font-bold leading-tight mb-5"
@@ -24,43 +24,41 @@ export const SolutionSlide: React.FC = () => {
                 background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
-              }}>
-              
-              One platform to run your entire restaurant group
+              }}
+            >
+              Invoice → Costing → Margin Dashboard
             </div>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Chef consolidates every tool into a single, intelligent system—especially valuable for groups with changing menus and decentralized operations.
+              Chef sits on top of your existing POS and turns messy invoices into actionable margin intelligence. No rip-and-replace needed.
             </p>
             
             <div className="space-y-2.5 mb-6">
-              {features.map((feature, index) =>
-              <div
-                key={feature}
-                className="fade-up flex items-center gap-3"
-                style={{ animationDelay: `${0.4 + index * 0.08}s`, opacity: 0 }}>
-                
+              {v1Features.map((feature, index) => (
+                <div
+                  key={feature}
+                  className="fade-up flex items-center gap-3"
+                  style={{ animationDelay: `${0.4 + index * 0.08}s`, opacity: 0 }}
+                >
                   <div
-                  className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{
-                    background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))'
-                  }}>
-                  
+                    className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))' }}
+                  >
                     <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                   </div>
                   <span className="text-base font-medium text-foreground">{feature}</span>
                 </div>
-              )}
+              ))}
             </div>
 
-            {/* AI inflection callout */}
+            {/* AI callout */}
             <div
               className="fade-up-delay-2 p-5 rounded-2xl relative overflow-hidden mt-auto"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
                 boxShadow: '0 20px 60px rgba(122, 30, 45, 0.3)'
-              }}>
-              
+              }}
+            >
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                   <Brain className="w-6 h-6 text-white/90" />
@@ -72,8 +70,8 @@ export const SolutionSlide: React.FC = () => {
                 </p>
                 <div
                   className="px-4 py-2 rounded-full inline-flex items-center gap-2"
-                  style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)' }}>
-                  
+                  style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)' }}
+                >
                   <Eye className="w-4 h-4 text-white" />
                   <span className="text-white text-sm font-medium">Ending manual data entry for good</span>
                 </div>
@@ -81,104 +79,76 @@ export const SolutionSlide: React.FC = () => {
             </div>
           </div>
           
-          {/* Right: Why Now + Embedded Finance */}
+          {/* Right: How it works + Integration */}
           <div className="fade-up-delay-2 flex flex-col h-full">
-            <div className="flex items-center gap-3 mb-3">
-              <Zap className="w-5 h-5 text-accent" />
-              <span className="text-muted-foreground font-semibold text-lg">Why 2026?</span>
-            </div>
-            
-            <div
-              className="p-5 rounded-2xl mb-6"
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)'
-              }}>
-              
-              <div className="text-muted-foreground text-sm leading-relaxed">
-                <span className="font-bold text-foreground">5 years ago:</span> Digitizing a kitchen was a manual mess—hours of data entry, disconnected systems, constant errors. Today, AI makes it possible to automate everything.
-              </div>
-            </div>
-
             <div className="flex items-center gap-3 mb-4">
-              <Sparkles className="w-5 h-5 text-accent" />
-              <h3
+              <Layers className="w-5 h-5 text-accent" />
+              <span
                 className="text-xl font-bold"
                 style={{
                   background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
-                }}>
-                
-                The Flipped Playbook
-              </h3>
+                }}
+              >
+                How It Works
+              </span>
             </div>
             
+            {/* Step flow */}
+            <div className="space-y-4 mb-6">
+              {[
+                { step: "1", title: "Snap your invoices", desc: "Photo, PDF, email forward — any format works" },
+                { step: "2", title: "AI extracts & maps ingredients", desc: "Matched to your recipes automatically" },
+                { step: "3", title: "See real-time dish margins", desc: "Know exactly what makes money — and what doesn't" },
+              ].map((item, index) => (
+                <div
+                  key={item.step}
+                  className="fade-up p-4 rounded-2xl flex items-start gap-4"
+                  style={{
+                    animationDelay: `${0.4 + index * 0.12}s`,
+                    opacity: 0,
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(255,255,255,0.6)',
+                  }}
+                >
+                  <div
+                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-white text-sm"
+                    style={{ background: 'hsl(350 60% 30%)' }}
+                  >
+                    {item.step}
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground text-sm">{item.title}</div>
+                    <div className="text-xs text-muted-foreground">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Integration note */}
             <div
-              className="p-5 rounded-2xl flex-1"
+              className="p-5 rounded-2xl mt-auto"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.6)',
                 boxShadow: '0 10px 40px rgba(0,0,0,0.06)'
-              }}>
-              
-              <h4 className="font-bold text-foreground mb-2">Not just SaaS — Embedded Finance</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                By handling procurement payments, Chef becomes a financial clearinghouse.
+              }}
+            >
+              <h4 className="font-bold text-foreground mb-2 flex items-center gap-2">
+                <Layers className="w-4 h-4 text-primary" />
+                Integration-Light by Design
+              </h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                V1 uses invoice parsing as the primary data source — no dependency on POS APIs. 
+                We acknowledge POS fragmentation and work around it.
               </p>
-              
-              <div className="space-y-2.5">
-                <div className="flex items-center gap-3 p-2.5 rounded-xl" style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))'
-                }}>
-                  <div
-                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'hsl(350 60% 30%)' }}>
-                    
-                    <Banknote className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground text-sm">Capture the Float</div>
-                    <div className="text-xs text-muted-foreground">Hold procurement funds in transit</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3 p-2.5 rounded-xl" style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))'
-                }}>
-                  <div
-                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'hsl(25 80% 55%)' }}>
-                    
-                    <Shield className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground text-sm">Interchange Revenue</div>
-                    <div className="text-xs text-muted-foreground">Earn on every payment processed</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 p-2.5 rounded-xl" style={{
-                  background: 'linear-gradient(135deg, hsl(350 60% 30% / 0.08), hsl(25 80% 55% / 0.08))'
-                }}>
-                  <div
-                    className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'hsl(350 45% 40%)' }}>
-                    
-                    <Banknote className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground text-sm">Working Capital</div>
-                    <div className="text-xs text-muted-foreground">Finance procurement needs for restaurants</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>);
-
+    </div>
+  );
 };

@@ -26,7 +26,7 @@ export const SolutionSlide: React.FC = () => {
                 WebkitTextFillColor: 'transparent'
               }}
             >
-              Invoice → Costing → Margin Dashboard
+              Invoice → Costing → Margins → Forecast
             </div>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">

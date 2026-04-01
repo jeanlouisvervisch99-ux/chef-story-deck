@@ -87,7 +87,7 @@ export const CompetitiveSlide: React.FC = () => {
                 <th className="px-2 py-2.5 font-semibold text-muted-foreground">
                   <div className="text-center">
                     <div className="text-[11px]">YourBI</div>
-                    <div className="text-[9px] font-normal text-muted-foreground/60">Analytics</div>
+                    <div className="text-[9px] font-normal text-muted-foreground/60">Analytics · NL</div>
                   </div>
                 </th>
                 <th className="px-2 py-2.5">

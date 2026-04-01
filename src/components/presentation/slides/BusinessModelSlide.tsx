@@ -61,7 +61,7 @@ export const BusinessModelSlide: React.FC = () => {
                   <span className="text-4xl font-black text-white">€169</span>
                   <span className="text-white/70">/mo per location</span>
                 </div>
-                <p className="text-sm text-white/80 mb-3">Full margin dashboard + recipe costing + alerts</p>
+                <p className="text-sm text-white/80 mb-3">Full margin dashboard + recipe costing + forecasting + alerts</p>
                 <div className="px-4 py-1.5 rounded-full flex items-center gap-2" style={{
                   background: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',
                   boxShadow: '0 4px 15px rgba(217, 119, 87, 0.4)'

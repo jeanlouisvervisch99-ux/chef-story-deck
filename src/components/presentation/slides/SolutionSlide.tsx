@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Brain, Eye, Layers, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Brain, Eye, Layers, TrendingUp } from 'lucide-react';
 
 const v1Features = [
   "AI invoice ingestion — snap, scan, done",

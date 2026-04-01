@@ -127,7 +127,7 @@ export const SolutionSlide: React.FC = () => {
               ))}
             </div>
 
-            {/* Integration note */}
+            {/* Forecasting note */}
             <div
               className="p-5 rounded-2xl mt-auto"
               style={{
@@ -138,12 +138,11 @@ export const SolutionSlide: React.FC = () => {
               }}
             >
               <h4 className="font-bold text-foreground mb-2 flex items-center gap-2">
-                <Layers className="w-4 h-4 text-primary" />
-                Integration-Light by Design
+                <TrendingUp className="w-4 h-4 text-primary" />
+                Forecasting Built Into the Flow
               </h4>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                V1 uses invoice parsing as the primary data source — no dependency on POS APIs. 
-                We acknowledge POS fragmentation and work around it.
+                Historical invoices + menu data = ingredient demand estimates. No extra setup — forecasting is a natural output of cost intelligence.
               </p>
             </div>
           </div>

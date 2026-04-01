@@ -41,7 +41,7 @@ export const ClosingSlide: React.FC = () => {
         background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
         boxShadow: '0 20px 60px rgba(122, 30, 45, 0.35)',
       }}>
-        <Heart className="w-6 h-6 text-white/90" />
+        <TrendingUp className="w-6 h-6 text-white/90" />
         <span className="text-2xl font-bold text-white">Let's build more profitable restaurants</span>
       </div>
       

@@ -58,7 +58,7 @@ export const TitleSlide: React.FC = () => {
       <p 
         className="fade-up-delay-2 text-xl font-medium mb-4 max-w-2xl text-muted-foreground"
       >
-        We turn invoices into margin intelligence — so every restaurant knows exactly where money is made and lost.
+        "We turn invoices into margin intelligence so every restaurant knows exactly where money is made and lost."
       </p>
 
       

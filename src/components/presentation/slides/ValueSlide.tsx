@@ -131,7 +131,7 @@ export const ValueSlide: React.FC = () => {
                   <span className="text-lg font-medium text-white/80">Target Margin Improvement</span>
                 </div>
                 <div className="text-7xl font-black text-white mb-2" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}>
-                  3–5%
+                  3–6%
                 </div>
                 <p className="text-white/80 text-lg">per location</p>
               </div>
@@ -146,7 +146,6 @@ export const ValueSlide: React.FC = () => {
               }}
             >
               <div className="flex items-center gap-2 mb-3">
-                <Sparkles className="w-5 h-5 text-accent" />
                 <span className="font-semibold text-foreground text-sm">Example: €500K revenue bistro</span>
               </div>
               <div className="flex justify-between items-center pt-1" style={{ borderTop: '2px solid hsl(350 60% 30% / 0.2)' }}>
@@ -159,7 +158,7 @@ export const ValueSlide: React.FC = () => {
                   background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                }}>€15–25K</span>
+                }}>€15–30K</span>
               </div>
             </div>
           </div>

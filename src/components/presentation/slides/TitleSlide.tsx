@@ -61,12 +61,6 @@ export const TitleSlide: React.FC = () => {
         We turn invoices into margin intelligence — so every restaurant knows exactly where money is made and lost.
       </p>
 
-      <p 
-        className="fade-up-delay-2 text-lg italic font-medium mb-12"
-        style={{ color: 'hsl(20 10% 45%)' }}
-      >
-        "Because every restaurant deserves a chance to be Michelin."
-      </p>
       
       <div 
         className="fade-up-delay-3 mt-4 w-32 h-1 rounded-full"

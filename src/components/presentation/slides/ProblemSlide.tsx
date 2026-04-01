@@ -5,25 +5,25 @@ const problems = [
   {
     icon: TrendingDown,
     title: "3–5% net margins",
-    description: "Restaurants operate on razor-thin margins. A single underperforming dish can wipe out monthly profit.",
+    description: "A single underperforming dish can wipe out monthly profit.",
     gradient: 'linear-gradient(135deg, hsl(350 70% 75%), hsl(350 60% 30%))',
   },
   {
     icon: Eye,
     title: "Zero dish-level visibility",
-    description: "Most owners don't know which dishes make money and which lose it. Pricing is based on gut feeling, not data.",
+    description: "Pricing is based on gut feeling, not data.",
     gradient: 'linear-gradient(135deg, hsl(25 80% 80%), hsl(25 80% 55%))',
   },
   {
     icon: Receipt,
     title: "Invoices pile up unread",
-    description: "Ingredient costs change weekly. Paper and PDF invoices sit in drawers — never linked to actual menu costs.",
+    description: "Ingredient costs change weekly — never linked to actual menu costs.",
     gradient: 'linear-gradient(135deg, hsl(280 50% 80%), hsl(280 50% 60%))',
   },
   {
     icon: AlertTriangle,
     title: "No real-time cost tracking",
-    description: "Owners discover margin erosion months later in quarterly accounting — far too late to act.",
+    description: "Margin erosion discovered months later — far too late to act.",
     gradient: 'linear-gradient(135deg, hsl(160 50% 70%), hsl(160 50% 45%))',
   }
 ];
@@ -32,7 +32,7 @@ export const ProblemSlide: React.FC = () => {
   return (
     <div className="slide">
       <h2 className="slide-title fade-up">The Problem</h2>
-      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-10">
+      <p className="fade-up-delay-1 text-2xl text-muted-foreground mb-8">
         Restaurants are flying blind on profitability
       </p>
       

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Store, Target, Handshake, ArrowRight, Users, Truck, Gift, Sparkles } from 'lucide-react';
+import { Store, Target, Handshake, Users, Truck, Gift } from 'lucide-react';
 
 export const ICPSlide: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ export const ICPSlide: React.FC = () => {
               >
                 <div className="absolute top-0 left-0 right-0 h-1.5" style={{ background: 'hsl(350 60% 30%)' }} />
                 
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-5">
                   <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: 'hsl(350 60% 30%)' }}>
                     <Store className="w-6 h-6 text-white" />
                   </div>
@@ -36,32 +36,24 @@ export const ICPSlide: React.FC = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <Target className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-foreground text-sm">Buyer</div>
-                      <div className="text-sm text-muted-foreground">Owner or head chef — the person who feels margin pain daily</div>
+                  {[
+                    { label: "Buyer", text: "Owner or head chef — the person who feels margin pain daily" },
+                    { label: "Core Pain", text: "No visibility into dish-level profitability" },
+                    { label: "Revenue", text: "€300K–€1.5M annual · 1–5 locations" },
+                  ].map(item => (
+                    <div key={item.label} className="flex items-start gap-3">
+                      <Target className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <span className="font-semibold text-foreground text-sm">{item.label}: </span>
+                        <span className="text-sm text-muted-foreground">{item.text}</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Target className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-foreground text-sm">Core Pain</div>
-                      <div className="text-sm text-muted-foreground">No visibility into true dish-level profitability. Pricing based on gut, not data.</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Target className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-foreground text-sm">Revenue Range</div>
-                      <div className="text-sm text-muted-foreground">€300K–€1.5M annual revenue. 1–5 locations.</div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
 
-            {/* Expansion targets */}
+            {/* Future expansion */}
             <div className="fade-up-delay-2 p-4 rounded-2xl" style={{
               background: 'linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3))',
               border: '1px solid rgba(255,255,255,0.4)',
@@ -86,73 +78,45 @@ export const ICPSlide: React.FC = () => {
               WebkitTextFillColor: 'transparent'
             }}>How We Get to 50–100 Customers</h3>
             
-            <div className="space-y-3">
-              <div className="p-4 rounded-2xl" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)',
-              }}>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: 'hsl(350 60% 30%)' }}>
-                    <Users className="w-4 h-4 text-white" />
+            <div className="space-y-4">
+              {[
+                { icon: Users, color: 'hsl(350 60% 30%)', title: "Direct Field Sales", desc: "Door-to-door in key Belgian restaurant districts. Demo on their actual invoices." },
+                { icon: Truck, color: 'hsl(25 80% 55%)', title: "Wholesaler Partnerships", desc: "Partner with food wholesalers to introduce Chef to their restaurant clients." },
+                { icon: Handshake, color: 'hsl(160 50% 45%)', title: "1-Month Free Trial", desc: "Zero friction onboarding. Scan invoices from day one. Auto-converts to paid." },
+              ].map(item => (
+                <div key={item.title} className="p-4 rounded-2xl" style={{
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+                  backdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(255,255,255,0.6)',
+                }}>
+                  <div className="flex items-center gap-3 mb-1.5">
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: item.color }}>
+                      <item.icon className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="font-bold text-foreground text-sm">{item.title}</div>
                   </div>
-                  <div className="font-bold text-foreground">Direct Field Sales</div>
+                  <p className="text-sm text-muted-foreground pl-11">{item.desc}</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Door-to-door in key Belgian restaurant districts. Demo the product on their actual invoices — instant value proof.</p>
-              </div>
-              
-              <div className="p-4 rounded-2xl" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)',
-              }}>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: 'hsl(25 80% 55%)' }}>
-                    <Truck className="w-4 h-4 text-white" />
-                  </div>
-                  <div className="font-bold text-foreground">Wholesaler Partnerships</div>
-                </div>
-                <p className="text-sm text-muted-foreground">Partner with food wholesalers as a distribution channel. They introduce Chef to their restaurant clients.</p>
-              </div>
-              
-              <div className="p-4 rounded-2xl" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)',
-              }}>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: 'hsl(160 50% 45%)' }}>
-                    <Handshake className="w-4 h-4 text-white" />
-                  </div>
-                  <div className="font-bold text-foreground">1-Month Free Trial</div>
-                </div>
-                <p className="text-sm text-muted-foreground">Zero friction onboarding. Scan invoices from day one. Auto-converts to paid after trial.</p>
-              </div>
+              ))}
 
-              {/* Tactical acquisition levers */}
+              {/* Incentives - compact */}
               <div className="p-4 rounded-2xl" style={{
                 background: 'linear-gradient(135deg, hsl(25 80% 55% / 0.08), hsl(350 60% 30% / 0.08))',
                 border: '1px solid hsl(25 80% 55% / 0.15)',
               }}>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: 'hsl(38 85% 55%)' }}>
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'hsl(38 85% 55%)' }}>
                     <Gift className="w-4 h-4 text-white" />
                   </div>
-                  <div className="font-bold text-foreground">Possible Early Adopter Incentives</div>
+                  <div className="font-bold text-foreground text-sm">Possible Early Adopter Incentives</div>
                 </div>
-                <div className="space-y-1.5 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-3.5 h-3.5 text-accent flex-shrink-0" />
-                    <span><span className="font-semibold text-foreground">€100 onboarding voucher</span> — redeemable at hospitality suppliers</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-3.5 h-3.5 text-accent flex-shrink-0" />
-                    <span><span className="font-semibold text-foreground">Referral bonus</span> — €100 credit for each restaurant referred</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-3.5 h-3.5 text-accent flex-shrink-0" />
-                    <span><span className="font-semibold text-foreground">Founding member pricing</span> — locked-in rate for first 50 customers</span>
-                  </div>
+                <div className="flex flex-wrap gap-2 pl-11">
+                  {["€100 onboarding voucher", "Referral bonus", "Founding member pricing"].map(item => (
+                    <span key={item} className="px-3 py-1 rounded-full text-xs font-medium" style={{
+                      background: 'hsl(35 30% 90%)',
+                      color: 'hsl(20 10% 45%)',
+                    }}>{item}</span>
+                  ))}
                 </div>
               </div>
             </div>

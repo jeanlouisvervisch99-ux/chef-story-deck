@@ -93,32 +93,26 @@ export const TeamSlide: React.FC = () => {
         
         {/* CPO Search */}
         <div className="fade-up-delay-3 max-w-2xl mx-auto">
-          <div className="p-6 rounded-3xl relative overflow-hidden" style={{
+          <div className="p-5 rounded-3xl relative overflow-hidden" style={{
             background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
             backdropFilter: 'blur(20px)',
             border: '2px solid hsl(350 60% 30% / 0.2)',
           }}>
-            <div className="absolute top-4 right-4 opacity-30">
-              <Sparkles className="w-8 h-8 text-accent" />
-            </div>
-            <div className="flex items-center gap-4 mb-3">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{
                 background: 'linear-gradient(135deg, hsl(280 50% 60%), hsl(280 40% 50%))',
               }}>
-                <Search className="h-6 w-6 text-white" />
+                <Search className="h-5 w-5 text-white" />
               </div>
               <div>
-                <span className="text-xl font-bold block" style={{
+                <span className="text-lg font-bold" style={{
                   background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(280 50% 60%))',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                 }}>Strategic Search: CPO</span>
-                <span className="text-sm text-muted-foreground">Hospitality + Tech background</span>
+                <span className="text-sm text-muted-foreground ml-2">Hospitality + Tech background</span>
               </div>
             </div>
-            <p className="text-muted-foreground text-sm">
-              Seeking a Chief Product Officer with deep hospitality experience to guide product vision and customer discovery.
-            </p>
           </div>
         </div>
       </div>

@@ -103,7 +103,7 @@ export const BusinessModelSlide: React.FC = () => {
               {[
                 { title: "Phase 1: Land", desc: "SaaS subscription per location. Pure software margins." },
                 { title: "Phase 2: Expand", desc: "Add-on modules (advanced forecasting, procurement recs) at €50–€100/mo each." },
-                { title: "Phase 3: Monetize Data", desc: "Aggregate anonymized data for wholesalers and industry insights." },
+                { title: "Phase 3: Monetize Data - 'BRD' or Big Restaurant Data", desc: "Aggregate anonymized data for wholesalers and industry insights." },
               ].map(phase => (
                 <div key={phase.title} className="p-5 rounded-2xl" style={{
                   background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',

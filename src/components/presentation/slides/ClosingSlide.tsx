@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChefHat, Mail, Sparkles, Heart } from 'lucide-react';
+import { ChefHat, Mail, Sparkles, TrendingUp } from 'lucide-react';
 
 export const ClosingSlide: React.FC = () => {
   return (

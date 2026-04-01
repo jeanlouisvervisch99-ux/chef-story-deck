@@ -12,7 +12,7 @@ const v1Features = [
 export const SolutionSlide: React.FC = () => {
   return (
     <div className="slide">
-      <h2 className="slide-title fade-up">The Solution</h2>
+      <h2 className="slide-title fade-up">The Solution V1</h2>
       
       <div className="slide-content">
         <div className="grid grid-cols-2 gap-12 items-start">

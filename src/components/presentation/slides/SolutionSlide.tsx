@@ -5,8 +5,8 @@ const v1Features = [
   "AI invoice ingestion — snap, scan, done",
   "Automatic recipe & menu costing",
   "Real-time margin dashboard per dish",
+  "Basic demand forecasting — what to buy next week",
   "Works on top of any existing POS",
-  "No deep integrations required for V1",
 ];
 
 export const SolutionSlide: React.FC = () => {

@@ -1,12 +1,12 @@
 import React from 'react';
-import { CheckCircle2, Brain, Eye, Layers, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Brain, Eye, Layers, TrendingUp } from 'lucide-react';
 
 const v1Features = [
   "AI invoice ingestion — snap, scan, done",
   "Automatic recipe & menu costing",
   "Real-time margin dashboard per dish",
+  "Basic demand forecasting — what to buy next week",
   "Works on top of any existing POS",
-  "No deep integrations required for V1",
 ];
 
 export const SolutionSlide: React.FC = () => {
@@ -26,11 +26,11 @@ export const SolutionSlide: React.FC = () => {
                 WebkitTextFillColor: 'transparent'
               }}
             >
-              Invoice → Costing → Margin Dashboard
+              Invoice → Costing → Margins → Forecast
             </div>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Chef sits on top of your existing POS and turns messy invoices into actionable margin intelligence. No rip-and-replace needed.
+              Chef turns messy invoices into margin intelligence and practical demand forecasts — so you know what's profitable and what to order next.
             </p>
             
             <div className="space-y-2.5 mb-6">
@@ -100,7 +100,7 @@ export const SolutionSlide: React.FC = () => {
               {[
                 { step: "1", title: "Snap your invoices", desc: "Photo, PDF, email forward — any format works" },
                 { step: "2", title: "AI extracts & maps ingredients", desc: "Matched to your recipes automatically" },
-                { step: "3", title: "See real-time dish margins", desc: "Know exactly what makes money — and what doesn't" },
+                { step: "3", title: "See margins & forecasts", desc: "Know what's profitable and what to order next week" },
               ].map((item, index) => (
                 <div
                   key={item.step}
@@ -127,7 +127,7 @@ export const SolutionSlide: React.FC = () => {
               ))}
             </div>
 
-            {/* Integration note */}
+            {/* Forecasting note */}
             <div
               className="p-5 rounded-2xl mt-auto"
               style={{
@@ -138,12 +138,11 @@ export const SolutionSlide: React.FC = () => {
               }}
             >
               <h4 className="font-bold text-foreground mb-2 flex items-center gap-2">
-                <Layers className="w-4 h-4 text-primary" />
-                Integration-Light by Design
+                <TrendingUp className="w-4 h-4 text-primary" />
+                Forecasting Built Into the Flow
               </h4>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                V1 uses invoice parsing as the primary data source — no dependency on POS APIs. 
-                We acknowledge POS fragmentation and work around it.
+                Historical invoices + menu data = ingredient demand estimates. No extra setup — forecasting is a natural output of cost intelligence.
               </p>
             </div>
           </div>

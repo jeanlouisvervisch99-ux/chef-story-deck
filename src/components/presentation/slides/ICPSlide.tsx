@@ -138,7 +138,7 @@ export const ICPSlide: React.FC = () => {
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: 'hsl(38 85% 55%)' }}>
                     <Gift className="w-4 h-4 text-white" />
                   </div>
-                  <div className="font-bold text-foreground">Early Adopter Incentives</div>
+                  <div className="font-bold text-foreground">Possible Early Adopter Incentives</div>
                 </div>
                 <div className="space-y-1.5 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">

@@ -52,11 +52,11 @@ export const CompetitiveSlide: React.FC = () => {
               <tr style={{ borderBottom: '2px solid hsl(350 60% 30% / 0.15)' }}>
                 <th className="text-left px-4 py-3 font-bold text-foreground">Feature</th>
                 {[
-                  { name: 'Lightspeed', sub: 'POS · BE' },
-                  { name: 'Toast', sub: 'POS · US/UK' },
+                  { name: 'Lightspeed', sub: 'POS · CA' },
+                  { name: 'Toast', sub: 'POS · US' },
                   { name: 'Square', sub: 'POS · US' },
                   { name: 'Apicbase', sub: 'F&B · BE' },
-                  { name: 'Alpa', sub: 'Finance · FR' },
+                  { name: 'Alpa', sub: 'Finance · UK' },
                   { name: 'YourBI', sub: 'Analytics · NL' },
                 ].map(col => (
                   <th key={col.name} className="px-2 py-3 font-semibold text-muted-foreground">

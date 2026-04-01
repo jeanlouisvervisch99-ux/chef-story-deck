@@ -60,7 +60,7 @@ export const ICPSlide: React.FC = () => {
             }}>
               <div className="text-sm font-semibold text-muted-foreground/70 mb-2">Future ICP Expansion</div>
               <div className="flex flex-wrap gap-2">
-                {["Bistro groups", "University cafeterias", "Hotel F&B", "Fast-casual chains"].map(seg => (
+                {["Bistro groups", "Ethnic restaurants", "Hotel F&B", "Fast-casual chains"].map(seg => (
                   <span key={seg} className="px-3 py-1 rounded-full text-xs font-medium" style={{
                     background: 'hsl(35 30% 90%)',
                     color: 'hsl(20 10% 50%)',

@@ -48,7 +48,7 @@ export const FeaturesSlide: React.FC = () => {
       </p>
       
       <div className="slide-content">
-        <div className="grid grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-4 gap-5 mb-8">
           {coreFeatures.map((feature, index) => (
             <div
               key={feature.title}

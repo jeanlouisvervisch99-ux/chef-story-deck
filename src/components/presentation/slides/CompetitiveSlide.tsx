@@ -109,7 +109,7 @@ export const CompetitiveSlide: React.FC = () => {
           }}>
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-foreground">
-              Alpa (FR) is closest — but requires POS integrations. Chef works from day one via invoice AI.
+              Alpa (UK) is closest — but requires POS integrations. Chef works from day one via invoice AI.
             </span>
           </div>
         </div>

@@ -1,11 +1,5 @@
 import React from 'react';
-import { ChefHat, Mail, Sparkles, Heart, GraduationCap, Building2, Store } from 'lucide-react';
-
-const earlyCustomers = [
-  { icon: GraduationCap, name: "UGent Cafeteria", type: "University dining" },
-  { icon: Building2, name: "Wintercircus Cafeteria", type: "Cultural venue" },
-  { icon: Store, name: "Lunch Garden", type: "Chain restaurants" },
-];
+import { ChefHat, Mail, Sparkles, Heart } from 'lucide-react';
 
 export const ClosingSlide: React.FC = () => {
   return (
@@ -52,29 +46,37 @@ export const ClosingSlide: React.FC = () => {
         <span className="text-2xl font-bold text-white">Let us be part of the Entourage Family</span>
       </div>
       
-      <div className="fade-up-delay-2 flex gap-4 mb-6">
-        <span className="text-sm font-semibold text-muted-foreground self-center mr-2">Building alongside:</span>
-        {earlyCustomers.map((customer) => (
-          <div key={customer.name} className="flex items-center gap-2.5 px-4 py-2.5 rounded-full" style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
-            backdropFilter: 'blur(20px)',
-            border: '1px solid rgba(255,255,255,0.5)',
-          }}>
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'hsl(350 60% 30%)' }}>
-              <customer.icon className="w-3.5 h-3.5 text-white" />
-            </div>
-            <span className="text-sm font-semibold text-foreground">{customer.name}</span>
-          </div>
-        ))}
-      </div>
-      
-      <div className="fade-up-delay-3 flex items-center gap-3 px-8 py-4 rounded-full mb-4" style={{
+      <div className="fade-up-delay-2 flex items-center gap-3 px-6 py-3 rounded-full mb-3" style={{
         background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
         backdropFilter: 'blur(20px)',
         border: '1px solid rgba(255,255,255,0.5)',
       }}>
-        <Mail className="h-5 w-5 text-primary" />
-        <span className="text-lg font-semibold text-foreground">contact@chef.app</span>
+        <span className="text-sm text-muted-foreground">Potential early rollout prospects:</span>
+        {["UGent Cafeteria", "Wintercircus Cafeteria", "Lunch Garden"].map(name => (
+          <span key={name} className="px-3 py-1 rounded-full text-xs font-medium" style={{
+            background: 'hsl(35 30% 90%)',
+            color: 'hsl(20 10% 45%)',
+          }}>{name}</span>
+        ))}
+      </div>
+      
+      <div className="fade-up-delay-3 flex flex-col items-center gap-2 mb-4">
+        <div className="flex items-center gap-3 px-8 py-3 rounded-full" style={{
+          background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255,255,255,0.5)',
+        }}>
+          <Mail className="h-5 w-5 text-primary" />
+          <span className="text-base font-semibold text-foreground">jeanlouis.vervisch@hotmail.com</span>
+        </div>
+        <div className="flex items-center gap-3 px-8 py-3 rounded-full" style={{
+          background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255,255,255,0.5)',
+        }}>
+          <Mail className="h-5 w-5 text-primary" />
+          <span className="text-base font-semibold text-foreground">pj.putzeys@gmail.com</span>
+        </div>
       </div>
       
       <p className="fade-up-delay-3 text-lg italic font-medium" style={{ color: 'hsl(20 10% 45%)' }}>

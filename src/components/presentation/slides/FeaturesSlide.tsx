@@ -26,9 +26,9 @@ const coreFeatures = [
   {
     icon: TrendingUp,
     title: "Demand Forecasting",
-    description: "Predict ingredient needs from historical invoices and menus — know what to buy next week, no POS required",
+    description: "Predict next-week ingredient needs from purchasing patterns and menus — no POS required",
     color: 'hsl(220 60% 50%)',
-    tag: "V1 Lite",
+    tag: "V1 Core",
   },
 ];
 

@@ -33,7 +33,7 @@ export const BusinessModelSlide: React.FC = () => {
                   <span className="text-4xl font-black" style={{ color: 'hsl(350 60% 30%)' }}>€69</span>
                   <span className="text-muted-foreground">/mo per location</span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-3">Invoice ingestion + basic costing</p>
+                <p className="text-sm text-muted-foreground mb-3">Invoice ingestion + basic costing + demand forecasting</p>
                 <div className="px-3 py-1.5 rounded-full text-xs font-semibold inline-block" style={{
                   background: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',
                   color: 'white'
@@ -61,7 +61,7 @@ export const BusinessModelSlide: React.FC = () => {
                   <span className="text-4xl font-black text-white">€169</span>
                   <span className="text-white/70">/mo per location</span>
                 </div>
-                <p className="text-sm text-white/80 mb-3">Full margin dashboard + recipe costing + alerts</p>
+                <p className="text-sm text-white/80 mb-3">Full margin dashboard + recipe costing + forecasting + alerts</p>
                 <div className="px-4 py-1.5 rounded-full flex items-center gap-2" style={{
                   background: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',
                   boxShadow: '0 4px 15px rgba(217, 119, 87, 0.4)'
@@ -116,7 +116,7 @@ export const BusinessModelSlide: React.FC = () => {
                 border: '1px solid rgba(255,255,255,0.6)'
               }}>
                 <div className="font-bold text-foreground mb-2">Phase 2: Expand</div>
-                <p className="text-sm text-muted-foreground">Add-on modules (forecasting, procurement recs) at €50–€100/mo each.</p>
+                <p className="text-sm text-muted-foreground">Add-on modules (advanced forecasting, procurement recs) at €50–€100/mo each.</p>
               </div>
               
               <div className="p-5 rounded-2xl" style={{

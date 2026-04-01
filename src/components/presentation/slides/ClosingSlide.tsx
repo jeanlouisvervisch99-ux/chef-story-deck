@@ -72,9 +72,6 @@ export const ClosingSlide: React.FC = () => {
         ))}
       </div>
       
-      <p className="fade-up-delay-3 text-lg italic font-medium" style={{ color: 'hsl(20 10% 45%)' }}>
-        "Because every restaurant deserves a chance to be Michelin."
-      </p>
     </div>
   );
 };

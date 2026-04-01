@@ -1,37 +1,26 @@
 import React from 'react';
-import { TrendingUp, Receipt, UtensilsCrossed, Euro, ArrowDown, ArrowUp, Sparkles, Clock, BarChart3, ArrowRight } from 'lucide-react';
+import { TrendingUp, Receipt, UtensilsCrossed, Euro, ArrowUp, Sparkles, Clock, ArrowRight } from 'lucide-react';
 
 const valueDrivers = [
   {
     icon: Receipt,
     title: "Identify Loss-Making Dishes",
-    description: "Spot dishes where ingredient cost exceeds margin target. Remove or reprice within days.",
-    impact: "1-2%",
-    direction: "up",
+    description: "Spot underperforming dishes. Remove or reprice within days.",
+    impact: "1–2%",
     color: 'hsl(350 60% 30%)',
   },
   {
-    icon: ArrowDown,
-    title: "Reduce Ingredient Costs",
-    description: "Visibility into per-ingredient spend reveals overpriced suppliers and waste patterns.",
-    impact: "1-2%",
-    direction: "down",
+    icon: UtensilsCrossed,
+    title: "Optimize Menu & Costs",
+    description: "See per-ingredient spend. Steer the menu toward high-margin dishes.",
+    impact: "1–2%",
     color: 'hsl(25 80% 55%)',
   },
   {
-    icon: UtensilsCrossed,
-    title: "Optimize Menu Mix",
-    description: "Steer the menu toward high-margin dishes while maintaining variety.",
-    impact: "1-2%",
-    direction: "up",
-    color: 'hsl(160 50% 45%)',
-  },
-  {
-    icon: BarChart3,
-    title: "Demand Forecasting",
-    description: "Predict next-week ingredient needs from purchasing patterns — reduce over-ordering, waste, and stockouts.",
-    impact: "1-2%",
-    direction: "up",
+    icon: TrendingUp,
+    title: "Forecast & Reduce Waste",
+    description: "Predict next-week ingredient needs — cut over-ordering, waste, and stockouts.",
+    impact: "1–2%",
     color: 'hsl(220 60% 50%)',
   },
 ];
@@ -49,15 +38,21 @@ export const ValueSlide: React.FC = () => {
         <div className="flex gap-12 items-start">
           {/* Left: Value drivers */}
           <div className="flex-1">
-            <div className="space-y-4">
+            <div className="space-y-5">
               {valueDrivers.map((driver, index) => (
                 <div
                   key={driver.title}
-                  className="fade-up feature-card flex items-start gap-5 group"
-                  style={{ animationDelay: `${0.2 + index * 0.12}s`, opacity: 0 }}
+                  className="fade-up flex items-start gap-5 p-5 rounded-2xl"
+                  style={{
+                    animationDelay: `${0.2 + index * 0.12}s`,
+                    opacity: 0,
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(255,255,255,0.6)',
+                  }}
                 >
                   <div 
-                    className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110"
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
                     style={{ background: driver.color }}
                   >
                     <driver.icon className="w-6 h-6 text-white" />
@@ -108,9 +103,8 @@ export const ValueSlide: React.FC = () => {
           
           {/* Right: Total impact */}
           <div className="flex-1 fade-up-delay-2">
-            {/* Time to value */}
             <div 
-              className="p-5 rounded-2xl mb-5 flex items-center gap-4"
+              className="p-5 rounded-2xl mb-6 flex items-center gap-4"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
@@ -125,15 +119,12 @@ export const ValueSlide: React.FC = () => {
             </div>
 
             <div 
-              className="p-8 rounded-3xl relative overflow-hidden text-center mb-5"
+              className="p-8 rounded-3xl relative overflow-hidden text-center mb-6"
               style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 35%))',
                 boxShadow: '0 30px 80px rgba(122, 30, 45, 0.35)',
               }}
             >
-              <div className="absolute inset-0 shimmer opacity-10" style={{
-                background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
-              }} />
               <div className="relative z-10">
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <TrendingUp className="w-6 h-6 text-white/80" />
@@ -146,49 +137,29 @@ export const ValueSlide: React.FC = () => {
               </div>
             </div>
             
-            {/* € Impact example */}
             <div 
               className="p-5 rounded-2xl"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.6)',
-                boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
               }}
             >
               <div className="flex items-center gap-2 mb-3">
                 <Sparkles className="w-5 h-5 text-accent" />
-                <span className="font-semibold text-foreground text-sm">Example: €500K annual revenue bistro</span>
+                <span className="font-semibold text-foreground text-sm">Example: €500K revenue bistro</span>
               </div>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Dish repricing (remove losers)</span>
-                  <span className="font-bold text-foreground">€7,500</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Ingredient cost reduction</span>
-                  <span className="font-bold text-foreground">€7,500</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Menu mix optimization</span>
-                  <span className="font-bold text-foreground">€5,000</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Demand forecasting (waste reduction)</span>
-                  <span className="font-bold text-foreground">€5,000</span>
-                </div>
-                <div className="pt-2 mt-1 flex justify-between items-center" style={{ borderTop: '2px solid hsl(350 60% 30% / 0.2)' }}>
-                  <span className="font-bold text-base" style={{
-                    background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}>Total Annual Impact</span>
-                  <span className="font-black text-xl" style={{
-                    background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}>€25,000</span>
-                </div>
+              <div className="flex justify-between items-center pt-1" style={{ borderTop: '2px solid hsl(350 60% 30% / 0.2)' }}>
+                <span className="font-bold text-base" style={{
+                  background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}>Total Annual Impact</span>
+                <span className="font-black text-2xl" style={{
+                  background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}>€15–25K</span>
               </div>
             </div>
           </div>

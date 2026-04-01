@@ -11,13 +11,12 @@ export const ClosingSlide: React.FC = () => {
         <Sparkles className="w-28 h-28 text-accent" />
       </div>
       
-      <div className="fade-up flex items-center gap-5 mb-5">
+      <div className="fade-up flex items-center gap-5 mb-6">
         <div className="p-5 rounded-3xl relative" style={{
           background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
           boxShadow: '0 25px 70px rgba(122, 30, 45, 0.4)',
         }}>
           <ChefHat className="h-12 w-12 text-white" />
-          <div className="absolute inset-0 rounded-3xl animate-pulse-glow opacity-40" />
         </div>
         <h1 className="text-7xl font-black tracking-tight" style={{
           background: 'linear-gradient(135deg, hsl(350 60% 25%), hsl(350 55% 40%))',
@@ -26,7 +25,7 @@ export const ClosingSlide: React.FC = () => {
         }}>Chef</h1>
       </div>
       
-      <p className="fade-up-delay-1 text-2xl font-bold mb-3 max-w-2xl leading-relaxed" style={{
+      <p className="fade-up-delay-1 text-2xl font-bold mb-2" style={{
         background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
@@ -34,11 +33,11 @@ export const ClosingSlide: React.FC = () => {
         The AI copilot for restaurant profitability.
       </p>
 
-      <p className="fade-up-delay-1 text-lg text-muted-foreground mb-6 max-w-xl">
+      <p className="fade-up-delay-1 text-lg text-muted-foreground mb-8">
         Focused wedge. Clear ROI. Massive market.
       </p>
       
-      <div className="fade-up-delay-1 flex items-center gap-3 px-8 py-4 rounded-2xl mb-6" style={{
+      <div className="fade-up-delay-1 flex items-center gap-3 px-8 py-4 rounded-2xl mb-8" style={{
         background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
         boxShadow: '0 20px 60px rgba(122, 30, 45, 0.35)',
       }}>
@@ -46,37 +45,31 @@ export const ClosingSlide: React.FC = () => {
         <span className="text-2xl font-bold text-white">Let us be part of the Entourage Family</span>
       </div>
       
-      <div className="fade-up-delay-2 flex items-center gap-3 px-6 py-3 rounded-full mb-3" style={{
+      <div className="fade-up-delay-2 flex items-center gap-2 px-5 py-2.5 rounded-full mb-5" style={{
         background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
         backdropFilter: 'blur(20px)',
         border: '1px solid rgba(255,255,255,0.5)',
       }}>
-        <span className="text-sm text-muted-foreground">Potential early rollout prospects:</span>
+        <span className="text-xs text-muted-foreground">Potential early rollout prospects:</span>
         {["UGent Cafeteria", "Wintercircus Cafeteria", "Lunch Garden", "Les brasseries de Breyne"].map(name => (
-          <span key={name} className="px-3 py-1 rounded-full text-xs font-medium" style={{
+          <span key={name} className="px-2.5 py-1 rounded-full text-xs font-medium" style={{
             background: 'hsl(35 30% 90%)',
             color: 'hsl(20 10% 45%)',
           }}>{name}</span>
         ))}
       </div>
       
-      <div className="fade-up-delay-3 flex flex-col items-center gap-2 mb-4">
-        <div className="flex items-center gap-3 px-8 py-3 rounded-full" style={{
-          background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
-          backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255,255,255,0.5)',
-        }}>
-          <Mail className="h-5 w-5 text-primary" />
-          <span className="text-base font-semibold text-foreground">jeanlouis.vervisch@hotmail.com</span>
-        </div>
-        <div className="flex items-center gap-3 px-8 py-3 rounded-full" style={{
-          background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
-          backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255,255,255,0.5)',
-        }}>
-          <Mail className="h-5 w-5 text-primary" />
-          <span className="text-base font-semibold text-foreground">pj.putzeys@gmail.com</span>
-        </div>
+      <div className="fade-up-delay-3 flex items-center gap-6 mb-5">
+        {["jeanlouis.vervisch@hotmail.com", "pj.putzeys@gmail.com"].map(email => (
+          <div key={email} className="flex items-center gap-2 px-5 py-2.5 rounded-full" style={{
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4))',
+            backdropFilter: 'blur(20px)',
+            border: '1px solid rgba(255,255,255,0.5)',
+          }}>
+            <Mail className="h-4 w-4 text-primary" />
+            <span className="text-sm font-semibold text-foreground">{email}</span>
+          </div>
+        ))}
       </div>
       
       <p className="fade-up-delay-3 text-lg italic font-medium" style={{ color: 'hsl(20 10% 45%)' }}>

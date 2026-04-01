@@ -13,7 +13,7 @@ export const BusinessModelSlide: React.FC = () => {
         <div className="flex gap-10 items-start">
           {/* Left: Pricing tiers */}
           <div className="flex-1">
-            <div className="flex gap-6 mb-8">
+            <div className="flex gap-6 mb-6">
               {/* Starter */}
               <div className="flex-1 fade-up p-6 rounded-3xl" style={{
                 animationDelay: '0.2s',
@@ -31,7 +31,7 @@ export const BusinessModelSlide: React.FC = () => {
                 </div>
                 <div className="mb-3">
                   <span className="text-4xl font-black" style={{ color: 'hsl(350 60% 30%)' }}>€69</span>
-                  <span className="text-muted-foreground">/mo per location</span>
+                  <span className="text-muted-foreground text-sm">/mo per location</span>
                 </div>
                 <p className="text-sm text-muted-foreground mb-3">Invoice ingestion + basic costing + demand forecasting</p>
                 <div className="px-3 py-1.5 rounded-full text-xs font-semibold inline-block" style={{
@@ -43,7 +43,7 @@ export const BusinessModelSlide: React.FC = () => {
               </div>
               
               {/* Professional */}
-              <div className="flex-1 fade-up p-6 rounded-3xl relative overflow-hidden" style={{
+              <div className="flex-1 fade-up p-6 rounded-3xl relative" style={{
                 animationDelay: '0.35s',
                 opacity: 0,
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
@@ -59,12 +59,11 @@ export const BusinessModelSlide: React.FC = () => {
                 </div>
                 <div className="mb-3">
                   <span className="text-4xl font-black text-white">€169</span>
-                  <span className="text-white/70">/mo per location</span>
+                  <span className="text-white/70 text-sm">/mo per location</span>
                 </div>
                 <p className="text-sm text-white/80 mb-3">Full margin dashboard + recipe costing + forecasting + alerts</p>
-                <div className="px-4 py-1.5 rounded-full flex items-center gap-2" style={{
+                <div className="px-4 py-1.5 rounded-full flex items-center gap-2 w-fit" style={{
                   background: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',
-                  boxShadow: '0 4px 15px rgba(217, 119, 87, 0.4)'
                 }}>
                   <Sparkles className="w-3.5 h-3.5 text-white" />
                   <span className="text-xs font-bold text-white">Recommended</span>
@@ -78,13 +77,13 @@ export const BusinessModelSlide: React.FC = () => {
               backdropFilter: 'blur(20px)',
               border: '1px solid rgba(255,255,255,0.6)'
             }}>
-              <div className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
+              <div className="text-sm font-semibold text-foreground mb-2 flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-primary" />
                 Why It Works for the Customer
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                At €169/mo, a restaurant saving just 3% on a €500K revenue base recovers €25,000/year — 
-                a <span className="font-bold text-foreground">12x ROI</span> on the subscription cost.
+                At €169/mo, a restaurant saving just 3% on €500K revenue recovers €25K/year — 
+                a <span className="font-bold text-foreground">12x ROI</span> on the subscription.
               </p>
             </div>
           </div>
@@ -101,34 +100,22 @@ export const BusinessModelSlide: React.FC = () => {
             </div>
             
             <div className="space-y-4">
-              <div className="p-5 rounded-2xl" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)'
-              }}>
-                <div className="font-bold text-foreground mb-2">Phase 1: Land</div>
-                <p className="text-sm text-muted-foreground">SaaS subscription per location. Pure software margins.</p>
-              </div>
+              {[
+                { title: "Phase 1: Land", desc: "SaaS subscription per location. Pure software margins." },
+                { title: "Phase 2: Expand", desc: "Add-on modules (advanced forecasting, procurement recs) at €50–€100/mo each." },
+                { title: "Phase 3: Monetize Data", desc: "Aggregate anonymized data for wholesalers and industry insights." },
+              ].map(phase => (
+                <div key={phase.title} className="p-5 rounded-2xl" style={{
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+                  backdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(255,255,255,0.6)'
+                }}>
+                  <div className="font-bold text-foreground mb-1">{phase.title}</div>
+                  <p className="text-sm text-muted-foreground">{phase.desc}</p>
+                </div>
+              ))}
               
-              <div className="p-5 rounded-2xl" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)'
-              }}>
-                <div className="font-bold text-foreground mb-2">Phase 2: Expand</div>
-                <p className="text-sm text-muted-foreground">Add-on modules (advanced forecasting, procurement recs) at €50–€100/mo each.</p>
-              </div>
-              
-              <div className="p-5 rounded-2xl" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.6)'
-              }}>
-                <div className="font-bold text-foreground mb-2">Phase 3: Monetize Data</div>
-                <p className="text-sm text-muted-foreground">Aggregate anonymized data for wholesalers, industry insights — future revenue stream.</p>
-              </div>
-              
-              <div className="p-6 rounded-2xl text-center" style={{
+              <div className="p-5 rounded-2xl text-center" style={{
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
                 boxShadow: '0 15px 50px rgba(122, 30, 45, 0.25)'
               }}>

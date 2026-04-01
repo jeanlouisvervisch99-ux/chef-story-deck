@@ -100,7 +100,7 @@ export const SolutionSlide: React.FC = () => {
               {[
                 { step: "1", title: "Snap your invoices", desc: "Photo, PDF, email forward — any format works" },
                 { step: "2", title: "AI extracts & maps ingredients", desc: "Matched to your recipes automatically" },
-                { step: "3", title: "See real-time dish margins", desc: "Know exactly what makes money — and what doesn't" },
+                { step: "3", title: "See margins & forecasts", desc: "Know what's profitable and what to order next week" },
               ].map((item, index) => (
                 <div
                   key={item.step}

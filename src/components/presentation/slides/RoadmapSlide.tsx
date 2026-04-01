@@ -13,7 +13,7 @@ const phases = [
       "AI invoice ingestion",
       "Recipe & menu costing",
       "Real-time margin dashboard",
-      "Dish-level P&L visibility",
+      "Basic demand forecasting",
     ],
   },
   {

@@ -146,6 +146,7 @@ export const ValueSlide: React.FC = () => {
               }}
             >
               <div className="flex items-center gap-2 mb-3">
+                <Sparkles className="w-5 h-5 text-accent" />
                 <span className="font-semibold text-foreground text-sm">Example: €500K revenue bistro</span>
               </div>
               <div className="flex justify-between items-center pt-1" style={{ borderTop: '2px solid hsl(350 60% 30% / 0.2)' }}>

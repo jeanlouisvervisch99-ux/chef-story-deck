@@ -1,5 +1,5 @@
 import React from 'react';
-import { Receipt, UtensilsCrossed, BarChart3, Sparkles, Lock, ArrowRight } from 'lucide-react';
+import { Receipt, UtensilsCrossed, BarChart3, TrendingUp, Lock, ArrowRight } from 'lucide-react';
 
 const coreFeatures = [
   {
@@ -23,11 +23,17 @@ const coreFeatures = [
     color: 'hsl(160 50% 45%)',
     tag: "V1 Core",
   },
+  {
+    icon: TrendingUp,
+    title: "Demand Forecasting",
+    description: "Predict ingredient needs from historical invoices and menus — know what to buy next week, no POS required",
+    color: 'hsl(220 60% 50%)',
+    tag: "V1 Lite",
+  },
 ];
 
 const futureModules = [
   "Procurement recommendations",
-  "Forecasting & demand planning",
   "Workforce optimization",
   "Working capital financing",
   "Loyalty & payments",
@@ -42,7 +48,7 @@ export const FeaturesSlide: React.FC = () => {
       </p>
       
       <div className="slide-content">
-        <div className="grid grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-4 gap-5 mb-8">
           {coreFeatures.map((feature, index) => (
             <div
               key={feature.title}

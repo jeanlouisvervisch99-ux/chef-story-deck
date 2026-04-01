@@ -24,10 +24,10 @@ const phases = [
     color: 'hsl(25 80% 55%)',
     status: "Planned",
     items: [
-      "Cost forecasting based on trends",
+      "Advanced forecasting accuracy",
+      "Weekly P&L forecasting",
       "Procurement recommendations",
       "Supplier price benchmarking",
-      "Menu performance scoring",
     ],
   },
   {

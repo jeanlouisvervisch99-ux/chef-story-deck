@@ -1,5 +1,5 @@
 import React from 'react';
-import { Store, Target, Handshake, ArrowRight, Users, Truck } from 'lucide-react';
+import { Store, Target, Handshake, ArrowRight, Users, Truck, Gift, Sparkles } from 'lucide-react';
 
 export const ICPSlide: React.FC = () => {
   return (
@@ -86,8 +86,8 @@ export const ICPSlide: React.FC = () => {
               WebkitTextFillColor: 'transparent'
             }}>How We Get to 50–100 Customers</h3>
             
-            <div className="space-y-4">
-              <div className="p-5 rounded-2xl" style={{
+            <div className="space-y-3">
+              <div className="p-4 rounded-2xl" style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.6)',
@@ -101,7 +101,7 @@ export const ICPSlide: React.FC = () => {
                 <p className="text-sm text-muted-foreground">Door-to-door in key Belgian restaurant districts. Demo the product on their actual invoices — instant value proof.</p>
               </div>
               
-              <div className="p-5 rounded-2xl" style={{
+              <div className="p-4 rounded-2xl" style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.6)',
@@ -112,10 +112,10 @@ export const ICPSlide: React.FC = () => {
                   </div>
                   <div className="font-bold text-foreground">Wholesaler Partnerships</div>
                 </div>
-                <p className="text-sm text-muted-foreground">Partner with food wholesalers as a distribution channel. They introduce Chef to their restaurant clients — mutual value creation.</p>
+                <p className="text-sm text-muted-foreground">Partner with food wholesalers as a distribution channel. They introduce Chef to their restaurant clients.</p>
               </div>
               
-              <div className="p-5 rounded-2xl" style={{
+              <div className="p-4 rounded-2xl" style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.6)',
@@ -127,6 +127,33 @@ export const ICPSlide: React.FC = () => {
                   <div className="font-bold text-foreground">1-Month Free Trial</div>
                 </div>
                 <p className="text-sm text-muted-foreground">Zero friction onboarding. Scan invoices from day one. Auto-converts to paid after trial.</p>
+              </div>
+
+              {/* Tactical acquisition levers */}
+              <div className="p-4 rounded-2xl" style={{
+                background: 'linear-gradient(135deg, hsl(25 80% 55% / 0.08), hsl(350 60% 30% / 0.08))',
+                border: '1px solid hsl(25 80% 55% / 0.15)',
+              }}>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: 'hsl(38 85% 55%)' }}>
+                    <Gift className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="font-bold text-foreground">Early Adopter Incentives</div>
+                </div>
+                <div className="space-y-1.5 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                    <span><span className="font-semibold text-foreground">€100 onboarding voucher</span> — redeemable at hospitality suppliers</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                    <span><span className="font-semibold text-foreground">Referral bonus</span> — €100 credit for each restaurant referred</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                    <span><span className="font-semibold text-foreground">Founding member pricing</span> — locked-in rate for first 50 customers</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

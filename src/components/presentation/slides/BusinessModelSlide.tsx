@@ -116,7 +116,7 @@ export const BusinessModelSlide: React.FC = () => {
                 border: '1px solid rgba(255,255,255,0.6)'
               }}>
                 <div className="font-bold text-foreground mb-2">Phase 2: Expand</div>
-                <p className="text-sm text-muted-foreground">Add-on modules (forecasting, procurement recs) at €50–€100/mo each.</p>
+                <p className="text-sm text-muted-foreground">Add-on modules (advanced forecasting, procurement recs) at €50–€100/mo each.</p>
               </div>
               
               <div className="p-5 rounded-2xl" style={{

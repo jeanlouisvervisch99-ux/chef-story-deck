@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, Receipt, UtensilsCrossed, Euro, ArrowDown, ArrowUp, Sparkles, Clock } from 'lucide-react';
+import { TrendingUp, Receipt, UtensilsCrossed, Euro, ArrowDown, ArrowUp, Sparkles, Clock, BarChart3, ArrowRight } from 'lucide-react';
 
 const valueDrivers = [
   {
@@ -26,6 +26,14 @@ const valueDrivers = [
     direction: "up",
     color: 'hsl(160 50% 45%)',
   },
+  {
+    icon: BarChart3,
+    title: "Demand Forecasting",
+    description: "Predict next-week ingredient needs from purchasing patterns — reduce over-ordering, waste, and stockouts.",
+    impact: "1-2%",
+    direction: "up",
+    color: 'hsl(220 60% 50%)',
+  },
 ];
 
 export const ValueSlide: React.FC = () => {
@@ -41,37 +49,60 @@ export const ValueSlide: React.FC = () => {
         <div className="flex gap-12 items-start">
           {/* Left: Value drivers */}
           <div className="flex-1">
-            <div className="space-y-5">
+            <div className="space-y-4">
               {valueDrivers.map((driver, index) => (
                 <div
                   key={driver.title}
                   className="fade-up feature-card flex items-start gap-5 group"
-                  style={{ animationDelay: `${0.2 + index * 0.15}s`, opacity: 0 }}
+                  style={{ animationDelay: `${0.2 + index * 0.12}s`, opacity: 0 }}
                 >
                   <div 
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110"
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110"
                     style={{ background: driver.color }}
                   >
-                    <driver.icon className="w-7 h-7 text-white" />
+                    <driver.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-1">
-                      <h3 className="text-xl font-bold text-foreground">{driver.title}</h3>
+                      <h3 className="text-lg font-bold text-foreground">{driver.title}</h3>
                       <div 
-                        className="flex items-center gap-1.5 px-3 py-1 rounded-full font-bold text-sm"
+                        className="flex items-center gap-1.5 px-3 py-1 rounded-full font-bold text-xs"
                         style={{
                           background: 'linear-gradient(135deg, hsl(160 50% 45% / 0.15), hsl(160 50% 45% / 0.1))',
                           color: 'hsl(160 50% 35%)',
                         }}
                       >
-                        <ArrowUp className="w-4 h-4" />
+                        <ArrowUp className="w-3.5 h-3.5" />
                         {driver.impact}
                       </div>
                     </div>
-                    <p className="text-muted-foreground">{driver.description}</p>
+                    <p className="text-sm text-muted-foreground">{driver.description}</p>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Value loop */}
+            <div className="fade-up-delay-3 mt-5 p-4 rounded-2xl" style={{
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255,255,255,0.6)',
+            }}>
+              <div className="flex items-center gap-2 mb-2">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span className="text-sm font-bold text-foreground">The Value Loop</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground flex-wrap">
+                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(350 60% 30% / 0.1)', color: 'hsl(350 60% 30%)' }}>Invoices & Menus</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(25 80% 55% / 0.1)', color: 'hsl(25 80% 45%)' }}>Margin Insight</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(220 60% 50% / 0.1)', color: 'hsl(220 60% 40%)' }}>Demand Forecast</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(160 50% 45% / 0.1)', color: 'hsl(160 50% 35%)' }}>Action</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+                <span className="px-2.5 py-1 rounded-full font-bold" style={{ background: 'hsl(350 60% 30%)', color: 'white' }}>Profit ↑</span>
+              </div>
             </div>
           </div>
           
@@ -117,7 +148,7 @@ export const ValueSlide: React.FC = () => {
             
             {/* € Impact example */}
             <div 
-              className="p-6 rounded-2xl"
+              className="p-5 rounded-2xl"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
                 backdropFilter: 'blur(20px)',
@@ -125,30 +156,34 @@ export const ValueSlide: React.FC = () => {
                 boxShadow: '0 10px 40px rgba(0,0,0,0.06)',
               }}
             >
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-3">
                 <Sparkles className="w-5 h-5 text-accent" />
-                <span className="font-semibold text-foreground">Example: €500K annual revenue bistro</span>
+                <span className="font-semibold text-foreground text-sm">Example: €500K annual revenue bistro</span>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2 text-sm">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Dish repricing (remove losers)</span>
                   <span className="font-bold text-foreground">€7,500</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Ingredient cost reduction</span>
-                  <span className="font-bold text-foreground">€10,000</span>
+                  <span className="font-bold text-foreground">€7,500</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Menu mix optimization</span>
-                  <span className="font-bold text-foreground">€7,500</span>
+                  <span className="font-bold text-foreground">€5,000</span>
                 </div>
-                <div className="pt-3 mt-2 flex justify-between items-center" style={{ borderTop: '2px solid hsl(350 60% 30% / 0.2)' }}>
-                  <span className="font-bold text-lg" style={{
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Demand forecasting (waste reduction)</span>
+                  <span className="font-bold text-foreground">€5,000</span>
+                </div>
+                <div className="pt-2 mt-1 flex justify-between items-center" style={{ borderTop: '2px solid hsl(350 60% 30% / 0.2)' }}>
+                  <span className="font-bold text-base" style={{
                     background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                   }}>Total Annual Impact</span>
-                  <span className="font-black text-2xl" style={{
+                  <span className="font-black text-xl" style={{
                     background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',

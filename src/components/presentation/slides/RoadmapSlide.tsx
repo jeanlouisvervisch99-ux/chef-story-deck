@@ -18,16 +18,16 @@ const phases = [
   },
   {
     version: "V2",
-    title: "Invoice AI & Procurement",
+    title: "Procurement & Intelligence",
     timeline: "Q1 2027 → Q3 2027",
     icon: BarChart3,
     color: 'hsl(25 80% 55%)',
     status: "Planned",
     items: [
-      "AI invoice ingestion",
-      "Supplier price tracking",
+      "Improved invoice accuracy",
+      "Supplier price intelligence",
       "Procurement recommendations",
-      "Improved forecasting accuracy",
+      "Enhanced forecasting accuracy",
     ],
   },
   {

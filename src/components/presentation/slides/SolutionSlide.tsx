@@ -98,8 +98,8 @@ export const SolutionSlide: React.FC = () => {
             {/* Step flow */}
             <div className="space-y-4 mb-6">
               {[
-                { step: "1", title: "Enter your recipes & ingredients", desc: "Manual entry, CSV, or invoice scan — any method works" },
-                { step: "2", title: "Chef maps costs to dishes", desc: "Real-time dish-level costing updated automatically" },
+                { step: "1", title: "Scan or forward invoices", desc: "AI extracts line items, prices, and supplier data automatically" },
+                { step: "2", title: "Chef maps costs to every dish", desc: "Real-time dish-level costing updated with each new invoice" },
                 { step: "3", title: "See margins & forecasts", desc: "Know what's profitable and what to order next week" },
               ].map((item, index) => (
                 <div

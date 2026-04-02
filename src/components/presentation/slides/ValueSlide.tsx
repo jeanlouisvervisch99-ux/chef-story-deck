@@ -92,7 +92,7 @@ export const ValueSlide: React.FC = () => {
                 <ArrowRight className="w-3.5 h-3.5" />
                 <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(25 80% 55% / 0.1)', color: 'hsl(25 80% 45%)' }}>Ingredient Prices</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(25 80% 55% / 0.1)', color: 'hsl(25 80% 45%)' }}>Margin Insight</span>
+                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(25 80% 55% / 0.1)', color: 'hsl(25 80% 45%)' }}>Margin Insights</span>
                 <ArrowRight className="w-3.5 h-3.5" />
                 <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(220 60% 50% / 0.1)', color: 'hsl(220 60% 40%)' }}>Demand Forecast</span>
                 <ArrowRight className="w-3.5 h-3.5" />

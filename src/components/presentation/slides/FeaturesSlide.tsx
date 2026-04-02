@@ -34,9 +34,9 @@ const coreFeatures = [
 
 const futureModules = [
   "Procurement intelligence",
+  "Supplier anomaly detection",
   "Labour analytics",
-  "Supplier benchmarking",
-  "Industry insights",
+  "Industry benchmarking",
 ];
 
 export const FeaturesSlide: React.FC = () => {

@@ -74,7 +74,7 @@ export const CompetitiveSlide: React.FC = () => {
                       background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(25 80% 55%))',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent'
-                    }}>Chef</span>
+                    }}>Chef V1</span>
                   </div>
                 </th>
               </tr>

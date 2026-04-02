@@ -3,32 +3,32 @@ import { Receipt, UtensilsCrossed, BarChart3, TrendingUp, Lock } from 'lucide-re
 
 const coreFeatures = [
   {
+    icon: Receipt,
+    title: "AI Invoice Ingestion",
+    description: "Snap or forward any invoice — AI extracts line items and tracks supplier prices automatically",
+    color: 'hsl(350 60% 30%)',
+    tag: "V1 Core",
+  },
+  {
     icon: UtensilsCrossed,
     title: "Recipe & Menu Costing",
-    description: "Build dish-level cost models. Identify underperforming dishes and reprice with confidence",
+    description: "Build dish-level cost models linked to real invoice prices. Identify underperformers instantly",
     color: 'hsl(25 80% 55%)',
     tag: "V1 Core",
   },
   {
     icon: BarChart3,
     title: "Real-Time Margin Dashboard",
-    description: "See dish-level profitability at a glance. Spot margin erosion before it's too late",
+    description: "See dish-level profitability at a glance. Costs update automatically with every invoice",
     color: 'hsl(160 50% 45%)',
     tag: "V1 Core",
   },
   {
     icon: TrendingUp,
     title: "Basic Demand Forecasting",
-    description: "Predict next-week ingredient needs from purchasing history — a natural output of cost data",
+    description: "Predict next-week ingredient needs from invoice history — a natural output of cost data",
     color: 'hsl(220 60% 50%)',
     tag: "V1 Core",
-  },
-  {
-    icon: Receipt,
-    title: "AI Invoice Ingestion",
-    description: "Snap or forward any invoice — AI extracts line items, tracks supplier prices automatically",
-    color: 'hsl(350 60% 30%)',
-    tag: "Next",
   },
 ];
 

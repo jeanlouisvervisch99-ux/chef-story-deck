@@ -88,7 +88,9 @@ export const ValueSlide: React.FC = () => {
                 <span className="text-sm font-bold text-foreground">The Value Loop</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground flex-wrap">
-                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(350 60% 30% / 0.1)', color: 'hsl(350 60% 30%)' }}>Invoices & Menus</span>
+                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(350 60% 30% / 0.1)', color: 'hsl(350 60% 30%)' }}>Invoices</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+                <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(25 80% 55% / 0.1)', color: 'hsl(25 80% 45%)' }}>Ingredient Prices</span>
                 <ArrowRight className="w-3.5 h-3.5" />
                 <span className="px-2.5 py-1 rounded-full" style={{ background: 'hsl(25 80% 55% / 0.1)', color: 'hsl(25 80% 45%)' }}>Margin Insight</span>
                 <ArrowRight className="w-3.5 h-3.5" />

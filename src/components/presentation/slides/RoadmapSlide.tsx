@@ -19,7 +19,7 @@ const phases = [
   {
     version: "V2",
     title: "Invoice AI & Procurement",
-    timeline: "Q3 2027 → Q1 2028",
+    timeline: "Q1 2027 → Q3 2027",
     icon: BarChart3,
     color: 'hsl(25 80% 55%)',
     status: "Planned",

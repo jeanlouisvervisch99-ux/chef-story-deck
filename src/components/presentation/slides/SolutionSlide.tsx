@@ -2,11 +2,11 @@ import React from 'react';
 import { CheckCircle2, Brain, Eye, Layers, TrendingUp } from 'lucide-react';
 
 const v1Features = [
-  "Dish-level recipe & menu costing",
-  "Real-time margin dashboard — spot underperformers",
-  "Basic demand forecasting — what to buy next week",
-  "Invoices as a data source for supplier price tracking",
-  "Works on top of any existing POS",
+  "AI-powered invoice ingestion — snap or forward, data extracted automatically",
+  "Dish-level recipe & menu costing linked to real invoice prices",
+  "Real-time margin dashboard — spot underperformers instantly",
+  "Basic demand forecasting — what to buy & prep next week",
+  "Works on top of any existing POS — no integrations needed",
 ];
 
 export const SolutionSlide: React.FC = () => {

@@ -2,10 +2,10 @@ import React from 'react';
 import { CheckCircle2, Brain, Eye, Layers, TrendingUp } from 'lucide-react';
 
 const v1Features = [
-  "AI invoice ingestion — snap, scan, done",
-  "Automatic recipe & menu costing",
-  "Real-time margin dashboard per dish",
+  "Dish-level recipe & menu costing",
+  "Real-time margin dashboard — spot underperformers",
   "Basic demand forecasting — what to buy next week",
+  "Invoices as a data source for supplier price tracking",
   "Works on top of any existing POS",
 ];
 
@@ -26,11 +26,11 @@ export const SolutionSlide: React.FC = () => {
                 WebkitTextFillColor: 'transparent'
               }}
             >
-              Invoice → Costing → Margins → Forecast
+              Costing → Margins → Forecast → Action
             </div>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Chef turns messy invoices into margin intelligence and practical demand forecasts — so you know what's profitable and what to order next.
+              Chef turns ingredient data into margin intelligence and practical demand forecasts — so you know what's profitable and what to order next.
             </p>
             
             <div className="space-y-2.5 mb-6">
@@ -98,8 +98,8 @@ export const SolutionSlide: React.FC = () => {
             {/* Step flow */}
             <div className="space-y-4 mb-6">
               {[
-                { step: "1", title: "Snap your invoices", desc: "Photo, PDF, email forward — any format works" },
-                { step: "2", title: "AI extracts & maps ingredients", desc: "Matched to your recipes automatically" },
+                { step: "1", title: "Enter your recipes & ingredients", desc: "Manual entry, CSV, or invoice scan — any method works" },
+                { step: "2", title: "Chef maps costs to dishes", desc: "Real-time dish-level costing updated automatically" },
                 { step: "3", title: "See margins & forecasts", desc: "Know what's profitable and what to order next week" },
               ].map((item, index) => (
                 <div

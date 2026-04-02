@@ -33,7 +33,7 @@ export const BusinessModelSlide: React.FC = () => {
                   <span className="text-4xl font-black" style={{ color: 'hsl(350 60% 30%)' }}>€69</span>
                   <span className="text-muted-foreground text-sm">/mo per location</span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-3">Invoice ingestion + basic costing + demand forecasting</p>
+                <p className="text-sm text-muted-foreground mb-3">Recipe costing + margin dashboard + basic forecasting</p>
                 <div className="px-3 py-1.5 rounded-full text-xs font-semibold inline-block" style={{
                   background: 'linear-gradient(135deg, hsl(25 80% 55%), hsl(38 85% 55%))',
                   color: 'white'
@@ -102,7 +102,7 @@ export const BusinessModelSlide: React.FC = () => {
             <div className="space-y-4">
               {[
                 { title: "Phase 1: Land", desc: "SaaS subscription per location. Pure software margins." },
-                { title: "Phase 2: Expand", desc: "Add-on modules (advanced forecasting, procurement recs) at €50–€100/mo each." },
+                { title: "Phase 2: Expand", desc: "Add-on modules (invoice AI, procurement intelligence, advanced forecasting) at €50–€100/mo each." },
                 { title: "Phase 3: Monetize Data - 'BRD' or Big Restaurant Data", desc: "Aggregate anonymized data for wholesalers and industry insights." },
               ].map(phase => (
                 <div key={phase.title} className="p-5 rounded-2xl" style={{

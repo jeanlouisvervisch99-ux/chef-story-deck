@@ -5,7 +5,7 @@ const phases = [
   {
     version: "V1",
     title: "Margin Intelligence",
-    timeline: "Now → Q2 2027",
+    timeline: "Now → Q4 2026",
     icon: Receipt,
     color: 'hsl(350 60% 30%)',
     status: "Building",
@@ -19,7 +19,7 @@ const phases = [
   {
     version: "V2",
     title: "Invoice AI & Procurement",
-    timeline: "Q3 2027 → Q1 2028",
+    timeline: "Q1 2027 → Q3 2027",
     icon: BarChart3,
     color: 'hsl(25 80% 55%)',
     status: "Planned",
@@ -33,7 +33,7 @@ const phases = [
   {
     version: "V3",
     title: "Analytics & Benchmarking",
-    timeline: "2028+",
+    timeline: "Q4 2027+",
     icon: Truck,
     color: 'hsl(160 50% 45%)',
     status: "Vision",

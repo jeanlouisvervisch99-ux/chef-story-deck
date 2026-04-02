@@ -13,7 +13,7 @@ const phases = [
       "Recipe & menu costing",
       "Real-time margin dashboard",
       "Basic demand forecasting",
-      "Manual & CSV data entry",
+      "Automated & Manual data entry",
     ],
   },
   {

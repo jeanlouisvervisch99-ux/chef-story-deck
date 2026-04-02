@@ -58,6 +58,7 @@ export const CompetitiveSlide: React.FC = () => {
                   { name: 'Choco', sub: 'Ordering · DE' },
                   { name: 'Apicbase', sub: 'F&B Mgmt · BE' },
                   { name: 'Alpa', sub: 'Finance · UK' },
+                  { name: 'YourBI', sub: 'Analytics · NL' },
                 ].map(col => (
                   <th key={col.name} className="px-2 py-3 font-semibold text-muted-foreground">
                     <div className="text-center">

@@ -30,7 +30,7 @@ export const SolutionSlide: React.FC = () => {
             </div>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Chef turns ingredient data into margin intelligence and practical demand forecasts — so you know what's profitable and what to order next.
+              Chef ingests invoices automatically, maps costs to every dish, and turns that into margin intelligence and practical demand forecasts.
             </p>
             
             <div className="space-y-2.5 mb-6">

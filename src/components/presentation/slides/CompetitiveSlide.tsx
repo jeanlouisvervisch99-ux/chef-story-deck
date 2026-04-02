@@ -2,14 +2,14 @@ import React from 'react';
 import { Check, X, ChefHat, Sparkles, Minus } from 'lucide-react';
 
 const features = [
-  { name: 'AI invoice ingestion',      marginedge: true,  libeo: false, dext: false, choco: false, apicbase: false, alpa: false, chef: true },
-  { name: 'Dish-level margin tracking', marginedge: true,  libeo: false, dext: false, choco: false, apicbase: 'partial', alpa: true, chef: true },
-  { name: 'Recipe & menu costing',     marginedge: true,  libeo: false, dext: false, choco: false, apicbase: true, alpa: 'partial', chef: true },
-  { name: 'Real-time cost dashboard',  marginedge: true,  libeo: false, dext: false, choco: false, apicbase: 'partial', alpa: true, chef: true },
-  { name: 'Works on top of any POS',   marginedge: false, libeo: true,  dext: true,  choco: true,  apicbase: true, alpa: true, chef: true },
-  { name: 'No deep integrations needed', marginedge: false, libeo: true, dext: true, choco: true, apicbase: false, alpa: false, chef: true },
-  { name: 'Demand forecasting',        marginedge: false, libeo: false, dext: false, choco: false, apicbase: false, alpa: false, chef: true },
-  { name: 'Supplier ordering',         marginedge: false, libeo: false, dext: false, choco: true,  apicbase: false, alpa: false, chef: false },
+  { name: 'AI invoice ingestion',      marginedge: true,  libeo: false, dext: false, choco: false, apicbase: false, alpa: false, yourbi: false, chef: true },
+  { name: 'Dish-level margin tracking', marginedge: true,  libeo: false, dext: false, choco: false, apicbase: 'partial', alpa: true, yourbi: true, chef: true },
+  { name: 'Recipe & menu costing',     marginedge: true,  libeo: false, dext: false, choco: false, apicbase: true, alpa: 'partial', yourbi: false, chef: true },
+  { name: 'Real-time cost dashboard',  marginedge: true,  libeo: false, dext: false, choco: false, apicbase: 'partial', alpa: true, yourbi: true, chef: true },
+  { name: 'Works on top of any POS',   marginedge: false, libeo: true,  dext: true,  choco: true,  apicbase: true, alpa: true, yourbi: true, chef: true },
+  { name: 'No deep integrations needed', marginedge: false, libeo: true, dext: true, choco: true, apicbase: false, alpa: false, yourbi: false, chef: true },
+  { name: 'Demand forecasting',        marginedge: false, libeo: false, dext: false, choco: false, apicbase: false, alpa: false, yourbi: false, chef: true },
+  { name: 'Supplier ordering',         marginedge: false, libeo: false, dext: false, choco: true,  apicbase: false, alpa: false, yourbi: false, chef: false },
 ];
 
 const Cell: React.FC<{value: boolean | string; highlight?: boolean}> = ({ value, highlight }) => (

@@ -1,42 +1,42 @@
 import React from 'react';
-import { Receipt, UtensilsCrossed, BarChart3, TrendingUp, Lock, ArrowRight } from 'lucide-react';
+import { Receipt, UtensilsCrossed, BarChart3, TrendingUp, Lock } from 'lucide-react';
 
 const coreFeatures = [
   {
-    icon: Receipt,
-    title: "AI Invoice Ingestion",
-    description: "Snap or forward any invoice — AI extracts line items, prices, and quantities automatically",
-    color: 'hsl(350 60% 30%)',
-    tag: "V1 Core",
-  },
-  {
     icon: UtensilsCrossed,
     title: "Recipe & Menu Costing",
-    description: "Map ingredients to recipes. Know the true cost of every dish in real time",
+    description: "Build dish-level cost models. Identify underperforming dishes and reprice with confidence",
     color: 'hsl(25 80% 55%)',
     tag: "V1 Core",
   },
   {
     icon: BarChart3,
     title: "Real-Time Margin Dashboard",
-    description: "See dish-level profitability at a glance. Spot loss-makers instantly",
+    description: "See dish-level profitability at a glance. Spot margin erosion before it's too late",
     color: 'hsl(160 50% 45%)',
     tag: "V1 Core",
   },
   {
     icon: TrendingUp,
-    title: "Demand Forecasting",
-    description: "Predict next-week ingredient needs from purchasing patterns and menus — no POS required",
+    title: "Basic Demand Forecasting",
+    description: "Predict next-week ingredient needs from purchasing history — a natural output of cost data",
     color: 'hsl(220 60% 50%)',
     tag: "V1 Core",
+  },
+  {
+    icon: Receipt,
+    title: "AI Invoice Ingestion",
+    description: "Snap or forward any invoice — AI extracts line items, tracks supplier prices automatically",
+    color: 'hsl(350 60% 30%)',
+    tag: "Next",
   },
 ];
 
 const futureModules = [
-  "Procurement recommendations",
-  "Workforce optimization",
-  "Working capital financing",
-  "Loyalty & payments",
+  "Procurement intelligence",
+  "Labour analytics",
+  "Supplier benchmarking",
+  "Industry insights",
 ];
 
 export const FeaturesSlide: React.FC = () => {

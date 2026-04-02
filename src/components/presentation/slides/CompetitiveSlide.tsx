@@ -97,6 +97,7 @@ export const CompetitiveSlide: React.FC = () => {
                   <Cell value={feature.choco} />
                   <Cell value={feature.apicbase} />
                   <Cell value={feature.alpa} />
+                  <Cell value={feature.yourbi} />
                   <Cell value={feature.chef} highlight />
                 </tr>
               ))}

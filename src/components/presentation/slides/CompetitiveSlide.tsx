@@ -111,7 +111,7 @@ export const CompetitiveSlide: React.FC = () => {
           }}>
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-foreground">
-              MarginEdge proves the model (10K+ US locations). Chef brings it to Europe — no POS required.
+              Rapid hospitality software adoption signals strong demand for smarter operational and profitability tools.
             </span>
           </div>
         </div>

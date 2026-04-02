@@ -2,10 +2,10 @@ import React from 'react';
 import { CheckCircle2, Brain, Eye, Layers, TrendingUp } from 'lucide-react';
 
 const v1Features = [
-  "AI invoice ingestion — snap, scan, done",
-  "Automatic recipe & menu costing",
-  "Real-time margin dashboard per dish",
+  "Dish-level recipe & menu costing",
+  "Real-time margin dashboard — spot underperformers",
   "Basic demand forecasting — what to buy next week",
+  "Invoices as a data source for supplier price tracking",
   "Works on top of any existing POS",
 ];
 

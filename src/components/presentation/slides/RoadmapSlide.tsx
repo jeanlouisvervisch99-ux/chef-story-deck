@@ -33,7 +33,7 @@ const phases = [
   {
     version: "V3",
     title: "Analytics & Benchmarking",
-    timeline: "2028+",
+    timeline: "Q4 2027+",
     icon: Truck,
     color: 'hsl(160 50% 45%)',
     status: "Vision",

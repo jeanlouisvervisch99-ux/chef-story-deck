@@ -10,10 +10,10 @@ const phases = [
     color: 'hsl(350 60% 30%)',
     status: "Building",
     items: [
+      "AI-powered invoice ingestion",
       "Recipe & menu costing",
       "Real-time margin dashboard",
       "Basic demand forecasting",
-      "Automated & Manual data entry",
     ],
   },
   {

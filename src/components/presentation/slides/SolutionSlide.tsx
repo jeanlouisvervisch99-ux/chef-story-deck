@@ -2,11 +2,11 @@ import React from 'react';
 import { CheckCircle2, Brain, Eye, Layers, TrendingUp } from 'lucide-react';
 
 const v1Features = [
-  "Dish-level recipe & menu costing",
-  "Real-time margin dashboard — spot underperformers",
-  "Basic demand forecasting — what to buy next week",
-  "Invoices as a data source for supplier price tracking",
-  "Works on top of any existing POS",
+  "AI-powered invoice ingestion — snap or forward, data extracted automatically",
+  "Dish-level recipe & menu costing linked to real invoice prices",
+  "Real-time margin dashboard — spot underperformers instantly",
+  "Basic demand forecasting — what to buy & prep next week",
+  "Works on top of any existing POS — no integrations needed",
 ];
 
 export const SolutionSlide: React.FC = () => {
@@ -26,11 +26,11 @@ export const SolutionSlide: React.FC = () => {
                 WebkitTextFillColor: 'transparent'
               }}
             >
-              Costing → Margins → Forecast → Action
+              Invoices → Costs → Margins → Forecast → Action
             </div>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Chef turns ingredient data into margin intelligence and practical demand forecasts — so you know what's profitable and what to order next.
+              Chef ingests invoices automatically, maps costs to every dish, and turns that into margin intelligence and practical demand forecasts.
             </p>
             
             <div className="space-y-2.5 mb-6">
@@ -98,8 +98,8 @@ export const SolutionSlide: React.FC = () => {
             {/* Step flow */}
             <div className="space-y-4 mb-6">
               {[
-                { step: "1", title: "Enter your recipes & ingredients", desc: "Manual entry, CSV, or invoice scan — any method works" },
-                { step: "2", title: "Chef maps costs to dishes", desc: "Real-time dish-level costing updated automatically" },
+                { step: "1", title: "Scan or forward invoices", desc: "AI extracts line items, prices, and supplier data automatically" },
+                { step: "2", title: "Chef maps costs to every dish", desc: "Real-time dish-level costing updated with each new invoice" },
                 { step: "3", title: "See margins & forecasts", desc: "Know what's profitable and what to order next week" },
               ].map((item, index) => (
                 <div

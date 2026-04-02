@@ -5,7 +5,7 @@ const phases = [
   {
     version: "V1",
     title: "Margin Intelligence",
-    timeline: "Now → Q2 2027",
+    timeline: "Now → Q4 2026",
     icon: Receipt,
     color: 'hsl(350 60% 30%)',
     status: "Building",

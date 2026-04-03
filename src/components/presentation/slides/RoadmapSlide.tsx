@@ -27,7 +27,7 @@ const phases = [
       "Improved invoice accuracy",
       "Supplier price intelligence",
       "Procurement recommendations",
-      "Enhanced forecasting accuracy",
+      "Supply forecasting",
     ],
   },
   {

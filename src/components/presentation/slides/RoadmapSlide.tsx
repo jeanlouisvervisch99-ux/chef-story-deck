@@ -44,6 +44,7 @@ const phases = [
       
       "Carbon tracking",
       "Multi-location insights",
+      "Third-party integrations (e.g. Feedelity)",
     ],
   },
 ];

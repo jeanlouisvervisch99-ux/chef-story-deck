@@ -28,7 +28,7 @@ const phases = [
       "Improved invoice accuracy",
       "Supplier price intelligence",
       "Procurement recommendations",
-      "Supply forecasting",
+      "Big Restaurant Data insights",
     ],
   },
   {

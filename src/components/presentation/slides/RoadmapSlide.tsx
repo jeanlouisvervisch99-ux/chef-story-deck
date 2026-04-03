@@ -41,7 +41,7 @@ const phases = [
     items: [
       "Weekly P&L forecasting",
       "Labour analytics",
-      "Supplier benchmarking",
+      
       "Carbon tracking",
       "Multi-location insights",
     ],

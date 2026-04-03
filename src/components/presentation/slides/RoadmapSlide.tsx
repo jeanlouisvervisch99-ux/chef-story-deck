@@ -14,6 +14,7 @@ const phases = [
       "Recipe & menu costing",
       "Real-time margin dashboard",
       "Basic demand forecasting",
+      "POS integrations",
     ],
   },
   {

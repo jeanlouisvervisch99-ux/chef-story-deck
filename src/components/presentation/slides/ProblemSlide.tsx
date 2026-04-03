@@ -62,15 +62,22 @@ export const ProblemSlide: React.FC = () => {
         
         <div className="fade-up-delay-3 mt-10 flex justify-center">
           <div 
-            className="px-8 py-4 rounded-full"
+            className="px-10 py-5 rounded-2xl relative overflow-hidden"
             style={{
-              background: 'linear-gradient(135deg, rgba(122, 30, 45, 0.1), rgba(217, 119, 87, 0.1))',
-              border: '1px solid rgba(122, 30, 45, 0.2)',
+              background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 55% 40%), hsl(25 80% 55%))',
+              boxShadow: '0 8px 32px rgba(122, 30, 45, 0.35), 0 0 60px rgba(122, 30, 45, 0.15)',
             }}
           >
-            <span className="text-lg font-medium text-primary">
-              Result: most restaurants don't know their true cost per plate
-            </span>
+            <div className="absolute inset-0 opacity-20" style={{
+              background: 'linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)',
+              animation: 'shimmer 3s linear infinite',
+              backgroundSize: '200% 100%',
+            }} />
+            <p className="text-lg font-semibold text-white relative z-10 text-center leading-relaxed">
+              Variable food costs erode already thin margins — yet most restaurants
+              <br />
+              lack the visibility to track, control, or act on their true cost per plate.
+            </p>
           </div>
         </div>
       </div>

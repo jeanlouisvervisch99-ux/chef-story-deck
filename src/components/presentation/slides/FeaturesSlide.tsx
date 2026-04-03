@@ -33,10 +33,16 @@ const coreFeatures = [
 ];
 
 const futureModules = [
-  "Procurement intelligence",
-  "Supplier anomaly detection",
+  "Improved invoice accuracy",
+  "Supplier price intelligence",
+  "Procurement recommendations",
+  "Big Restaurant Data insights",
+  "Weekly P&L forecasting",
   "Labour analytics",
-  "Industry benchmarking",
+  "Carbon tracking",
+  "Multi-location insights",
+  "Third-party integrations",
+  "Embedded finance solutions",
 ];
 
 export const FeaturesSlide: React.FC = () => {

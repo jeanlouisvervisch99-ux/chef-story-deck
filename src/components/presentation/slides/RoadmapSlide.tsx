@@ -19,7 +19,7 @@ const phases = [
   },
   {
     version: "V2",
-    title: "Procurement & Intelligence",
+    title: "Procurement, Staffing & Improvements",
     timeline: "Q1 2027 → Q3 2027",
     icon: BarChart3,
     color: 'hsl(25 80% 55%)',
@@ -34,7 +34,7 @@ const phases = [
   },
   {
     version: "V3",
-    title: "Analytics & Benchmarking",
+    title: "Analytics & Finance",
     timeline: "Q4 2027+",
     icon: Truck,
     color: 'hsl(160 50% 45%)',

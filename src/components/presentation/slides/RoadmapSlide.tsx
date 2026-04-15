@@ -29,6 +29,7 @@ const phases = [
       "Supplier price intelligence",
       "Procurement recommendations",
       "Staff planning",
+      "Multi-location insights",
     ],
   },
   {
@@ -42,7 +43,6 @@ const phases = [
       "Weekly P&L forecasting",
       "Big Restaurant Data insights",
       "Carbon tracking",
-      "Multi-location insights",
       "Third-party integrations (e.g. Feedelity)",
       "Embedded finance solutions",
     ],

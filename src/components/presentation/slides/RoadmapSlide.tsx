@@ -29,6 +29,7 @@ const phases = [
       "Supplier price intelligence",
       "Procurement recommendations",
       "Big Restaurant Data insights",
+      "Staff planning",
     ],
   },
   {

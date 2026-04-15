@@ -28,7 +28,6 @@ const phases = [
       "Improved invoice accuracy",
       "Supplier price intelligence",
       "Procurement recommendations",
-      "Big Restaurant Data insights",
       "Staff planning",
     ],
   },
@@ -41,8 +40,7 @@ const phases = [
     status: "Vision",
     items: [
       "Weekly P&L forecasting",
-      "Labour analytics",
-      
+      "Big Restaurant Data insights",
       "Carbon tracking",
       "Multi-location insights",
       "Third-party integrations (e.g. Feedelity)",

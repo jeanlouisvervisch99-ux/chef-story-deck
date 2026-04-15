@@ -2,14 +2,15 @@ import React from 'react';
 import { Check, X, ChefHat, Sparkles, Minus } from 'lucide-react';
 
 const features = [
-  { name: 'AI invoice ingestion',          marginedge: true,  growzer: false, libeo: false, dext: false, choco: false, apicbase: false, alpa: false, yourbi: false, allo: false, chef: true },
-  { name: 'Dish-level margin tracking',    marginedge: true,  growzer: false, libeo: false, dext: false, choco: false, apicbase: 'partial', alpa: true, yourbi: true, allo: false, chef: true },
-  { name: 'Recipe & menu costing',         marginedge: true,  growzer: true,  libeo: false, dext: false, choco: false, apicbase: true, alpa: 'partial', yourbi: false, allo: 'partial', chef: true },
-  { name: 'Real-time cost dashboard',      marginedge: true,  growzer: true,  libeo: false, dext: false, choco: false, apicbase: 'partial', alpa: true, yourbi: true, allo: 'partial', chef: true },
-  { name: 'Works on top of any POS',       marginedge: false, growzer: false, libeo: true,  dext: true,  choco: true,  apicbase: true, alpa: true, yourbi: true, allo: false, chef: true },
-  { name: 'No deep integrations needed',   marginedge: false, growzer: false, libeo: true,  dext: true,  choco: true,  apicbase: false, alpa: false, yourbi: false, allo: false, chef: true },
-  { name: 'Demand forecasting',            marginedge: false, growzer: true,  libeo: false, dext: false, choco: false, apicbase: false, alpa: false, yourbi: false, allo: false, chef: true },
-  { name: 'Supplier ordering',             marginedge: false, growzer: true,  libeo: false, dext: false, choco: true,  apicbase: false, alpa: false, yourbi: false, allo: false, chef: false },
+  { name: 'AI invoice ingestion',          marginedge: true,  growzer: false, nesto: false, libeo: false, dext: false, choco: false, apicbase: false, alpa: false, yourbi: false, allo: false, chef: true },
+  { name: 'Dish-level margin tracking',    marginedge: true,  growzer: false, nesto: false, libeo: false, dext: false, choco: false, apicbase: 'partial', alpa: true, yourbi: true, allo: false, chef: true },
+  { name: 'Recipe & menu costing',         marginedge: true,  growzer: true,  nesto: false, libeo: false, dext: false, choco: false, apicbase: true, alpa: 'partial', yourbi: false, allo: 'partial', chef: true },
+  { name: 'Real-time cost dashboard',      marginedge: true,  growzer: true,  nesto: false, libeo: false, dext: false, choco: false, apicbase: 'partial', alpa: true, yourbi: true, allo: 'partial', chef: true },
+  { name: 'Staff planning',               marginedge: false, growzer: false, nesto: true,  libeo: false, dext: false, choco: false, apicbase: false, alpa: false, yourbi: false, allo: 'partial', chef: false },
+  { name: 'Works on top of any POS',       marginedge: false, growzer: false, nesto: true,  libeo: true,  dext: true,  choco: true,  apicbase: true, alpa: true, yourbi: true, allo: false, chef: true },
+  { name: 'No deep integrations needed',   marginedge: false, growzer: false, nesto: false, libeo: true,  dext: true,  choco: true,  apicbase: false, alpa: false, yourbi: false, allo: false, chef: true },
+  { name: 'Demand forecasting',            marginedge: false, growzer: true,  nesto: false, libeo: false, dext: false, choco: false, apicbase: false, alpa: false, yourbi: false, allo: false, chef: true },
+  { name: 'Supplier ordering',             marginedge: false, growzer: true,  nesto: false, libeo: false, dext: false, choco: true,  apicbase: false, alpa: false, yourbi: false, allo: false, chef: false },
 ];
 
 const Cell: React.FC<{value: boolean | string; highlight?: boolean}> = ({ value, highlight }) => (
@@ -54,6 +55,7 @@ export const CompetitiveSlide: React.FC = () => {
                 {[
                   { name: 'MarginEdge', sub: 'Invoice AI · US' },
                   { name: 'Growzer', sub: 'Ordering · BE' },
+                  { name: 'Nesto', sub: 'Staff AI · DE' },
                   { name: 'Libeo', sub: 'AP Auto · FR' },
                   { name: 'Dext', sub: 'Scanning · UK' },
                   { name: 'Choco', sub: 'Ordering · DE' },
@@ -95,6 +97,7 @@ export const CompetitiveSlide: React.FC = () => {
                   <td className="px-4 py-2 font-medium text-foreground text-sm">{feature.name}</td>
                   <Cell value={feature.marginedge} />
                   <Cell value={feature.growzer} />
+                  <Cell value={feature.nesto} />
                   <Cell value={feature.libeo} />
                   <Cell value={feature.dext} />
                   <Cell value={feature.choco} />

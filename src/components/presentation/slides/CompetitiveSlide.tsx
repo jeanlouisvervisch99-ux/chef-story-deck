@@ -53,6 +53,7 @@ export const CompetitiveSlide: React.FC = () => {
                 <th className="text-left px-4 py-3 font-bold text-foreground">Feature</th>
                 {[
                   { name: 'MarginEdge', sub: 'Invoice AI · US' },
+                  { name: 'Growzer', sub: 'Ordering · BE' },
                   { name: 'Libeo', sub: 'AP Auto · FR' },
                   { name: 'Dext', sub: 'Scanning · UK' },
                   { name: 'Choco', sub: 'Ordering · DE' },
@@ -93,6 +94,7 @@ export const CompetitiveSlide: React.FC = () => {
                 >
                   <td className="px-4 py-2 font-medium text-foreground text-sm">{feature.name}</td>
                   <Cell value={feature.marginedge} />
+                  <Cell value={feature.growzer} />
                   <Cell value={feature.libeo} />
                   <Cell value={feature.dext} />
                   <Cell value={feature.choco} />

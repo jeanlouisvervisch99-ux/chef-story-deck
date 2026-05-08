@@ -62,18 +62,18 @@ export const SolutionSlide: React.FC = () => {
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                   <Brain className="w-6 h-6 text-white/90" />
-                  <span className="text-white/80 font-medium">LLM-Driven Vision</span>
+                  <span className="text-white/80 font-medium">LLM + Human-in-the-Loop</span>
                 </div>
-                <div className="text-3xl font-black text-white mb-2">99% Accuracy</div>
+                <div className="text-3xl font-black text-white mb-2">~90% Accuracy Target</div>
                 <p className="text-white/80 text-sm mb-3">
-                  Extract data from messy invoices and handwritten specials automatically.
+                  Realistic about LLMs on messy invoices and handwritten delivery notes. Humans verify edge cases by design — a tight feedback loop that compounds accuracy as our data set grows.
                 </p>
                 <div
                   className="px-4 py-2 rounded-full inline-flex items-center gap-2"
                   style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)' }}
                 >
                   <Eye className="w-4 h-4 text-white" />
-                  <span className="text-white text-sm font-medium">Ending manual data entry for good</span>
+                  <span className="text-white text-xs font-medium">Peer benchmark: MarginEdge runs ~500 ops in Chandigarh; Haddock hit ~90% only after 5 yrs of data</span>
                 </div>
               </div>
             </div>

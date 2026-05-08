@@ -96,14 +96,14 @@ export const BusinessModelSlide: React.FC = () => {
                 background: 'linear-gradient(135deg, hsl(20 15% 15%), hsl(350 60% 30%))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
-              }}>Revenue Expansion Path</h3>
+              }}>ARPA Expansion Path</h3>
             </div>
             
             <div className="space-y-4">
               {[
-                { title: "Phase 1: Land", desc: "SaaS subscription per location. Pure software margins." },
-                { title: "Phase 2: Expand", desc: "Add-on modules (invoice AI, procurement intelligence, advanced forecasting) at €50–€100/mo each." },
-                { title: "Phase 3: Monetize Data - 'BRD' or Big Restaurant Data", desc: "Aggregate anonymized data for wholesalers and industry insights." },
+                { title: "Phase 1 — Land · ~€150/mo per location", desc: "Entry product is the wedge: invoice ingestion, recipe costing, margin dashboard. Blended ACV ~€1.8K/year." },
+                { title: "Phase 2 — Expand · >€200/mo per location", desc: "Layer in theoretical-vs-actual usage (POS × recipes), predictive ordering, and agentic bank/vendor reconciliation. Each module adds ARPA." },
+                { title: "Phase 3 — Multi-unit & data · €500+/mo per group", desc: "Move upmarket to multi-unit groups; monetise aggregated data ('Big Restaurant Data') for wholesalers and suppliers." },
               ].map(phase => (
                 <div key={phase.title} className="p-5 rounded-2xl" style={{
                   background: 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5))',
@@ -119,8 +119,8 @@ export const BusinessModelSlide: React.FC = () => {
                 background: 'linear-gradient(135deg, hsl(350 60% 30%), hsl(350 50% 38%))',
                 boxShadow: '0 15px 50px rgba(122, 30, 45, 0.25)'
               }}>
-                <div className="text-white/80 text-sm mb-1">Start simple, expand with trust</div>
-                <div className="text-xl font-black text-white">SaaS first. Always.</div>
+                <div className="text-white/80 text-sm mb-1">Wedge in, expand ARPA, monetise the data layer</div>
+                <div className="text-xl font-black text-white">€150 → €200+ → €500+</div>
               </div>
             </div>
           </div>

@@ -99,7 +99,7 @@ export const ICPSlide: React.FC = () => {
                 </div>
               ))}
 
-              {/* Incentives - compact */}
+              {/* Sales efficiency reality check */}
               <div className="p-4 rounded-2xl" style={{
                 background: 'linear-gradient(135deg, hsl(25 80% 55% / 0.08), hsl(350 60% 30% / 0.08))',
                 border: '1px solid hsl(25 80% 55% / 0.15)',
@@ -108,10 +108,17 @@ export const ICPSlide: React.FC = () => {
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'hsl(38 85% 55%)' }}>
                     <Gift className="w-4 h-4 text-white" />
                   </div>
-                  <div className="font-bold text-foreground text-sm">Possible Early Adopter Incentives</div>
+                  <div className="font-bold text-foreground text-sm">Solving the Sales Math</div>
                 </div>
+                <p className="text-xs text-muted-foreground pl-11 mb-2 leading-relaxed">
+                  At ~€1.8K ACV, a 5x quota:OTE ratio implies 167 deals/year per rep — not realistic. We hit efficiency through three levers:
+                </p>
                 <div className="flex flex-wrap gap-2 pl-11">
-                  {["€100 onboarding voucher", "Referral bonus", "Founding member pricing"].map(item => (
+                  {[
+                    "Lower-cost inside sales",
+                    "Multi-unit groups (higher ACV)",
+                    "POS partnerships for distribution",
+                  ].map(item => (
                     <span key={item} className="px-3 py-1 rounded-full text-xs font-medium" style={{
                       background: 'hsl(35 30% 90%)',
                       color: 'hsl(20 10% 45%)',

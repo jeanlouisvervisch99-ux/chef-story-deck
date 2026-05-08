@@ -39,7 +39,7 @@ export const ICPSlide: React.FC = () => {
                   {[
                     { label: "Buyer", text: "Owner or head chef — the person who feels margin pain daily" },
                     { label: "Core Pain", text: "No visibility into dish-level profitability" },
-                    { label: "Revenue", text: "€300K–€1.5M annual · 1–5 locations" },
+                    { label: "Revenue", text: "€500K–€1.5M annual · 1–5 locations" },
                   ].map(item => (
                     <div key={item.label} className="flex items-start gap-3">
                       <Target className="w-4 h-4 text-primary mt-1 flex-shrink-0" />

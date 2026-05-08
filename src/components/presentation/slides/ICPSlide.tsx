@@ -118,6 +118,7 @@ export const ICPSlide: React.FC = () => {
                     "Lower-cost inside sales",
                     "Multi-unit groups (higher ACV)",
                     "POS partnerships for distribution",
+                    "Customer referrals (€100 bonus)",
                   ].map(item => (
                     <span key={item} className="px-3 py-1 rounded-full text-xs font-medium" style={{
                       background: 'hsl(35 30% 90%)',
